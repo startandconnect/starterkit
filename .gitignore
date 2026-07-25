@@ -1,0 +1,6 @@
+# Zugangsdaten. Landen im Arbeitsordner des Kunden, nie hier.
+.env
+
+__pycache__/
+*.pyc
+.DS_Store
