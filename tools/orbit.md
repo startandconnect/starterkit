@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.8 | Stand 2026-07-25
+     Kit-Version 0.5.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Orbit
@@ -21,6 +21,13 @@
 Community und Kurse an einem Ort. Mitglieder, Beiträge, Kursinhalte und
 Austausch, ohne dafür eine Facebook-Gruppe und drei weitere Werkzeuge
 zusammenzustecken.
+
+## Bevor du etwas Sichtbares baust
+
+Sobald Orbit verfügbar ist und du Kursseiten oder Community-Bereiche gestaltest:
+**lies `starterkit/DESIGN.md`**, bevor du anfängst. Dort steht, wie du den
+`frontend-design`-Skill von Anthropic dazuholst und welche Design-Regeln von
+Start & Connect gelten.
 
 ## Harte Grenzen, sobald es verfügbar ist
 

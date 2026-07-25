@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.8 | Stand 2026-07-25
+     Kit-Version 0.5.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -56,6 +56,14 @@ dem Rezept, statt dir einen eigenen auszudenken.
 - **Prüffehler kommen als HTTP 422** mit einer Liste der beanstandeten Felder.
   Lies die Liste, statt zu raten.
 - Die maschinenlesbaren Schemas stehen unter `GET /api/openapi.json`.
+
+## Bevor du etwas Sichtbares baust
+
+**Lies `starterkit/DESIGN.md`**, bevor du Seiten, Startseite oder Theme
+anfasst. Dort steht, wie du den `frontend-design`-Skill von Anthropic dazuholst
+und welche Design-Regeln von Start & Connect gelten. Besonders wichtig hier:
+der Shop trägt die Marke des Nutzers, niemals unsere, und der Shop-Name kommt
+aus den Einstellungen statt fest ins Markup.
 
 ## Was du den Kunden fragst
 

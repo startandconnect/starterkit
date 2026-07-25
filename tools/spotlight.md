@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.8 | Stand 2026-07-25
+     Kit-Version 0.5.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
@@ -47,6 +47,13 @@ und `credentials`.
   bekommst, statt es anzunehmen.
 - **Beim Umbenennen einer Mediendatei** wird automatisch eine Weiterleitung
   angelegt. Alte Links bleiben also gültig.
+
+## Bevor du etwas Sichtbares baust
+
+**Lies `starterkit/DESIGN.md`**, bevor du die erste Seite anlegst. Dort steht,
+wie du den `frontend-design`-Skill von Anthropic dazuholst und welche
+Design-Regeln von Start & Connect gelten. Ohne das kommt eine austauschbare
+Standard-Seite heraus, und genau die will hier niemand.
 
 ## Was du den Kunden fragst
 

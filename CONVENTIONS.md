@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.8 | Stand 2026-07-25
+     Kit-Version 0.5.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Konventionen
@@ -22,6 +22,8 @@ einmal, sondern in dieser Reihenfolge nur so weit, wie die Aufgabe es braucht:
 5. **Bei wiederkehrenden Abläufen:** erst in `secondbrain/runbooks/` schauen
 6. **Bei Fragen zu Werkzeugen:** `starterkit/TOOLS.md`, dann `starterkit/tools/<tool>.md`
 7. **Bei Fachrecherche:** `starterkit/RECHERCHE.md` für die validen Primärquellen
+8. **Bevor du etwas Sichtbares baust** (Website, Shop-Seite, Formular):
+   `starterkit/DESIGN.md`
 
 Frag dich vor jedem Lesen: was ist der kürzeste Weg zur Antwort? Jede Datei,
 die du unnötig liest, kostet den Nutzer Geld.

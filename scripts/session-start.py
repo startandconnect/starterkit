@@ -13,7 +13,7 @@ kein Hinweis als ein gestoerter Start.
 
 Die Ausgabe geht als Kontext an Claude, nicht direkt an den Nutzer.
 
-Verwaltet von Start & Connect. Kit-Version 0.4.8
+Verwaltet von Start & Connect. Kit-Version 0.5.0
 """
 
 import datetime
