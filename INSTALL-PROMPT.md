@@ -22,9 +22,13 @@ Bewusst kurz. Die ganze Logik liegt in `SETUP.md` und ist damit versioniert.
 ```text
 Klone https://github.com/startandconnect/starterkit in diesen Ordner.
 Lies dann starterkit/SETUP.md und richte damit Schritt für Schritt meine
-Arbeitsumgebung ein. Erklär mir jeden Schritt, bevor du ihn machst, ich
-kenne mich mit Technik nicht aus.
+Arbeitsumgebung ein.
 ```
+
+Bewusst **ohne** "erklär mir jeden Schritt". Das polt Claude auf Absichern
+statt Durcharbeiten, und bei einer Rückfrage des Kunden verhaspelt es sich und
+lässt im Zweifel Dinge weg, die er braucht. Die passende Sprache regelt
+`SETUP.md` selbst, indem es in Schritt 0 nach dem Technik-Niveau fragt.
 
 ---
 
