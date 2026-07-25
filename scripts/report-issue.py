@@ -17,7 +17,7 @@ Verwendung:
 Der Titel wird als "[Kategorie] Titel" gesendet, damit Start & Connect filtern
 kann. Kit-Version und Plattform werden automatisch als Metadaten mitgeschickt.
 
-Verwaltet von Start & Connect. Kit-Version 0.4.1
+Verwaltet von Start & Connect. Kit-Version 0.4.2
 """
 
 import argparse
@@ -120,7 +120,8 @@ def main():
         sys.exit(1)
     except urllib.error.URLError as e:
         print(f"Fehler: Start & Connect ist gerade nicht erreichbar ({e.reason}). "
-              f"Versuch es spaeter erneut oder schreib an support@startandconnect.com.",
+              f"Versuch es spaeter erneut oder schreib als letzte Option an "
+              f"hallo@startandconnect.com.",
               file=sys.stderr)
         sys.exit(1)
 

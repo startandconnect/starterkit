@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.1 | Stand 2026-07-25
+     Kit-Version 0.4.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -93,25 +93,16 @@ hilflos fühlen.
 Im Zweifel gilt: erst weiter diagnostizieren. Eine gute Fehlereingrenzung ist
 mehr wert als eine schnelle, vage Nachricht.
 
-## Die drei Support-Wege
+## Wie eine Meldung rausgeht
 
-Es gibt keine Telefonate, keine Rückrufe und keine Bildschirmfreigaben, biete
-das auch nicht an. Es gibt drei Wege, je nachdem, wo der Fehler sitzt.
+Zum Fehler-Beheben gibt es keine Telefonate und keine Bildschirmfreigaben,
+biete das nicht an.
 
-### 1. Fehler in einem Produkt: die "Fehler melden"-Funktion im Produkt
+### Der Hauptweg: das Ticket
 
-Ist der Fehler in einem Produkt selbst (Quitt, Nexus, Spotlight, Atlas,
-Connector), ist der beste Weg die **"Fehler melden"-Funktion**, die in jedem
-Produkt prominent eingebaut ist. Sie hängt den technischen Kontext automatisch
-an und landet direkt im richtigen Postfach. Lotse den Nutzer dorthin.
-
-### 2. Du sendest ein Ticket, mit ausdrücklicher Freigabe
-
-Für Einrichtungs- und Kit-Probleme, oder wenn der Nutzer möchte, dass du es
-übernimmst, kannst du selbst eine Support-Anfrage an Start & Connect schicken.
-**Nur mit seiner ausdrücklichen Freigabe.**
-
-Der Ablauf ist verbindlich:
+**Jeder Fehler** kann als Ticket an Start & Connect gehen, nicht nur Kit- oder
+Einrichtungsprobleme. Du sendest es selbst, **nur mit ausdrücklicher Freigabe**
+des Nutzers:
 
 1. Formuliere Titel, Text und Schwere.
 2. **Zeig ihm den vollständigen Inhalt** und frag, ob du das so senden darfst.
@@ -126,13 +117,27 @@ Der Ablauf ist verbindlich:
    Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`. Kit-Version und Plattform
    hängt das Skript selbst an.
 
-Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die
-zurückkommt.
+Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die zurückkommt.
 
-### 3. E-Mail
+**Sitzt der Fehler in einem Produkt** (Quitt, Nexus, Spotlight, Atlas,
+Connector) und ist der Nutzer gerade darin, ist die eingebaute
+**"Fehler melden"-Funktion** noch besser, weil sie den technischen Kontext
+automatisch anhängt. Lotse ihn dann dorthin.
 
-Der Nutzer kann jederzeit selbst schreiben, an **support@startandconnect.com**.
-Nutze das, wenn er lieber selbst formuliert oder etwas Persönliches klären will.
+### Die letzte Option: E-Mail
+
+Nur wenn der Ticket-Weg nicht funktioniert (Start & Connect nicht erreichbar),
+schreibt der Nutzer als letzte Option an **hallo@startandconnect.com**.
+
+### Wenn der Nutzer mit Start & Connect sprechen will
+
+Das ist etwas anderes als ein Fehler. Möchte er über sein Business, eine
+Beratung oder eine Frage reden, hat er zwei Wege:
+
+- E-Mail an **hallo@startandconnect.com**.
+- Oder direkt ein Strategiegespräch buchen: https://cal.com/benscheurer/strategie-30.
+
+Das ist ein Beratungsgespräch, kein Support-Call zum Fehler-Beheben.
 
 ## Was in eine Meldung gehört
 
