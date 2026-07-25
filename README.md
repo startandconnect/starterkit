@@ -68,6 +68,10 @@ kann. Sie darf nicht aufgeweicht werden.
    Zustimmung an uns übertragen.
 5. **Mac und Windows.** Claude Desktop läuft auf beidem, Linux ist kein Ziel.
    Skripte in Python-Standardbibliothek halten, keine Shell-Eigenheiten.
+6. **Niemals Preise hardcoden.** Das Kit liegt als Kopie beim Kunden und
+   veraltet, Preise ändern sich. Immer nur auf startandconnect.com verweisen.
+   Der Trial-Hinweis ("14 Tage kostenlos testbar") ist erlaubt, das ist ein
+   Angebot, kein Preis.
 
 ## Zielgruppe
 

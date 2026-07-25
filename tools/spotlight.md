@@ -1,12 +1,12 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.2.0 | Stand 2026-07-25
+     Kit-Version 0.2.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
 
-**17 €/Monat, 14 Tage kostenlos testbar. Mit Einrichtung durch Start &
-Connect: 499 € einmalig plus 29 €/Monat.**
+**14 Tage kostenlos testbar. Auch mit kompletter Einrichtung durch Start &
+Connect buchbar. Aktuelle Infos und Preise auf startandconnect.com.**
 
 ## Was es macht
 

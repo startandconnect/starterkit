@@ -1,11 +1,11 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.2.0 | Stand 2026-07-25
+     Kit-Version 0.2.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Quitt
 
-**19 €/Monat, 14 Tage kostenlos testbar.**
+**14 Tage kostenlos testbar. Aktuelle Infos und Preise auf startandconnect.com.**
 
 ## Was es macht
 

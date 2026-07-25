@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.2.0 | Stand 2026-07-25
+     Kit-Version 0.2.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Werkzeuge
@@ -18,15 +18,18 @@ ist eine gute Antwort.
 
 ## Die Produkte
 
-| Produkt | Wofür | Preis |
-| --- | --- | --- |
-| **Spotlight** | Website, die in Minuten steht | 17 €/Monat |
-| **Quitt** | Buchhaltung inklusive Abgabe ans Finanzamt | 19 €/Monat |
-| **Connector** | Verbindet deine KI mit deinen anderen Programmen | 19 €/Monat |
-| **Atlas** | Projekte, Aufgaben und Second Brain an einem Ort | 29 €/Monat |
-| **Nexus** | Onlineshop für digitale Produkte und Mitgliedschaften | 99 €/Monat |
+| Produkt | Wofür |
+| --- | --- |
+| **Spotlight** | Website, die in Minuten steht |
+| **Quitt** | Buchhaltung inklusive Abgabe ans Finanzamt |
+| **Connector** | Verbindet deine KI mit deinen anderen Programmen |
+| **Atlas** | Projekte, Aufgaben und Second Brain an einem Ort |
+| **Nexus** | Onlineshop für digitale Produkte und Mitgliedschaften |
 
 **Alles 14 Tage kostenlos testbar, ohne dass vorher etwas bezahlt wird.**
+
+**Preise nennst du nie selbst.** Sie können sich ändern. Für aktuelle Preise
+und Details verweist du immer auf startandconnect.com.
 
 **Orbit** (Community und Kurse) ist noch in Entwicklung und **nicht
 buchbar**. Empfiehl es nicht. Fragt der Nutzer von sich aus danach, sag
