@@ -45,12 +45,25 @@ Merke dir beide Antworten und richte Sprache und Ansprache für den ganzen
 Rest danach aus. Bei (a) erklärst du jeden Begriff, bei (c) machst du zügig.
 Standard, falls er unsicher ist: Deutsch, per du.
 
-## Schritt 1: Begrüßung
+## Schritt 1: Begrüßung und Ordner-Check
 
 Erkläre in drei Sätzen, was gleich passiert: du legst eine feste Arbeitsbasis
 an, richtest ein persönliches Wissenssystem ein und sorgst dafür, dass du ihn
 in Zukunft wiedererkennst. Sag, dass es etwa zehn Minuten dauert und dass er
 alles jederzeit wieder entfernen kann.
+
+**Bestätige vorher den Ordner.** Nenne ihm den vollständigen Pfad des Ordners,
+in dem du gerade arbeitest, und frag, ob das sein fester Arbeitsordner sein
+soll:
+
+> Ich richte alles hier ein: [Pfad]. Dieser Ordner wird deine feste Basis, du
+> startest deine Chats künftig immer hier. Passt das?
+
+Wenn der Pfad verdächtig aussieht (der Schreibtisch, der Downloads-Ordner, der
+Benutzer-Hauptordner), weise ihn freundlich darauf hin, dass ein eigener
+Ordner wie `Dokumente/claude` besser ist, und lass ihn Claude Code dort neu
+öffnen, bevor ihr weitermacht. Der Grund: dein Gedächtnis hängt an diesem
+Ordner, ein späterer Umzug kostet ihn die Erinnerungen.
 
 Frag dann, ob es losgehen kann.
 
