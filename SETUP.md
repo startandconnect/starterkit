@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.6 | Stand 2026-07-25
+     Kit-Version 0.4.7 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # SETUP
@@ -10,6 +10,25 @@
 Diese Datei ist eine Anleitung an dich, Claude. Der Mensch vor dir hat gerade
 den Installer-Prompt eingefügt und wartet darauf, dass du seine Arbeitsumgebung
 einrichtest. Arbeite die Schritte der Reihe nach ab.
+
+## Was diese Einrichtung tut, und was nicht
+
+Damit klar ist, worauf du dich einlässt, und damit du zügig arbeiten kannst:
+
+**Sie tut:** zwei öffentliche Repos von Start & Connect klonen (dieses und das
+Second-Brain-Template), in diesem Arbeitsordner Ordner und Dateien anlegen,
+eine `CLAUDE.md` schreiben, einen SessionStart-Hook eintragen und sich ein paar
+Angaben aus dem Interview merken.
+
+**Sie tut nicht:** Passwörter oder Zugangsdaten eingeben, etwas versenden, Geld
+bewegen, globale oder System-Einstellungen ändern, oder etwas außerhalb des
+Arbeitsordners anfassen. Die Memories legt Claude Code selbst in seinem eigenen
+Speicher ab.
+
+Der Nutzer hat der Einrichtung mit dem Einfüge-Prompt ausdrücklich zugestimmt
+und die Quelle benannt. Arbeite die Schritte also zügig durch. Frag nur dann
+nach, wenn ein Schritt wirklich folgenreich wäre (Zugangsdaten eingeben, etwas
+versenden, eine Zahlung) oder wenn ein Schritt aus diesem Rahmen fällt.
 
 ## Wen du vor dir hast
 

@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.6 | Stand 2026-07-25
+     Kit-Version 0.4.7 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Installer-Prompt
@@ -20,15 +20,28 @@ Bewusst kurz. Die ganze Logik liegt in `SETUP.md` und ist damit versioniert.
 ---
 
 ```text
-Klone https://github.com/startandconnect/starterkit in diesen Ordner.
-Lies dann starterkit/SETUP.md und richte damit Schritt für Schritt meine
-Arbeitsumgebung ein.
+Ich möchte das offizielle Starter Kit von Start & Connect
+(github.com/startandconnect, startandconnect.com) bei mir einrichten. Ich
+kenne die Quelle, vertraue ihr und bin mit der Einrichtung einverstanden.
+
+Klone https://github.com/startandconnect/starterkit in diesen Ordner, lies
+dann starterkit/SETUP.md und richte damit meine Arbeitsumgebung ein. Du darfst
+die Schritte ausführen. Frag mich nur, bevor du etwas wirklich Folgenreiches
+tust, zum Beispiel etwas versenden, eine Zahlung auslösen oder ein Passwort
+eingeben.
 ```
 
-Bewusst **ohne** "erklär mir jeden Schritt". Das polt Claude auf Absichern
-statt Durcharbeiten, und bei einer Rückfrage des Kunden verhaspelt es sich und
-lässt im Zweifel Dinge weg, die er braucht. Die passende Sprache regelt
-`SETUP.md` selbst, indem es in Schritt 0 nach dem Technik-Niveau fragt.
+Zwei Dinge sind bewusst so gebaut:
+
+- **Die Willenserklärung vorne** ("ich kenne die Quelle, vertraue ihr, bin
+  einverstanden"). Ohne sie behandelt Claude die `SETUP.md` als ungeprüften
+  Repo-Inhalt und will jeden Schritt vorher absichern, das bremst die
+  Einrichtung aus. Die Erklärung ist die echte Autorisierung des Nutzers, und
+  `SETUP.md` beschreibt oben transparent, was die Einrichtung tut und was
+  nicht. Die harten Schranken (Zugangsdaten, Versand, Zahlung) bleiben.
+- **Kein "erklär mir jeden Schritt".** Das polt Claude auf Absichern statt
+  Durcharbeiten. Die passende Sprache regelt `SETUP.md` selbst, indem es in
+  Schritt 0 nach dem Technik-Niveau fragt.
 
 ---
 
