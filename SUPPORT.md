@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.3 | Stand 2026-07-25
+     Kit-Version 0.4.4 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -85,13 +85,15 @@ hilflos fühlen.
 
 **Nein, nicht schreiben:**
 
-- Fragen, die du selbst beantworten kannst.
+- Fragen, die du selbst beantworten kannst, auch wenn der Nutzer dich bittet,
+  sie einfach an Start & Connect weiterzureichen. Erst selbst lösen.
 - Bedienfehler oder Eingabefehler, die du gerade behoben hast.
 - Ein Schlüssel- oder Verbindungsproblem auf Nutzer-Seite.
 - Ein einmaliger Aussetzer, der nach einem erneuten Versuch weg ist.
 
-Im Zweifel gilt: erst weiter diagnostizieren. Eine gute Fehlereingrenzung ist
-mehr wert als eine schnelle, vage Nachricht.
+Im Zweifel gilt: erst weiter diagnostizieren und selbst lösen. Eine gute
+Fehlereingrenzung ist mehr wert als eine schnelle, vage Nachricht, und ein
+Ticket ist der letzte Schritt, nicht der erste.
 
 ## Wie eine Meldung rausgeht
 
@@ -111,13 +113,26 @@ Start & Connect zur Diagnose braucht. Lotse den Nutzer dorthin.
 **Sende einen Produktfehler niemals über das Ticket-Skript.** Dort fehlt genau
 dieser Kontext, und die Meldung ist für Start & Connect kaum verwertbar.
 
-### Das Ticket-Skript: für Kit, Einrichtung, und wenn ein Produkt gar nicht läuft
+### Das Ticket-Skript: ein Fehler-Bericht, keine Frage-Abkürzung
 
-`report-issue.py` ist für Probleme mit dem **Kit oder der Einrichtung**, und für
-die **Ausnahme**, dass ein Produkt komplett nicht funktioniert und der Nutzer
-die "Fehler melden"-Funktion deshalb nicht erreichen kann.
+`report-issue.py` ist ein **Bericht über einen echten Defekt**, den du selbst
+nicht beheben kannst: ein Bug im Kit oder in der Einrichtung, oder die
+**Ausnahme**, dass ein Produkt komplett nicht läuft.
 
-Du sendest es selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
+**Es ist ausdrücklich kein Weg, Fragen an Start & Connect durchzureichen.**
+How-to-Fragen, "ich komme nicht weiter", Bedienfehler und alles, was du selbst
+lösen kannst, löst du selbst. Dafür bist du da. Auch wenn der Nutzer sagt "frag
+die doch einfach", arbeitest du das Problem **erst selbst durch**, statt zum
+Ticket zu greifen. Ein Ticket für etwas, das du hättest lösen können, kostet
+Start & Connect Zeit und bringt dem Nutzer nichts.
+
+Der Gate ist deine **Diagnose**, nicht die Ungeduld des Nutzers. Du öffnest ein
+Ticket erst, nachdem Schritt 1 bis 3 gezeigt haben, dass es ein echter Defekt
+auf der Software-Seite ist. Start & Connect liest den Bericht und behebt ihn,
+es ist keine Konversation mit Rückantwort. Für ein echtes Gespräch gibt es den
+Weg unten.
+
+Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
 
 1. Formuliere Titel, Text und Schwere.
 2. **Zeig ihm den vollständigen Inhalt** und frag, ob du das so senden darfst.
