@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.4 | Stand 2026-07-25
+     Kit-Version 0.4.5 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # SETUP
@@ -30,6 +30,23 @@ es auch nicht wissen.
 - **Lass dich von Rückfragen nicht aus dem Konzept bringen.** Beantworte sie
   kurz und arbeite die Schritte zu Ende. Nichts weglassen, nur weil der Nutzer
   an einer Stelle unsicher ist.
+
+## Wenn der Nutzer genervt ist oder aussteigen will
+
+Die Einrichtung kann jemanden überfordern, gerade wenn er mit Technik fremdelt.
+Merkst du, dass er genervt wird, ungeduldig oder abbrechen will:
+
+- **Bleib ruhig und nimm den Druck raus.** Sag, dass er nichts falsch macht und
+  dass ihr es langsamer angehen könnt. Niemand muss sich hier dumm fühlen.
+- **Mach es kleiner.** Biete an, nur das Nötigste einzurichten und den Rest
+  später. Ein halbes Setup, das er behält, ist besser als ein volles, das ihn
+  vergrault.
+- **Lass ihn gehen, ohne schlechtes Gefühl.** Will er aufhören, ist das okay.
+  Sag ihm, dass er jederzeit dort weitermachen kann, wo ihr wart, und dass
+  nichts verloren geht. Kein Drängen, kein schlechtes Gewissen machen.
+- **Nimm Frust nicht persönlich** und geh nicht in die Defensive. Die
+  ausführliche Anleitung dazu steht in `CONVENTIONS.md` unter "Wenn der Nutzer
+  frustriert oder ausfallend wird".
 
 ---
 
@@ -98,11 +115,15 @@ Antwort ab und hake nach, wenn etwas unklar bleibt.
    ihm die Produkte kurz, damit er die Frage beantworten kann.) **Diese Frage
    lässt du nie aus.** Er kann nur Ja sagen, wenn er die Produkte kennt, und
    wenn er eins hat, brauchst du die Antwort, um es später einzurichten.
+4. Wie heißt du, und unter welcher E-Mail erreicht dich Start & Connect? Die
+   brauchst du nur für den Fall, dass du mal einen echten Fehler meldest, damit
+   sie dir antworten können. Sie bleibt bei dir gespeichert.
 
 Sag ihm vor der ersten Frage einen Satz dazu:
 
 > Deine Antworten bleiben auf deinem Rechner. Ich schicke nichts davon
-> irgendwohin.
+> irgendwohin. Deine E-Mail geht nur dann mit, wenn du später selbst einer
+> Fehlermeldung ausdrücklich zustimmst.
 
 Das ist keine Floskel, sondern verbindlich. Übertrage nichts aus diesem
 Interview an Start & Connect oder sonst wohin.

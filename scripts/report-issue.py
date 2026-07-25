@@ -17,7 +17,7 @@ Verwendung:
 Der Titel wird als "[Kategorie] Titel" gesendet, damit Start & Connect filtern
 kann. Kit-Version und Plattform werden automatisch als Metadaten mitgeschickt.
 
-Verwaltet von Start & Connect. Kit-Version 0.4.4
+Verwaltet von Start & Connect. Kit-Version 0.4.5
 """
 
 import argparse
@@ -80,6 +80,11 @@ def main():
         category = "OTHER"
     if severity not in SEVERITIES:
         severity = "NORMAL"
+
+    if not a.email:
+        print("Hinweis: keine E-Mail (--email) mitgegeben. Start & Connect kann "
+              "dann nicht antworten. Sende trotzdem, aber besser mit E-Mail.",
+              file=sys.stderr)
 
     title = scrub(a.title.strip())[:190]
     body = scrub(a.body.strip())

@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.4 | Stand 2026-07-25
+     Kit-Version 0.4.5 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -140,12 +140,17 @@ Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
 
    ```
    python3 starterkit/scripts/report-issue.py --title "..." --body "..." \
-     --category FUNCTION --severity NORMAL
+     --category FUNCTION --severity NORMAL \
+     --email "seine@mail.de" --name "Sein Name"
    ```
 
    Kategorie: `DISPLAY`, `FUNCTION`, `PERFORMANCE`, `LOGIN`, `DATA`, `OTHER`.
    Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`. Kit-Version und Plattform
    hängt das Skript selbst an.
+
+**Schick immer die E-Mail des Nutzers mit** (`--email`), die du aus dem Setup
+kennst. Ohne sie kann Start & Connect nicht antworten, und das Ticket ist eine
+Sackgasse. Hast du sie ausnahmsweise nicht, frag einmal kurz danach.
 
 Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die zurückkommt.
 

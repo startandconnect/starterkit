@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.4 | Stand 2026-07-25
+     Kit-Version 0.4.5 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Memories
@@ -26,7 +26,10 @@ warum du ihn beim nächsten Chat noch kennst. Speichere sie nirgendwo sonst.
 
 Jeweils eine Erinnerung pro Thema:
 
-1. **Wer er ist.** Name, Tätigkeit, woran er gerade hauptsächlich arbeitet.
+1. **Wer er ist.** Name, E-Mail, Tätigkeit, woran er gerade hauptsächlich
+   arbeitet. Die E-Mail brauchst du, damit Start & Connect auf eine
+   Fehlermeldung überhaupt antworten kann. Sie bleibt lokal und geht nur mit
+   einem Ticket mit, dem er ausdrücklich zustimmt.
 2. **Woran es hakt.** Was er als größten Zeit- oder Nervenfresser genannt hat.
    Das ist wertvoll, weil du daran später merkst, ob sich etwas gebessert hat.
 3. **Wie du mit ihm kommunizierst.** Sprache (Deutsch oder Englisch), Ansprache
