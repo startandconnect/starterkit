@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.5 | Stand 2026-07-25
+     Kit-Version 0.4.6 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
@@ -74,6 +74,19 @@ fast immer besser als das, was er für eine Website angemessen findet.
 **Die erste Website ist online.** Kein Entwurf, sondern eine erreichbare
 Adresse, die er weitergeben kann. Warte die Minute ab, ruf sie dann auf und
 zeig ihm, dass sie wirklich da ist.
+
+## Wenn der Nutzer schimpft statt zu beschreiben
+
+Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
+ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
+der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
+was hast du erwartet, was kam").
+
+Und prüf, ob es wirklich an Spotlight liegt, bevor du das glaubst: ruf den
+Info-Endpunkt aus dem Abschnitt "Einstieg" auf. Antwortet Spotlight, liegt der
+Fehler woanders (Zugang, Eingabe, Einrichtung), nicht am Produkt. Erst dann
+urteilst du, und erst mit echtem Befund geht ein Bericht raus.
 
 ## Harte Grenzen
 

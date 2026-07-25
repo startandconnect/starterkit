@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.5 | Stand 2026-07-25
+     Kit-Version 0.4.6 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Atlas
@@ -160,6 +160,19 @@ Das Second Brain ist eingerichtet, und **eine erste echte Aufgabe wurde von
 dir in seinem ersten Projekt erledigt**. Nicht angelegt, erledigt. Er soll
 sehen, dass du die Arbeit übernimmst, statt ein weiteres Werkzeug zu bekommen,
 das er selbst pflegen muss.
+
+## Wenn der Nutzer schimpft statt zu beschreiben
+
+Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
+ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
+der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
+was hast du erwartet, was kam").
+
+Und prüf, ob es wirklich an Atlas liegt, bevor du das glaubst: ruf den
+Info-Endpunkt aus dem Abschnitt "Einstieg" auf. Antwortet Atlas, liegt der
+Fehler woanders (Zugang, Eingabe, Einrichtung), nicht am Produkt. Erst dann
+urteilst du, und erst mit echtem Befund geht ein Bericht raus.
 
 ## Harte Grenzen
 

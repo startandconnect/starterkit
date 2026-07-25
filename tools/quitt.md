@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.5 | Stand 2026-07-25
+     Kit-Version 0.4.6 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Quitt
@@ -88,6 +88,19 @@ niemals anstelle davon.
 Je nachdem, was zu ihm passt: **die erste Buchung ist erfasst** oder **die
 erste Rechnung ist geschrieben**. Nimm einen echten Vorgang aus seinem Alltag.
 Der Aha-Moment liegt darin, wie schnell es geht.
+
+## Wenn der Nutzer schimpft statt zu beschreiben
+
+Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
+ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
+der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
+was hast du erwartet, was kam").
+
+Und prüf, ob es wirklich an Quitt liegt, bevor du das glaubst: ruf den
+Info-Endpunkt aus dem Abschnitt "Einstieg" auf. Antwortet Quitt, liegt der
+Fehler woanders (Zugang, Eingabe, Einrichtung), nicht am Produkt. Erst dann
+urteilst du, und erst mit echtem Befund geht ein Bericht raus.
 
 ## Harte Grenzen
 

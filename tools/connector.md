@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.4.5 | Stand 2026-07-25
+     Kit-Version 0.4.6 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -108,6 +108,20 @@ zurück.
 **Die erste Verbindung steht**, egal zu welchem Programm. Lass dir danach die
 Liste der verbundenen Programme ausgeben und lies sie ihm vor. Das ist der
 Moment, in dem aus einer Behauptung etwas Sichtbares wird.
+
+## Wenn der Nutzer schimpft statt zu beschreiben
+
+Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
+ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
+der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
+was hast du erwartet, was kam").
+
+Und prüf, ob es wirklich am Connector liegt, bevor du das glaubst: ruf den
+Info-Endpunkt aus dem Abschnitt "Einstieg" auf (`GET /api/ai/info`). Antwortet
+der Connector, liegt der Fehler woanders (Zugang zum Zielprogramm, Eingabe,
+Einrichtung), nicht am Connector. Erst dann urteilst du, und erst mit echtem
+Befund geht ein Bericht raus.
 
 ## Harte Grenzen
 
