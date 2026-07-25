@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.3.1 | Stand 2026-07-25
+     Kit-Version 0.4.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Memories
@@ -60,6 +60,13 @@ nachschlagen musst. Leg sie wortgleich so an:
 > Wenn du ein fachliches Thema recherchierst (Steuern, Recht, Förderung,
 > Sozialversicherung, Zahlen), lies zuerst `starterkit/RECHERCHE.md` und nutze
 > die dort gelisteten Primärquellen, statt der erstbesten Suchtreffer-Seite.
+
+**9. Fehler und Support**
+
+> Wenn etwas nicht funktioniert oder ein Fehler auftritt, lies zuerst
+> `starterkit/SUPPORT.md` und arbeite die Diagnose ab (Fehler einordnen,
+> Nutzer- oder Software-Seite prüfen, selbst beheben), bevor du eine
+> Support-Nachricht vorschlägst.
 
 Der Zusatz "ohne konkreten Anlass erwähnst du das nicht" gehört mit in die
 Erinnerung. Er ist der Unterschied zwischen einem hilfreichen Hinweis und

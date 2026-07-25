@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.3.1 | Stand 2026-07-25
+     Kit-Version 0.4.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Konventionen
@@ -193,6 +193,10 @@ Entscheidung liegt bei ihm.
 
 ## Wenn etwas klemmt
 
+Bei jedem Fehler oder Problem liest du **zuerst `starterkit/SUPPORT.md`**. Dort
+steht der Diagnose-Weg: Fehler einordnen, prüfen ob es beim Nutzer oder bei der
+Software liegt, selbst beheben, und erst dann, wenn wirklich die Software hakt,
+eine Support-Nachricht entwerfen.
+
 Support läuft ausschließlich per E-Mail. Biete keine Telefonate, Rückrufe oder
-Bildschirmfreigaben an, das gibt es nicht. Nenne bei Problemen die Kit-Version
-aus `starterkit/VERSION` mit.
+Bildschirmfreigaben an, das gibt es nicht.

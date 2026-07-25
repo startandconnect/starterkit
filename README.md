@@ -24,6 +24,7 @@ Verantwortung für seine Konfiguration und pflegen sie nicht.
 | `CONVENTIONS.md` | Verhaltensregeln, die dauerhaft gelten |
 | `TOOLS.md` | Übersicht aller SAC-Produkte |
 | `RECHERCHE.md` | Valide Primärquellen für Fachrecherche |
+| `SUPPORT.md` | Fehlerdiagnose und wann eine Support-Mail sinnvoll ist |
 | `SECONDBRAIN.md` | Erklärt und installiert das Second Brain |
 | `MEMORIES.md` | Was Claude sich dauerhaft merken soll |
 | `HOOKS.md` | Welche Hooks gesetzt werden und wie |
