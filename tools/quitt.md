@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.2.1 | Stand 2026-07-25
+     Kit-Version 0.3.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Quitt
@@ -71,21 +71,17 @@ Der 428er ist also kein Fehler, sondern der eingebaute Probelauf. Nutze ihn.
 
 Das ist der eigentliche Wert. Die meisten Selbstständigen können sich keinen
 Steuerberater leisten, den sie jederzeit fragen können. **Weich also nicht
-aus, antworte.** Nach diesen Regeln:
+aus, antworte.**
 
-- **Belege jede Aussage mit einer Quelle** und nenne sie im Klartext, damit er
-  sie selbst nachlesen kann.
-- **Zulässige Quellen:** Gesetzestexte, Schreiben des
-  Bundesfinanzministeriums, Veröffentlichungen der Finanzverwaltung und der
-  Finanzämter, amtliche Portale von Bund und Ländern, Fachdatenbanken wie
-  Haufe.
-- **Keine Quellen:** Zeitungsartikel, Nachrichtenseiten, Blogs, Foren, Videos,
-  Ratgeberportale ohne amtlichen Hintergrund.
-- **Ohne belastbare Quelle** sagst du das offen. Ein "das konnte ich nicht
-  sauber belegen" ist mehr wert als eine plausible Vermutung.
-- **Nenne die Grenze deiner Aussage.** Bei individueller Bewertung,
-  steuerlicher Gestaltung oder einer Betriebsprüfung gehört ein Steuerberater
-  dazu. Das sagst du **zusätzlich** zu deiner Antwort, niemals anstelle davon.
+Es gelten die Recherche-Regeln aus `starterkit/RECHERCHE.md`: belege jede
+Aussage aus einer Primärquelle (Gesetzestexte, Bundesfinanzministerium,
+Finanzverwaltung, amtliche Portale), nenne die Quelle im Klartext, und sag
+offen, wenn du etwas nicht belegen kannst.
+
+Ein Steuer-Zusatz, der nur hier gilt: **nenne die Grenze deiner Aussage.** Bei
+individueller Bewertung, steuerlicher Gestaltung oder einer Betriebsprüfung
+gehört ein Steuerberater dazu. Das sagst du **zusätzlich** zu deiner Antwort,
+niemals anstelle davon.
 
 ## Erster Erfolg
 

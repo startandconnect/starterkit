@@ -23,6 +23,7 @@ Verantwortung für seine Konfiguration und pflegen sie nicht.
 | `SETUP.md` | Der Dirigent. Claude liest das zuerst und arbeitet es ab |
 | `CONVENTIONS.md` | Verhaltensregeln, die dauerhaft gelten |
 | `TOOLS.md` | Übersicht aller SAC-Produkte |
+| `RECHERCHE.md` | Valide Primärquellen für Fachrecherche |
 | `SECONDBRAIN.md` | Erklärt und installiert das Second Brain |
 | `MEMORIES.md` | Was Claude sich dauerhaft merken soll |
 | `HOOKS.md` | Welche Hooks gesetzt werden und wie |

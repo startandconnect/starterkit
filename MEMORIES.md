@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.2.1 | Stand 2026-07-25
+     Kit-Version 0.3.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Memories
@@ -54,6 +54,12 @@ nachschlagen musst. Leg sie wortgleich so an:
 > Zugangsdaten und Endpunkte stehen, ist das ein Einrichtungsauftrag. Lies
 > dann `starterkit/CONVENTIONS.md`, Abschnitt zum Systemprompt, und danach
 > `starterkit/tools/<produkt>.md`.
+
+**8. Fachrecherche**
+
+> Wenn du ein fachliches Thema recherchierst (Steuern, Recht, Förderung,
+> Sozialversicherung, Zahlen), lies zuerst `starterkit/RECHERCHE.md` und nutze
+> die dort gelisteten Primärquellen, statt der erstbesten Suchtreffer-Seite.
 
 Der Zusatz "ohne konkreten Anlass erwähnst du das nicht" gehört mit in die
 Erinnerung. Er ist der Unterschied zwischen einem hilfreichen Hinweis und
