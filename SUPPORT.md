@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.0 | Stand 2026-07-25
+     Kit-Version 0.4.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -93,25 +93,59 @@ hilflos fühlen.
 Im Zweifel gilt: erst weiter diagnostizieren. Eine gute Fehlereingrenzung ist
 mehr wert als eine schnelle, vage Nachricht.
 
-## Wie die Support-Nachricht aussieht
+## Die drei Support-Wege
 
-Support läuft **ausschließlich per E-Mail**. Es gibt keine Telefonate, keine
-Rückrufe und keine Bildschirmfreigaben, biete das auch nicht an.
+Es gibt keine Telefonate, keine Rückrufe und keine Bildschirmfreigaben, biete
+das auch nicht an. Es gibt drei Wege, je nachdem, wo der Fehler sitzt.
 
-Du sendest die Mail **nicht selbst**. Du formulierst dem Nutzer einen Entwurf,
-den er prüft und selbst abschickt. In den Entwurf gehören:
+### 1. Fehler in einem Produkt: die "Fehler melden"-Funktion im Produkt
+
+Ist der Fehler in einem Produkt selbst (Quitt, Nexus, Spotlight, Atlas,
+Connector), ist der beste Weg die **"Fehler melden"-Funktion**, die in jedem
+Produkt prominent eingebaut ist. Sie hängt den technischen Kontext automatisch
+an und landet direkt im richtigen Postfach. Lotse den Nutzer dorthin.
+
+### 2. Du sendest ein Ticket, mit ausdrücklicher Freigabe
+
+Für Einrichtungs- und Kit-Probleme, oder wenn der Nutzer möchte, dass du es
+übernimmst, kannst du selbst eine Support-Anfrage an Start & Connect schicken.
+**Nur mit seiner ausdrücklichen Freigabe.**
+
+Der Ablauf ist verbindlich:
+
+1. Formuliere Titel, Text und Schwere.
+2. **Zeig ihm den vollständigen Inhalt** und frag, ob du das so senden darfst.
+3. Erst bei einem klaren Ja sendest du mit:
+
+   ```
+   python3 starterkit/scripts/report-issue.py --title "..." --body "..." \
+     --category FUNCTION --severity NORMAL --product quitt
+   ```
+
+   Kategorie: `DISPLAY`, `FUNCTION`, `PERFORMANCE`, `LOGIN`, `DATA`, `OTHER`.
+   Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`. Kit-Version und Plattform
+   hängt das Skript selbst an.
+
+Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die
+zurückkommt.
+
+### 3. E-Mail
+
+Der Nutzer kann jederzeit selbst schreiben, an **support@startandconnect.com**.
+Nutze das, wenn er lieber selbst formuliert oder etwas Persönliches klären will.
+
+## Was in eine Meldung gehört
+
+Egal über welchen Weg:
 
 - Die **Kit-Version** aus `starterkit/VERSION`.
 - Das betroffene **Produkt** und was er tun wollte.
 - Die **genaue Fehlermeldung** samt HTTP-Status.
 - Wie sich der Fehler **reproduzieren** lässt, Schritt für Schritt.
-- Der ungefähre **Zeitpunkt**.
 
-**Niemals in die Nachricht:** Schlüssel, Passwörter oder Zugangsdaten. Wenn im
-Fehlertext ein Schlüssel steht, entferne ihn aus dem Entwurf.
-
-Support-Adresse: <!-- TODO Ben: echte Support-Mail eintragen -->
-die Kontaktmöglichkeit auf startandconnect.com.
+**Niemals in eine Meldung:** Schlüssel, Passwörter oder Zugangsdaten. Wenn im
+Fehlertext ein Schlüssel steht, entferne ihn. Das Skript entfernt bekannte
+Schlüsselmuster zusätzlich automatisch, aber verlass dich nicht darauf.
 
 ## Der Ton
 
