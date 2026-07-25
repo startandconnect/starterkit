@@ -1,11 +1,11 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.3.0 | Stand 2026-07-25
+     Kit-Version 0.3.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Atlas
 
-**14 Tage kostenlos testbar. Aktuelle Infos und Preise auf startandconnect.com.**
+**14 Tage kostenlos testbar. Aktuelle Infos und Preise auf startandconnect.com/atlas.**
 
 ## Was es macht
 

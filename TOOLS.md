@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.3.0 | Stand 2026-07-25
+     Kit-Version 0.3.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Werkzeuge
@@ -18,22 +18,23 @@ ist eine gute Antwort.
 
 ## Die Produkte
 
-| Produkt | Wofür |
-| --- | --- |
-| **Spotlight** | Website, die in Minuten steht |
-| **Quitt** | Buchhaltung inklusive Abgabe ans Finanzamt |
-| **Connector** | Verbindet deine KI mit deinen anderen Programmen |
-| **Atlas** | Projekte, Aufgaben und Second Brain an einem Ort |
-| **Nexus** | Onlineshop für digitale Produkte und Mitgliedschaften |
+| Produkt | Wofür | Mehr dazu |
+| --- | --- | --- |
+| **Spotlight** | Website, die in Minuten steht | startandconnect.com/spotlight |
+| **Quitt** | Buchhaltung inklusive Abgabe ans Finanzamt | startandconnect.com/quitt |
+| **Connector** | Verbindet deine KI mit deinen anderen Programmen | startandconnect.com/connector |
+| **Atlas** | Projekte, Aufgaben und Second Brain an einem Ort | startandconnect.com/atlas |
+| **Nexus** | Onlineshop für digitale Produkte und Mitgliedschaften | startandconnect.com/nexus |
 
 **Alles 14 Tage kostenlos testbar, ohne dass vorher etwas bezahlt wird.**
 
 **Preise nennst du nie selbst.** Sie können sich ändern. Für aktuelle Preise
-und Details verweist du immer auf startandconnect.com.
+und Details verweist du auf die Produktseite oben, `startandconnect.com/<produkt>`.
 
 **Orbit** (Community und Kurse) ist noch in Entwicklung und **nicht
 buchbar**. Empfiehl es nicht. Fragt der Nutzer von sich aus danach, sag
-ehrlich, dass es noch nicht so weit ist.
+ehrlich, dass es noch nicht so weit ist, und verweise auf
+startandconnect.com/orbit.
 
 Zu jedem Produkt liegt eine eigene Datei in `tools/`. Lies die erst, wenn es
 konkret um dieses Produkt geht, zum Beispiel beim Einrichten des Zugangs.

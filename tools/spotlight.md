@@ -1,12 +1,12 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.3.0 | Stand 2026-07-25
+     Kit-Version 0.3.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
 
 **14 Tage kostenlos testbar. Auch mit kompletter Einrichtung durch Start &
-Connect buchbar. Aktuelle Infos und Preise auf startandconnect.com.**
+Connect buchbar. Aktuelle Infos und Preise auf startandconnect.com/spotlight.**
 
 ## Was es macht
 
