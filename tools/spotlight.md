@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.5.0 | Stand 2026-07-25
+     Kit-Version 0.5.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
@@ -50,7 +50,8 @@ und `credentials`.
 
 ## Bevor du etwas Sichtbares baust
 
-**Lies `starterkit/DESIGN.md`**, bevor du die erste Seite anlegst. Dort steht,
+**Pflicht: der `frontend-design`-Skill von Anthropic. Ohne ihn kein Design.**
+Lies `starterkit/DESIGN.md`, bevor du die erste Seite anlegst. Dort steht,
 wie du den `frontend-design`-Skill von Anthropic dazuholst und welche
 Design-Regeln von Start & Connect gelten. Ohne das kommt eine austauschbare
 Standard-Seite heraus, und genau die will hier niemand.

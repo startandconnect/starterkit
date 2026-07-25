@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.5.0 | Stand 2026-07-25
+     Kit-Version 0.5.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # SETUP
@@ -182,6 +182,8 @@ Vorlage:
   Eine neue Memory legst du nur an, wenn ich es ausdrücklich sage.
 - Wirkt etwas im `secondbrain/` veraltet, frag mich, statt es blind zu nutzen
   oder zu verwerfen.
+- Website- oder Shop-Design nie ohne den `frontend-design`-Skill. Vorher
+  `starterkit/DESIGN.md` lesen.
 ```
 
 Passe die Sprache und Ansprache der Vorlage an das an, was er in Schritt 0

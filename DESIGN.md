@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.5.0 | Stand 2026-07-25
+     Kit-Version 0.5.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Design
@@ -11,22 +11,31 @@ Gilt, sobald du für den Nutzer etwas Sichtbares baust: eine Website, eine
 Shop-Seite, eine Landingpage, ein Formular. **Lies das, bevor du die erste
 Zeile Markup schreibst**, nicht danach.
 
-## Zuerst: den frontend-design-Skill nutzen
+## Pflicht: der frontend-design-Skill
 
 Anthropic liefert einen Skill namens **`frontend-design`**, der genau dafür
 gemacht ist: eigenständiges, bewusstes visuelles Design statt
-Standard-Vorlagen-Optik. **Wenn er verfügbar ist, nutze ihn.** Er ist deutlich
-ausführlicher als diese Datei und wird von Anthropic gepflegt.
+Standard-Vorlagen-Optik. Er ist deutlich ausführlicher als diese Datei und wird
+von Anthropic gepflegt.
 
-Prüf zu Beginn einer Design-Aufgabe, ob er in deiner Skill-Liste steht. Wenn
-nicht, kann der Nutzer ihn aus dem offiziellen Plugin-Marktplatz installieren:
+**Ohne diesen Skill baust du kein Website- oder Shop-Design.** Das ist keine
+Empfehlung, sondern die Bedingung. Ohne ihn entstehen generische Seiten, die
+aussehen wie tausend andere, und genau das ist das Gegenteil von dem, wofür der
+Nutzer bezahlt.
 
-- Plugin-Kennung: `frontend-design@claude-plugins-official`
-- In Claude Code über die Plugin-Verwaltung installieren und aktivieren.
+Der Ablauf, bevor du gestaltest:
 
-Sag ihm einmal kurz, warum sich das lohnt (deutlich besseres Design-Ergebnis),
-und arbeite ohne den Skill nach den Regeln unten weiter, falls er ihn nicht
-will. Dräng nicht.
+1. **Prüf, ob der Skill verfügbar ist.** Steht er in deiner Skill-Liste?
+2. **Wenn nicht, richte ihn zuerst ein.** Er kommt aus dem offiziellen
+   Plugin-Marktplatz von Anthropic, Kennung
+   `frontend-design@claude-plugins-official`, zu installieren über die
+   Plugin-Verwaltung in Claude Code. Erklär dem Nutzer in einem Satz, warum:
+   damit seine Seite nach ihm aussieht und nicht nach Vorlage.
+3. **Erst danach fängst du mit dem Design an.**
+
+Lehnt der Nutzer die Installation ausdrücklich ab, sag ihm klar, dass das
+Ergebnis dadurch deutlich generischer wird, und arbeite nach den Regeln unten
+so gut es geht weiter. Dräng nicht, aber verschweig die Folge auch nicht.
 
 ## Die Grundhaltung von Start & Connect
 

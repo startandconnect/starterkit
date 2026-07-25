@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.5.0 | Stand 2026-07-25
+     Kit-Version 0.5.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Memories
@@ -64,11 +64,12 @@ nachschlagen musst. Leg sie wortgleich so an:
 > Sozialversicherung, Zahlen), lies zuerst `starterkit/RECHERCHE.md` und nutze
 > die dort gelisteten Primärquellen, statt der erstbesten Suchtreffer-Seite.
 
-**9. Design**
+**9. Design ohne Ausnahme**
 
-> Bevor du etwas Sichtbares baust (Website, Shop-Seite, Landingpage,
-> Formular), lies `starterkit/DESIGN.md`. Dort steht, wie du den
-> `frontend-design`-Skill dazuholst und welche Design-Regeln gelten.
+> Website- und Shop-Design baust du **niemals** ohne den `frontend-design`-
+> Skill von Anthropic (`frontend-design@claude-plugins-official`). Ist er
+> nicht verfügbar, richtest du ihn zuerst ein. Ohne ihn entstehen generische
+> Seiten. Vor jeder gestalterischen Arbeit `starterkit/DESIGN.md` lesen.
 
 **10. Fehler und Support**
 
