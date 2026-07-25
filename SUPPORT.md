@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.4.2 | Stand 2026-07-25
+     Kit-Version 0.4.3 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -95,14 +95,29 @@ mehr wert als eine schnelle, vage Nachricht.
 
 ## Wie eine Meldung rausgeht
 
-Zum Fehler-Beheben gibt es keine Telefonate und keine Bildschirmfreigaben,
-biete das nicht an.
+Fehler werden immer **asynchron mit KI-Hilfe** behoben. Ein Telefonat oder ein
+Loom-Video bringt dabei weder dem Nutzer noch Start & Connect etwas, es hilft
+nur eine **präzise, schriftliche Fehlerbeschreibung**. Biete also keine Calls
+und keine Bildschirmvideos an, sondern erstelle mit dem Nutzer eine gute
+Beschreibung.
 
-### Der Hauptweg: das Ticket
+### Fehler in einem gebuchten Produkt: die "Fehler melden"-Funktion
 
-**Jeder Fehler** kann als Ticket an Start & Connect gehen, nicht nur Kit- oder
-Einrichtungsprobleme. Du sendest es selbst, **nur mit ausdrücklicher Freigabe**
-des Nutzers:
+Das ist der **Hauptweg**, wenn der Fehler in einem Produkt sitzt (Quitt, Nexus,
+Spotlight, Atlas, Connector). Jedes Produkt hat die **"Fehler melden"-Funktion**
+prominent eingebaut. Sie hängt den technischen Kontext automatisch an, den
+Start & Connect zur Diagnose braucht. Lotse den Nutzer dorthin.
+
+**Sende einen Produktfehler niemals über das Ticket-Skript.** Dort fehlt genau
+dieser Kontext, und die Meldung ist für Start & Connect kaum verwertbar.
+
+### Das Ticket-Skript: für Kit, Einrichtung, und wenn ein Produkt gar nicht läuft
+
+`report-issue.py` ist für Probleme mit dem **Kit oder der Einrichtung**, und für
+die **Ausnahme**, dass ein Produkt komplett nicht funktioniert und der Nutzer
+die "Fehler melden"-Funktion deshalb nicht erreichen kann.
+
+Du sendest es selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
 
 1. Formuliere Titel, Text und Schwere.
 2. **Zeig ihm den vollständigen Inhalt** und frag, ob du das so senden darfst.
@@ -110,7 +125,7 @@ des Nutzers:
 
    ```
    python3 starterkit/scripts/report-issue.py --title "..." --body "..." \
-     --category FUNCTION --severity NORMAL --product quitt
+     --category FUNCTION --severity NORMAL
    ```
 
    Kategorie: `DISPLAY`, `FUNCTION`, `PERFORMANCE`, `LOGIN`, `DATA`, `OTHER`.
@@ -118,11 +133,6 @@ des Nutzers:
    hängt das Skript selbst an.
 
 Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die zurückkommt.
-
-**Sitzt der Fehler in einem Produkt** (Quitt, Nexus, Spotlight, Atlas,
-Connector) und ist der Nutzer gerade darin, ist die eingebaute
-**"Fehler melden"-Funktion** noch besser, weil sie den technischen Kontext
-automatisch anhängt. Lotse ihn dann dorthin.
 
 ### Die letzte Option: E-Mail
 

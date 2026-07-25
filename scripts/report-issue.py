@@ -17,7 +17,7 @@ Verwendung:
 Der Titel wird als "[Kategorie] Titel" gesendet, damit Start & Connect filtern
 kann. Kit-Version und Plattform werden automatisch als Metadaten mitgeschickt.
 
-Verwaltet von Start & Connect. Kit-Version 0.4.2
+Verwaltet von Start & Connect. Kit-Version 0.4.3
 """
 
 import argparse
