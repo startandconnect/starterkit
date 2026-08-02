@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.5.2 | Stand 2026-07-25
+     Kit-Version 0.6.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -66,6 +66,57 @@ Affiliate, SEO und eigene Domains.
 - **Prüffehler kommen als HTTP 422** mit einer Liste der beanstandeten Felder.
   Lies die Liste, statt zu raten.
 - Die maschinenlesbaren Schemas stehen unter `GET /api/openapi.json`.
+
+## Der Weg zum Go-Live
+
+Das ist die Reihenfolge, in der ein Shop verkaufsfertig wird. Arbeite sie von
+oben nach unten ab und lies vor jedem Schritt den genannten Info-Endpunkt.
+Überspring nichts, auch wenn es unwichtig aussieht.
+
+| # | Schritt | Info-Endpunkt | Pflicht |
+| --- | --- | --- | --- |
+| 1 | Firmendaten (Name, Anschrift, USt-IdNr.) | `/api/settings/info` | ja |
+| 2 | Branding (Shop-Name, Logo) | `/api/settings/info` | ja |
+| 3 | Theme (Akzentfarbe, Schrift) | `/api/theme/info` | nein |
+| 4 | Produkte, Varianten, Preise, Bestand | `/api/products/info` | ja |
+| 5 | Funktionsumfang | `/api/ai/features` | nichts zu tun |
+| 6 | Seiten und Navigation | `/api/pages/info` | ja |
+| 7 | Rechtsseiten befüllen | `/api/pages/info` | ja |
+| 8 | Steuern | `/api/settings/info` | ja |
+| 9 | Versand | `/api/shipping/info` | bei Ware |
+| 10 | Zahlungen (Stripe) | `/api/settings/info` | ja |
+| 11 | E-Mail-Absender | `/api/settings/info` | ja |
+| 12 | Eigene Domain | `/api/settings/info` | nein |
+
+### Die fünf Fallen in diesem Ablauf
+
+1. **Rechtsseiten sind schon da.** Impressum, Datenschutz und AGB liegen im
+   frischen Shop bereits als veröffentlichte Seiten. **Leg sie nicht neu an**,
+   sonst hat der Shop sie doppelt. Du befüllst die vorhandenen mit den
+   Firmendaten aus Schritt 1.
+2. **Ohne Versand-Einrichtung gilt kostenloser Versand.** Sobald etwas
+   Physisches verkauft wird, ist Schritt 9 Pflicht, auch wenn die Liste ihn als
+   optional führt. Sonst verschickt der Nutzer auf eigene Kosten.
+3. **Nach den Stripe-Schlüsseln muss der Webhook neu abgeglichen werden.**
+   Schlüssel eintragen allein reicht nicht, sonst kommen Zahlungen nicht im
+   Shop an.
+4. **Ohne Shop-Name steht überall "Mein Shop".** Der Name kommt aus den
+   Einstellungen und ist white-label. Schreib niemals einen Markennamen fest
+   ins Markup, weder den des Kunden noch unseren.
+5. **Ohne E-Mail-Absender verschickt der Shop nichts.** Keine
+   Bestellbestätigung, keine Double-Opt-in-Mail, keine Mahnung. Schritt 11 wird
+   gern vergessen, weil im Test alles zu funktionieren scheint.
+
+### Bevor du "fertig" sagst
+
+Prüfe am lebenden Shop, statt es anzunehmen:
+
+- Ist das Produkt über die öffentliche Produktliste sichtbar?
+- Führt ein Kaufweg von außen bis zur Kasse?
+- Stehen Firmendaten im Impressum, oder noch Platzhalter?
+- Ist ein Absender für E-Mails hinterlegt?
+
+Erst wenn das steht, ist der Shop live und nicht nur eingerichtet.
 
 ## Seiten bauen: erst `pages/info` lesen
 
