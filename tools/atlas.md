@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.6.1 | Stand 2026-07-25
+     Kit-Version 0.7.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Atlas
@@ -96,12 +96,104 @@ Atlas liefert Workflows für die typischen Ketten mit, unter anderem
 Deal wird Projekt) und `contract-sign` (Vertrag erstellen und signieren
 lassen). Folge denen, statt eigene zu erfinden.
 
+## Die Regel, die bei Atlas alles andere schlägt
+
+**Ab dem Moment, in dem Atlas eingerichtet ist, speicherst du kein Wissen mehr
+lokal.** Jede Notiz, jede Entscheidung, jeder Projektstand geht direkt ins
+Atlas-Wiki. Keine Ausnahme, auch nicht "kurz zwischenspeichern und später
+übertragen". Was lokal liegen bleibt, wird vergessen und widerspricht
+irgendwann dem, was in Atlas steht.
+
+Das gilt ab der Einrichtung, nicht erst, wenn die Migration fertig ist.
+
+## Zuerst: das Wissen des Nutzers einsammeln
+
+Das ist bei Atlas der schnelle Erfolg, vergleichbar mit der ersten Website bei
+Spotlight. Ein leeres Atlas ist wertlos, ein gefülltes wird sofort zum
+Nachschlagewerk. Also fängst du damit an.
+
+**Frag systematisch nach den Orten, an denen sein Wissen heute liegt.** Die
+meisten unterschätzen, wie viel sie schon haben:
+
+- Notizen-Apps, Textdateien, Dokumente auf dem Rechner
+- Lesezeichen, gespeicherte Artikel, Videos
+- Das, was nur im Kopf ist: Abläufe, Kniffe, Erfahrungen mit Kunden und
+  Lieferanten
+- Wiederkehrende Antworten, die er ständig neu schreibt
+- Alte Angebote, Vorlagen, Textbausteine
+
+**Dann hol es strukturiert rein, statt alles auf einmal zu kippen.** Nimm ein
+Thema nach dem anderen, frag nach, und schreib es sauber ins Wiki. Ein gut
+geschriebener Eintrag ist mehr wert als zwanzig hingeworfene.
+
+**Frag beim Schreiben nach, was fehlt.** Der Nutzer erzählt selten vollständig.
+"Und was passiert, wenn der Kunde nicht antwortet?" ist die Art Frage, die aus
+einer Notiz echtes Wissen macht.
+
+**Der Aha-Moment:** such danach etwas heraus, was er dir vor zehn Minuten
+erzählt hat. In dem Moment versteht er, wofür das gut ist.
+
+## Dann: seine Prozesse bauen
+
+Der zweite Teil, und der wertvollere. Hier geht es darum, **seine** Abläufe
+abzubilden, nicht ihm unsere aufzuzwingen.
+
+**So gehst du vor:**
+
+1. **Lass ihn einen Ablauf erzählen**, den er regelmäßig macht. Von der ersten
+   Handlung bis zu dem Punkt, an dem er sagt "fertig".
+2. **Frag nach den Bruchstellen:** Wo bleibt es liegen? Was vergisst du
+   regelmäßig? Was machst du jedes Mal von Hand? Woran merkst du überhaupt,
+   dass du dran musst?
+3. **Bild es in Atlas ab** mit dem, was dazu passt: wiederkehrende Aufgaben,
+   Aufgaben-Vorlagen, Meilensteine, Tickets, Pipelines für Verkauf,
+   Zeiterfassung.
+4. **Lauft es einmal echt durch**, mit einem realen Vorgang, nicht mit einem
+   Beispiel.
+
+**Und jetzt der Teil, der den Unterschied macht:** bau den Ablauf nicht einfach
+nach. Ein schlechter Ablauf wird durch Software nur ein schneller schlechter
+Ablauf. Stell die unbequemen Fragen:
+
+- **"Warum gibt es diesen Schritt überhaupt?"** Viele Schritte existieren, weil
+  sie mal nötig waren.
+- **"Was würdest du tun, wenn das von allein liefe?"** Das zeigt, was ihm
+  wirklich wichtig ist.
+- **"Was passiert, wenn du es einfach weglässt?"** Bei überraschend vielen
+  Schritten lautet die Antwort: nichts.
+- **"Woher weißt du, dass es geklappt hat?"** Abläufe ohne Rückmeldung scheitern
+  still.
+- **"Was machst du hier dreimal, weil du es beim ersten Mal nicht aufgeschrieben
+  hast?"** Das gehört ins Wiki, nicht in den Ablauf.
+
+Schlag Verbesserungen vor, die über das Offensichtliche hinausgehen, aber
+**entscheide nicht für ihn**. Es sind seine Abläufe, und er kennt Gründe, die
+du nicht siehst. Sag, was du siehst, und lass ihn wählen.
+
+**Halte das Ergebnis fest**, im Wiki als beschriebener Ablauf und als Memory,
+damit du beim nächsten Mal weißt, wie er arbeitet.
+
+## Mail und Kalender verbinden
+
+Empfiehl das früh, denn es ändert die Qualität deiner Arbeit sofort. Sind Mail
+und Kalender verbunden, kennst du seinen Kontext, statt danach fragen zu
+müssen: was ansteht, was ein Kunde zuletzt geschrieben hat, was diese Woche
+läuft.
+
+- **Mail:** über IMAP und SMTP oder direkt mit Google. Die Postfächer spiegeln
+  seine bestehenden Ordner, Nachrichten hängen in Gesprächsverläufen.
+- **Kalender:** Zwei-Wege-Abgleich mit Google. Die Verbindung ist unabhängig
+  vom Postfach, beides geht also auch einzeln.
+
+Details stehen in `GET /api/mail/info` und `GET /api/calendar/info`. Das
+Verbinden selbst macht der Nutzer in Atlas, das ist eine Anmeldung mit seinem
+Konto und nichts, was du für ihn erledigst.
+
 ## Atlas ersetzt das lokale secondbrain
 
-Das ist die wichtigste Folge, wenn ein Nutzer Atlas hat. Atlas bringt ein
-eigenes Wiki mit, und das wird sein Gedächtnis, nicht mehr die lokalen
-`secondbrain/`-Dateien. Zwei Speicher parallel zu pflegen führt garantiert
-zu widersprüchlichen Ständen.
+Atlas bringt ein eigenes Wiki mit, und das wird sein Gedächtnis, nicht mehr die
+lokalen `secondbrain/`-Dateien. Zwei Speicher parallel zu pflegen führt
+garantiert zu widersprüchlichen Ständen.
 
 Beim Einrichten also:
 
@@ -156,10 +248,12 @@ statt sie zu raten.
 
 ## Erster Erfolg
 
-Das Second Brain ist eingerichtet, und **eine erste echte Aufgabe wurde von
-dir in seinem ersten Projekt erledigt**. Nicht angelegt, erledigt. Er soll
-sehen, dass du die Arbeit übernimmst, statt ein weiteres Werkzeug zu bekommen,
-das er selbst pflegen muss.
+**Sein eigenes Wissen steht in Atlas, und du hast ihm daraus etwas
+herausgesucht, das er dir kurz vorher erzählt hat.** Das ist der Moment, in
+dem aus einem leeren Werkzeug sein Nachschlagewerk wird.
+
+Direkt danach: **ein echter Ablauf von ihm ist abgebildet und einmal
+durchgelaufen**, mit einem realen Vorgang. Nicht angelegt, durchgelaufen.
 
 ## Wenn der Nutzer schimpft statt zu beschreiben
 

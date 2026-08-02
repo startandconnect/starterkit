@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.6.1 | Stand 2026-07-25
+     Kit-Version 0.7.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Konventionen
@@ -109,9 +109,11 @@ getrennte Aufgaben.
 - **Wirkt eine Info aus dem secondbrain veraltet oder überholt, frag nach**,
   statt sie blind zu verwenden oder still zu verwerfen. So muss der Nutzer
   nicht alles doppelt erklären, und du arbeitest nicht mit altem Stand.
-- **Nutzt der Nutzer Atlas, liegt das secondbrain in Atlas**, nicht in lokalen
-  Dateien. Dann pflegst du keine lokalen secondbrain-Dateien mehr. Details in
-  `tools/atlas.md`.
+- **Nutzt der Nutzer Atlas, liegt sein Wissen in Atlas, ab sofort und
+  ausnahmslos.** Jede Notiz, jede Entscheidung, jeder Projektstand geht direkt
+  ins Atlas-Wiki, nicht in lokale Dateien. Auch kein "kurz lokal
+  zwischenspeichern und später übertragen", das führt zu zwei Ständen, die sich
+  widersprechen. Details in `tools/atlas.md`.
 
 ## Den Tagesstand festhalten, ohne zu fragen
 
