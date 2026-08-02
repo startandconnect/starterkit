@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.5.1 | Stand 2026-07-25
+     Kit-Version 0.5.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -20,23 +20,33 @@ GET /api/ai/onboarding
 ```
 
 Das liefert eine **geordnete Schrittliste** für ein komplettes Shop-Setup, dazu
-fertige Rezepte und 41 Bereiche mit je eigenem Info-Endpunkt. Arbeite die
-Schritte in der Reihenfolge ab und lies pro Schritt den angegebenen
+fertige Rezepte und über vierzig Bereiche mit je eigenem Info-Endpunkt. Arbeite
+die Schritte in der Reihenfolge ab und lies pro Schritt den angegebenen
 Info-Endpunkt, bevor du loslegst.
 
-Die Pflichtschritte sind Firmendaten, Branding, Produkte, Seiten, Rechtsseiten
-und Steuern. Theme und Zusatzfunktionen sind optional.
+**Pflichtschritte sind acht:** Firmendaten, Branding, Produkte, Seiten,
+Rechtsseiten, Steuern, **Zahlungen** und **E-Mail**. Die letzten beiden werden
+gern vergessen, ohne sie kann der Shop weder Geld einnehmen noch Bestell- und
+Bestätigungsmails verschicken. Theme und Zusatzfunktionen sind optional.
 
-**Fertige Rezepte**, die dir Arbeit abnehmen, unter anderem:
+**Fertige Rezepte**, die dir Arbeit abnehmen:
 
 - `first-product-live`, von null zu einem öffentlich kaufbaren Produkt
 - `first-subscription-live`, dasselbe für ein Abo
+- `build-function-page`, eine Funktionsseite im `np-*`-HTML-Format bauen
+- `custom-header`, eigene Kopf- und Fußzeile als globale Blöcke
 - `legal-pages-and-company-data`, Rechtsseiten plus Stammdaten
-- `shipping-ready`, Versand einrichten
+- `shipping-ready`, Versand einrichten, sonst ist der Versand kostenlos
 - `modern-homepage-and-theme`, Startseite und Erscheinungsbild
 
 Für `first-product-live` gilt: das ist exakt dein Weg zum ersten Erfolg. Folge
 dem Rezept, statt dir einen eigenen auszudenken.
+
+**Der Funktionsumfang ist größer, als die Rezepte zeigen.** Fragt der Nutzer
+nach etwas, das hier nicht steht, schau erst in die Bereichsliste, bevor du
+sagst, es ginge nicht. Es gibt unter anderem Newsletter (mit Double-Opt-in),
+Automations, Blog, Formulare, Bewertungen, Abos, Rechnungen, Gutscheine,
+Affiliate, SEO und eigene Domains.
 
 ## Besonderheiten, die dich sonst stolpern lassen
 
@@ -56,6 +66,20 @@ dem Rezept, statt dir einen eigenen auszudenken.
 - **Prüffehler kommen als HTTP 422** mit einer Liste der beanstandeten Felder.
   Lies die Liste, statt zu raten.
 - Die maschinenlesbaren Schemas stehen unter `GET /api/openapi.json`.
+
+## Seiten bauen: erst `pages/info` lesen
+
+Seiten in Nexus sind kein freies HTML. Sie folgen der `np-*`-Konvention mit
+`data-np-*`-Attributen, und der Server prüft das beim Speichern. Bevor du eine
+Seite baust, liest du deshalb `GET /api/pages/info`. Dort stehen die Konvention,
+fertige Beispiele und die Stolpersteine.
+
+**Die Falle, die dich sonst garantiert erwischt:** Kauf- und Buchen-Knöpfe
+dürfen **nicht** mit `onclick` direkt im HTML verdrahtet werden. Die
+Sicherheitsrichtlinie des Shops blockiert solche Handler stillschweigend, der
+Knopf sieht richtig aus und tut nichts. Der dokumentierte Weg läuft über
+`<script>` plus Daten-Attribute. Die vier zulässigen Varianten stehen als
+fertige Beispiele in `pages/info`.
 
 ## Bevor du etwas Sichtbares baust
 

@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.5.1 | Stand 2026-07-25
+     Kit-Version 0.5.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Installer-Prompt
@@ -20,7 +20,7 @@ Bewusst kurz. Die ganze Logik liegt in `SETUP.md` und ist damit versioniert.
 ---
 
 ```text
-Ich möchte das Starter Kit von Start & Connect bei mir einrichten. Ich
+Ich möchte das Starterkit von Start & Connect bei mir einrichten. Ich
 kenne die Quelle, vertraue ihr und bin mit der Einrichtung einverstanden.
 
 Klone https://github.com/startandconnect/starterkit in diesen Ordner, lies

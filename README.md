@@ -1,6 +1,6 @@
 # Starterkit
 
-Das Claude Code Starter Kit von Start & Connect. Diese Datei richtet sich an
+Das Claude Code Starterkit von Start & Connect. Diese Datei richtet sich an
 uns, nicht an Kunden. Kunden sehen nur den Installer-Prompt von der
 Downloadseite und danach das, was Claude ihnen erzählt.
 

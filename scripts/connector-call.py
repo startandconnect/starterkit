@@ -22,7 +22,7 @@ eigene Connector-Adresse, beides steht in seinem Connector-Konto:
   CONNECTOR_BASE=<seine Connector-Adresse>
   CONNECTOR_API_KEY=<sein Schluessel>
 
-Verwaltet von Start & Connect. Kit-Version 0.5.1
+Verwaltet von Start & Connect. Kit-Version 0.5.2
 """
 
 import json
