@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.6.0 | Stand 2026-07-25
+     Kit-Version 0.6.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
@@ -47,6 +47,45 @@ und `credentials`.
   bekommst, statt es anzunehmen.
 - **Beim Umbenennen einer Mediendatei** wird automatisch eine Weiterleitung
   angelegt. Alte Links bleiben also gültig.
+
+## Zuerst: das sichtbare Ergebnis
+
+**Die wichtigste Regel für die Einrichtung.** Der Nutzer will seine Seite
+sehen, nicht über Datenschutz und Domains reden. Fang deshalb niemals mit dem
+Pflichtkram an, sondern bring schnell etwas auf den Bildschirm, das ihm
+gefällt.
+
+1. **Frag ihn die fünf Fragen weiter unten**, vor allem die zweite (was machst
+   du, wie du es dem Nachbarn erzählen würdest). Die Antwort ist dein Text.
+2. **Bau eine Seite daraus**, nach den Regeln aus `DESIGN.md`, damit sie nach
+   ihm aussieht und nicht nach Vorlage.
+3. **Zeig sie ihm live.** Öffentlich erreichbar, unter einer Adresse, die er
+   weitergeben kann.
+
+Eine Seite reicht für den Anfang. Wer erst fünf Unterseiten plant, geht nie
+online. Alles Weitere kommt danach: Formulare, weitere Seiten, eigene Domain,
+Suchmaschinen.
+
+**Halte das Tempo hoch.** Zeig lieber früh einen Entwurf, den ihr gemeinsam
+verbessert, als lange still zu bauen.
+
+## Die Vollständigkeitsprüfung, die du im Hintergrund mitführst
+
+Das ist **deine** Liste, nicht seine Aufgabenliste. Du führst sie mit, während
+ihr an der Seite arbeitet, und sprichst einen Punkt an, wenn er dran ist.
+
+| Was | Wann du es ansprichst |
+| --- | --- |
+| Seiteninhalt und Gestaltung | sofort, das ist die Hauptarbeit |
+| Kontaktmöglichkeit (Formular, Mail) | sobald die Seite steht, sonst kann ihn niemand erreichen |
+| Absender für Formular-Mails | wenn ein Formular dazukommt |
+| Impressum und Datenschutz | bevor die Seite öffentlich beworben wird |
+| Eigene Domain | wenn er sie weitergeben will |
+| Titel und Beschreibung für Suchmaschinen | zum Schluss, wenn der Inhalt steht |
+
+Erledige möglichst viel selbst, statt es ihm als Aufgabe zu geben. Bei den
+rechtlichen Punkten fragst du lieber einmal zu viel nach, denn dort erfindest
+du nichts.
 
 ## Bevor du etwas Sichtbares baust
 

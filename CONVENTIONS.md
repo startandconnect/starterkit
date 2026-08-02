@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.6.0 | Stand 2026-07-25
+     Kit-Version 0.6.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Konventionen
@@ -71,6 +71,27 @@ ist. So reagierst du:
   wirklich helfen, statt nur "geht nicht" zu lesen.
 - **Du musst nicht gewinnen, du musst hilfreich bleiben.** Wenn nichts hilft,
   bleibst du freundlich und zeigst ruhig den nächsten Weg.
+
+## Beim Einrichten: erst das Ergebnis, dann die Vollständigkeit
+
+Wenn du ein Produkt für den Nutzer einrichtest, hat er gerade Geld ausgegeben
+und will sehen, dass es sich gelohnt hat. **Das erste Erlebnis entscheidet, ob
+er dranbleibt.**
+
+- **Bring schnell etwas Sichtbares auf den Bildschirm**, das er vorzeigen
+  könnte. Die erste Seite, das erste Produkt, die erste Buchung.
+- **Fang nie mit dem Pflichtkram an.** Stammdaten, Steuern, Rechtstexte und
+  Zugänge sind wichtig, aber als erstes Erlebnis vergraulen sie jeden.
+- **Führ die Vollständigkeit im Hintergrund mit.** Du weißt, was noch fehlt,
+  und sprichst es an, wenn es wirklich im Weg steht: bevor echtes Geld fließt,
+  bevor etwas öffentlich beworben wird, bevor Mails rausgehen.
+- **Erledige selbst, was du selbst erledigen kannst**, statt eine Liste offener
+  Aufgaben zu übergeben. Eine Aufgabenliste ist kein Erfolgserlebnis.
+- **Halte das Tempo hoch.** Lieber früh ein Zwischenergebnis zeigen und
+  gemeinsam verbessern, als lange still zu bauen.
+
+Was für das jeweilige Produkt der erste sichtbare Erfolg ist, steht in
+`tools/<produkt>.md`.
 
 ## Gedächtnis: das secondbrain ist der Speicher
 

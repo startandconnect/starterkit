@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.6.0 | Stand 2026-07-25
+     Kit-Version 0.6.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -67,11 +67,47 @@ Affiliate, SEO und eigene Domains.
   Lies die Liste, statt zu raten.
 - Die maschinenlesbaren Schemas stehen unter `GET /api/openapi.json`.
 
-## Der Weg zum Go-Live
+## Zuerst: das sichtbare Ergebnis
 
-Das ist die Reihenfolge, in der ein Shop verkaufsfertig wird. Arbeite sie von
-oben nach unten ab und lies vor jedem Schritt den genannten Info-Endpunkt.
-Überspring nichts, auch wenn es unwichtig aussieht.
+**Die wichtigste Regel für die Einrichtung.** Der Nutzer hat gerade Geld
+ausgegeben und will sehen, dass es sich gelohnt hat. Fang deshalb **niemals**
+mit Firmendaten, Steuern oder Rechtsseiten an. Das ist Papierkram, und
+Papierkram als erstes Erlebnis vergrault jeden.
+
+Fang mit dem an, was er verkaufen will, und bring es schnell auf den
+Bildschirm:
+
+1. **Frag, was er verkauft**, und leg genau dieses eine Produkt an, mit echtem
+   Namen und echtem Preis. Kein Beispielprodukt.
+2. **Bau die Seite dazu**, die es verkauft. Nach den Regeln aus `DESIGN.md`,
+   damit sie nach ihm aussieht und nicht nach Vorlage.
+3. **Zeig es ihm live.** Öffentlich erreichbar, Kaufweg bis zur Kasse.
+
+Das ist der Moment, an dem aus einem Abo ein Aha-Erlebnis wird. Alles Weitere
+baut darauf auf: weitere Produkte, Verkaufsseiten, Formulare, Newsletter, Abos.
+
+**Halte das Tempo hoch.** Frag nicht fünf Dinge auf einmal, entscheide
+Kleinigkeiten selbst und zeig lieber schnell etwas Vorzeigbares, das ihr
+danach gemeinsam verbessert.
+
+## Die Vollständigkeitsprüfung, die du im Hintergrund mitführst
+
+Die Liste unten ist **deine** Checkliste, nicht seine Aufgabenliste. Du führst
+sie im Kopf mit, während ihr am Ergebnis arbeitet, und sprichst einen Punkt
+erst an, wenn er wirklich im Weg steht.
+
+**Wann welcher Punkt dran ist:**
+
+- **Sofort und beiläufig:** was du selbst erledigen kannst, ohne ihn zu fragen
+  (Shop-Name, Theme-Grundlage, System-Seiten).
+- **Wenn der erste echte Verkauf ansteht:** Zahlungen, Steuern, E-Mail-Absender.
+  Da wird es konkret, und da versteht er auch, warum es sein muss.
+- **Bevor der Shop öffentlich beworben wird:** Rechtsseiten mit echten
+  Firmendaten, Versand.
+
+Sag es dann in einem Satz und erledige es möglichst selbst. Kein Vortrag über
+Pflichten, keine Liste mit zwölf offenen Punkten. Wer gerade sein erstes
+Produkt live gesehen hat, macht den Rest gern mit.
 
 | # | Schritt | Info-Endpunkt | Pflicht |
 | --- | --- | --- | --- |
@@ -107,7 +143,7 @@ oben nach unten ab und lies vor jedem Schritt den genannten Info-Endpunkt.
    Bestellbestätigung, keine Double-Opt-in-Mail, keine Mahnung. Schritt 11 wird
    gern vergessen, weil im Test alles zu funktionieren scheint.
 
-### Bevor du "fertig" sagst
+### Bevor der Shop echtes Geld annimmt
 
 Prüfe am lebenden Shop, statt es anzunehmen:
 
@@ -116,7 +152,9 @@ Prüfe am lebenden Shop, statt es anzunehmen:
 - Stehen Firmendaten im Impressum, oder noch Platzhalter?
 - Ist ein Absender für E-Mails hinterlegt?
 
-Erst wenn das steht, ist der Shop live und nicht nur eingerichtet.
+Erst wenn das steht, ist der Shop verkaufsbereit und nicht nur eingerichtet.
+Bis dahin ist er trotzdem schon vorzeigbar, und genau das soll der Nutzer
+unterwegs auch sehen.
 
 ## Seiten bauen: erst `pages/info` lesen
 
