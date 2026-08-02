@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.7.0 | Stand 2026-07-25
+     Kit-Version 0.7.1 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -103,11 +103,72 @@ zurück.
 2. Wo tippst du Daten von einem Programm ins andere ab? Das ist der Ort, an
    dem der Connector sofort Zeit spart.
 
-## Erster Erfolg
+## Ziel 1: die erste Verbindung steht und wird benutzt
 
-**Die erste Verbindung steht**, egal zu welchem Programm. Lass dir danach die
-Liste der verbundenen Programme ausgeben und lies sie ihm vor. Das ist der
-Moment, in dem aus einer Behauptung etwas Sichtbares wird.
+**Frag zuerst, was verbunden werden soll.** Nicht abstrakt ("welche APIs?"),
+sondern konkret: welche Programme nutzt du, und was davon nervt dich beim
+Hin- und Herkopieren.
+
+**Dann richtest du ein, ohne ihn mit Technik zu behelligen:**
+
+- **Für die meisten Programme gibt es eine Vorlage.** Über sechzig Stück,
+  Liste unter `GET /api/integration-templates`. Dann reicht `templateId` plus
+  Zugangsdaten, alles andere ist hinterlegt.
+- **Für alles andere die freie Variante.** Über `slug`, `name`, `baseUrl` und
+  `authType` lässt sich **jedes** Programm mit einer Schnittstelle anbinden,
+  auch eines, für das es keine Vorlage gibt.
+- **Hat das Programm eine OpenAPI-Beschreibung**, lies sie mit
+  `POST /api/integrations/{id}/import-openapi` ein. Danach findet `discover`
+  die Endpunkte von selbst.
+
+**Die technischen Angaben suchst du selbst.** Adresse, Art der Anmeldung,
+Endpunkte: das steht in der Doku des jeweiligen Anbieters, und die findest du
+schneller als der Nutzer. Frag ihn technische Details nur, wenn er in Schritt 0
+gesagt hat, dass er sich auskennt. Von ihm brauchst du nur zwei Dinge: **welches
+Programm**, und **seinen Zugangsschlüssel** aus dessen Konto.
+
+**Erfolg ist nicht die Verbindung, sondern ihre Nutzung.** Ruf danach sofort
+etwas Echtes ab, das ihn interessiert: seine letzten Rechnungen, seine
+Termine, seine Kontakte. Erst wenn er seine eigenen Daten sieht, ist der Nutzen
+sichtbar.
+
+## Ziel 2: die erste Automation läuft
+
+**Was hier eine Automation ist:** der Connector selbst ist die Leitung, kein
+Baukasten mit Schaltflächen. Eine Automation ist ein kleines Skript, das du
+schreibst und das seine Schritte über den Connector ausführt. Ausgelöst wird
+es entweder von ihm, zeitgesteuert, oder über einen eingehenden Webhook.
+
+**Frag ihn, was er automatisieren will.** Und wenn er nichts im Kopf hat,
+was oft vorkommt, dann bleib nicht stehen, sondern **schlag selbst etwas vor**.
+Du weißt inzwischen einiges über ihn: aus dem Interview, aus seinem
+secondbrain, aus seinen Abläufen. Nutz das.
+
+Gute Kandidaten erkennst du an diesen Mustern:
+
+- Etwas, das er **regelmäßig zur selben Zeit** macht (Montagsübersicht,
+  Monatsabschluss).
+- Etwas, das er **von Hand von A nach B** trägt.
+- Etwas, das er **regelmäßig vergisst** und das dann Ärger macht.
+- Eine Frage, die er sich **immer wieder** stellt und für die er jedes Mal in
+  drei Programme schaut.
+- Etwas, das **passieren müsste, wenn X eintritt**, aber nur passiert, wenn er
+  daran denkt.
+
+Hat er trotzdem keine Idee, **starte ein Brainstorming**: lass ihn einen
+typischen Arbeitstag oder eine typische Woche erzählen und hör auf genau diese
+Muster. Meistens fällt beim Erzählen von selbst etwas auf.
+
+**Bau dann eine, nicht fünf.** Klein anfangen, einmal echt durchlaufen lassen,
+und prüfen, dass sie wirklich läuft, statt es anzunehmen. Halte fest, was sie
+tut und wie man sie stoppt, im secondbrain oder in Atlas. Eine Automatik, die
+niemand mehr versteht, ist später ein Problem.
+
+**Prüf vorher, ob das Programm es selbst kann.** Läuft die Automation komplett
+innerhalb eines Produkts, ist die eingebaute Funktion fast immer besser als ein
+Skript von außen: Nexus hat einen eigenen Bereich für Abläufe und Auslöser,
+Atlas kennt wiederkehrende Aufgaben und Vorlagen. Der Connector ist für alles
+da, was **über die Grenzen eines Programms hinweg** läuft.
 
 ## Wenn der Nutzer schimpft statt zu beschreiben
 
