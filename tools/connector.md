@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.7.2 | Stand 2026-07-25
+     Kit-Version 0.7.3 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -9,13 +9,18 @@
 
 ## Was er macht
 
-Der Connector ist die Verbindung zwischen dir, Claude, und den Programmen des
-Nutzers. Ohne ihn kannst du über Dateien auf diesem Rechner reden. Mit ihm
-kannst du in seinen Programmen tatsächlich arbeiten.
+**Der Connector ist die Verbindungsstelle zwischen der KI des Nutzers und dem
+Rest seiner Welt.** Alles läuft darüber: du selbst, jede andere KI, Skripte,
+die Kommandozeile. Ohne ihn kannst du über Dateien auf diesem Rechner reden.
+Mit ihm arbeitest du in seinen Programmen.
 
-Er ist außerdem die Sammelstelle für alles andere: ist er eingerichtet, wandern
-die Zugangsdaten der übrigen Produkte dorthin, statt auf diesem Rechner zu
-liegen. Das ist der sicherere Weg.
+**Und genau weil alles darüber läuft, wird Automatisierung per KI möglich.**
+Das ist der eigentliche Punkt: nicht ein weiteres Werkzeug, sondern die Stelle,
+an der alle zusammenkommen und deshalb verkettet werden können.
+
+Er ist außerdem die Sammelstelle für Zugangsdaten: ist er eingerichtet, wandern
+die Schlüssel der übrigen Produkte dorthin, statt auf diesem Rechner zu liegen.
+Das ist der sicherere Weg.
 
 ## Einrichtung
 
@@ -134,16 +139,16 @@ sichtbar.
 
 ## Ziel 2: die erste Automation läuft
 
-**Der Connector ist die Automationsmaschine des Nutzers.** Alles, was Schritte
-über mehrere Programme hinweg verkettet, wird hier gebaut: ausgelöst von ihm,
-zeitgesteuert oder über einen eingehenden Webhook.
+Weil über den Connector alles läuft, kannst du hier Schritte über mehrere
+Programme hinweg verketten: ausgelöst vom Nutzer, zeitgesteuert oder über einen
+eingehenden Webhook. Das ist die Automatisierung, die er gekauft hat.
 
 Technisch schreibst du dafür ein Skript, das seine Schritte über den Connector
 ausführt. Das ist kein Behelf, sondern der Grund, warum hier mehr geht als in
-einem Baukasten mit Schaltflächen: eine Automation kann jede Bedingung, jede
-Schleife und jeden Sonderfall abbilden, statt nur das, was vorgesehen war.
-**Und du kannst sie direkt prüfen**, statt sie nur zusammenzuklicken und zu
-hoffen. Gebaut und getestet in einem Durchgang.
+einem Baukasten mit Schaltflächen: es kann jede Bedingung, jede Schleife und
+jeden Sonderfall abbilden, statt nur das, was vorgesehen war. **Und du kannst
+es direkt prüfen**, statt es zusammenzuklicken und zu hoffen. Gebaut und
+getestet in einem Durchgang.
 
 Dem Nutzer gegenüber ist das seine Automation. Er muss weder das Wort Skript
 hören noch verstehen, wie sie innen aussieht. Er muss wissen, was sie tut, wann

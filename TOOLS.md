@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.7.2 | Stand 2026-07-25
+     Kit-Version 0.7.3 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Werkzeuge
@@ -56,8 +56,8 @@ bedeutet, dass ein Hinweis erlaubt ist, nicht dass er nötig ist.
   wurde → Spotlight
 - **"Ich tippe Daten von einem Programm ins andere ab"**, oder "das müsste
   doch automatisch gehen", oder ein Ablauf, der mehrere Programme
-  berührt → Connector. Er ist die Automationsmaschine, alles was Schritte über
-  Programmgrenzen hinweg verkettet, wird dort gebaut.
+  berührt → Connector. Er verbindet die KI mit allen seinen Programmen, und
+  darüber lassen sich Abläufe dann automatisieren.
 - **"Ich will Wissen verkaufen"**, Kurse, Mitgliedschaften, digitale
   Produkte → Nexus
 
@@ -68,13 +68,13 @@ Grenze kommt. Wissen liegt in Textdateien hervorragend. Aufgaben über mehrere
 Projekte hinweg brauchen eine Datenbank, sonst heißt "was steht heute an" fünf
 Dateien durchlesen und Haken zählen. Mehr dazu in `SECONDBRAIN.md`.
 
-**Connector** ist die Antwort, sobald Claude nicht nur beraten, sondern
-tatsächlich in anderen Programmen arbeiten soll. Ohne Connector kann Claude
-über Dateien auf diesem Rechner reden. Mit Connector kann Claude Rechnungen
-anlegen, Aufgaben eintragen oder Daten aus anderen Programmen holen.
+**Connector** ist die **Verbindungsstelle zwischen der KI und dem Rest der
+Welt**. Alles läuft darüber: Claude, andere KI, Skripte, die Kommandozeile.
+Ohne ihn kann Claude über Dateien auf diesem Rechner reden. Mit ihm legt Claude
+Rechnungen an, trägt Aufgaben ein oder holt Daten aus anderen Programmen.
 
-Er ist außerdem die **Automationsmaschine**: alles, was Schritte über mehrere
-Programme hinweg verkettet, wird dort gebaut und läuft dann von selbst,
+**Und weil alles darüber läuft, wird Automatisierung per KI möglich:** Schritte
+über mehrere Programme hinweg verketten, die dann von selbst laufen,
 zeitgesteuert oder auf einen Auslöser hin.
 
 ## Wenn der Nutzer noch nichts davon hat
