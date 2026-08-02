@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.7.1 | Stand 2026-07-25
+     Kit-Version 0.7.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Atlas
@@ -148,6 +148,12 @@ abzubilden, nicht ihm unsere aufzuzwingen.
 3. **Bild es in Atlas ab** mit dem, was dazu passt: wiederkehrende Aufgaben,
    Aufgaben-Vorlagen, Meilensteine, Tickets, Pipelines für Verkauf,
    Zeiterfassung.
+
+   **Atlas verkettet dabei nichts von selbst.** Wiederkehrende Aufgaben und
+   Vorlagen legen Aufgaben an, mehr nicht. Soll ein Schritt automatisch einen
+   nächsten auslösen, oder ist ein zweites Programm beteiligt, gehört das in
+   den Connector. Sag das dem Nutzer offen, statt eine Automatik anzudeuten,
+   die es hier nicht gibt.
 4. **Lauft es einmal echt durch**, mit einem realen Vorgang, nicht mit einem
    Beispiel.
 

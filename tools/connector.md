@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.7.1 | Stand 2026-07-25
+     Kit-Version 0.7.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -134,10 +134,20 @@ sichtbar.
 
 ## Ziel 2: die erste Automation läuft
 
-**Was hier eine Automation ist:** der Connector selbst ist die Leitung, kein
-Baukasten mit Schaltflächen. Eine Automation ist ein kleines Skript, das du
-schreibst und das seine Schritte über den Connector ausführt. Ausgelöst wird
-es entweder von ihm, zeitgesteuert, oder über einen eingehenden Webhook.
+**Der Connector ist die Automationsmaschine des Nutzers.** Alles, was Schritte
+über mehrere Programme hinweg verkettet, wird hier gebaut: ausgelöst von ihm,
+zeitgesteuert oder über einen eingehenden Webhook.
+
+Technisch schreibst du dafür ein Skript, das seine Schritte über den Connector
+ausführt. Das ist kein Behelf, sondern der Grund, warum hier mehr geht als in
+einem Baukasten mit Schaltflächen: eine Automation kann jede Bedingung, jede
+Schleife und jeden Sonderfall abbilden, statt nur das, was vorgesehen war.
+**Und du kannst sie direkt prüfen**, statt sie nur zusammenzuklicken und zu
+hoffen. Gebaut und getestet in einem Durchgang.
+
+Dem Nutzer gegenüber ist das seine Automation. Er muss weder das Wort Skript
+hören noch verstehen, wie sie innen aussieht. Er muss wissen, was sie tut, wann
+sie läuft und wie er sie stoppt.
 
 **Frag ihn, was er automatisieren will.** Und wenn er nichts im Kopf hat,
 was oft vorkommt, dann bleib nicht stehen, sondern **schlag selbst etwas vor**.
@@ -164,11 +174,18 @@ und prüfen, dass sie wirklich läuft, statt es anzunehmen. Halte fest, was sie
 tut und wie man sie stoppt, im secondbrain oder in Atlas. Eine Automatik, die
 niemand mehr versteht, ist später ein Problem.
 
-**Prüf vorher, ob das Programm es selbst kann.** Läuft die Automation komplett
-innerhalb eines Produkts, ist die eingebaute Funktion fast immer besser als ein
-Skript von außen: Nexus hat einen eigenen Bereich für Abläufe und Auslöser,
-Atlas kennt wiederkehrende Aufgaben und Vorlagen. Der Connector ist für alles
-da, was **über die Grenzen eines Programms hinweg** läuft.
+### Wo eine Automation hingehört
+
+- **Einfach und komplett innerhalb von Nexus:** dort bauen. Nexus hat einen
+  eigenen Bereich für Abläufe und Auslöser, für einfache Fälle ist der der
+  kürzere Weg.
+- **Alles andere: hier.** Sobald mehr als ein Programm beteiligt ist, sobald
+  Bedingungen, Sonderfälle oder mehrere Schritte dazukommen, ist der Connector
+  der richtige Ort.
+- **Atlas hat keine Automationen.** Wiederkehrende Aufgaben und
+  Aufgaben-Vorlagen gibt es, aber die legen nur Aufgaben an, sie verketten
+  nichts. Alles, was über "diese Aufgabe kommt jede Woche wieder" hinausgeht,
+  baust du im Connector.
 
 ## Wenn der Nutzer schimpft statt zu beschreiben
 
