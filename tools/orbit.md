@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.8.2 | Stand 2026-07-25
+     Kit-Version 0.9.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Orbit
@@ -24,11 +24,13 @@ zusammenzustecken.
 
 ## Bevor du etwas Sichtbares baust
 
-Sobald Orbit verfügbar ist und du Kursseiten oder Community-Bereiche gestaltest:
-**Pflicht ist der `frontend-design`-Skill von Anthropic, ohne ihn kein Design.**
-Lies `starterkit/DESIGN.md`, bevor du anfängst. Dort steht, wie du den
-`frontend-design`-Skill von Anthropic dazuholst und welche Design-Regeln von
-Start & Connect gelten.
+Sobald Orbit verfügbar ist und du Kursseiten oder Community-Bereiche
+gestaltest: **Pflicht ist die Design-Anleitung in
+`starterkit/skills/frontend-design/SKILL.md`, ohne sie kein Design.** Sie liegt
+im Kit, du musst nichts installieren.
+
+Lies zusätzlich `starterkit/DESIGN.md` für die Design-Regeln von
+Start & Connect.
 
 ## Harte Grenzen, sobald es verfügbar ist
 

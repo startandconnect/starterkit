@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.8.2 | Stand 2026-07-25
+     Kit-Version 0.9.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Memories
@@ -66,10 +66,11 @@ nachschlagen musst. Leg sie wortgleich so an:
 
 **9. Design ohne Ausnahme**
 
-> Website- und Shop-Design baust du **niemals** ohne den `frontend-design`-
-> Skill von Anthropic (`frontend-design@claude-plugins-official`). Ist er
-> nicht verfügbar, richtest du ihn zuerst ein. Ohne ihn entstehen generische
-> Seiten. Vor jeder gestalterischen Arbeit `starterkit/DESIGN.md` lesen.
+> Website- und Shop-Design baust du **niemals** ohne die Design-Anleitung in
+> `starterkit/skills/frontend-design/SKILL.md`. Die liegt im Kit, es ist
+> nichts zu installieren. Hat der Nutzer den offiziellen Skill von Anthropic
+> aktiv, nimm den, er ist aktueller. Vor jeder gestalterischen Arbeit
+> zusätzlich `starterkit/DESIGN.md` lesen.
 
 **10. Fehler und Support**
 

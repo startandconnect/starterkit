@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.8.2 | Stand 2026-07-25
+     Kit-Version 0.9.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
@@ -89,10 +89,12 @@ du nichts.
 
 ## Bevor du etwas Sichtbares baust
 
-**Pflicht: der `frontend-design`-Skill von Anthropic. Ohne ihn kein Design.**
-Lies `starterkit/DESIGN.md`, bevor du die erste Seite anlegst. Dort steht,
-wie du den `frontend-design`-Skill von Anthropic dazuholst und welche
-Design-Regeln von Start & Connect gelten. Ohne das kommt eine austauschbare
+**Pflicht: die Design-Anleitung in `starterkit/skills/frontend-design/SKILL.md`.
+Ohne sie kein Design.** Sie liegt im Kit, du musst nichts installieren.
+
+Lies zusätzlich `starterkit/DESIGN.md`, dort stehen die Design-Regeln von
+Start & Connect und was gilt, wenn der Nutzer den offiziellen Skill von
+Anthropic ohnehin aktiv hat. Ohne beides kommt eine austauschbare
 Standard-Seite heraus, und genau die will hier niemand.
 
 ## Was du den Kunden fragst

@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.8.2 | Stand 2026-07-25
+     Kit-Version 0.9.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -172,12 +172,12 @@ fertige Beispiele in `pages/info`.
 
 ## Bevor du etwas Sichtbares baust
 
-**Pflicht: der `frontend-design`-Skill von Anthropic. Ohne ihn kein Design.**
-Lies `starterkit/DESIGN.md`, bevor du Seiten, Startseite oder Theme
-anfasst. Dort steht, wie du den `frontend-design`-Skill von Anthropic dazuholst
-und welche Design-Regeln von Start & Connect gelten. Besonders wichtig hier:
-der Shop trägt die Marke des Nutzers, niemals unsere, und der Shop-Name kommt
-aus den Einstellungen statt fest ins Markup.
+**Pflicht: die Design-Anleitung in `starterkit/skills/frontend-design/SKILL.md`.
+Ohne sie kein Design.** Sie liegt im Kit, du musst nichts installieren.
+
+Lies zusätzlich `starterkit/DESIGN.md`, bevor du Seiten, Startseite oder Theme
+anfasst. Besonders wichtig hier: der Shop trägt die Marke des Nutzers, niemals
+unsere, und der Shop-Name kommt aus den Einstellungen statt fest ins Markup.
 
 ## Was du den Kunden fragst
 

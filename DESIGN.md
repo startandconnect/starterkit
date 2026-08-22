@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.8.2 | Stand 2026-07-25
+     Kit-Version 0.9.0 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Design
@@ -11,31 +11,37 @@ Gilt, sobald du für den Nutzer etwas Sichtbares baust: eine Website, eine
 Shop-Seite, eine Landingpage, ein Formular. **Lies das, bevor du die erste
 Zeile Markup schreibst**, nicht danach.
 
-## Pflicht: der frontend-design-Skill
+## Pflicht: die frontend-design-Anleitung
 
-Anthropic liefert einen Skill namens **`frontend-design`**, der genau dafür
-gemacht ist: eigenständiges, bewusstes visuelles Design statt
-Standard-Vorlagen-Optik. Er ist deutlich ausführlicher als diese Datei und wird
-von Anthropic gepflegt.
+Ohne die Design-Anleitung von Anthropic baust du **kein** Website- oder
+Shop-Design. Das ist keine Empfehlung, sondern die Bedingung. Ohne sie
+entstehen generische Seiten, die aussehen wie tausend andere, und genau das ist
+das Gegenteil von dem, wofür der Nutzer bezahlt.
 
-**Ohne diesen Skill baust du kein Website- oder Shop-Design.** Das ist keine
-Empfehlung, sondern die Bedingung. Ohne ihn entstehen generische Seiten, die
-aussehen wie tausend andere, und genau das ist das Gegenteil von dem, wofür der
-Nutzer bezahlt.
+**Sie liegt hier im Kit, du musst nichts installieren:**
 
-Der Ablauf, bevor du gestaltest:
+```
+starterkit/skills/frontend-design/SKILL.md
+```
 
-1. **Prüf, ob der Skill verfügbar ist.** Steht er in deiner Skill-Liste?
-2. **Wenn nicht, richte ihn zuerst ein.** Er kommt aus dem offiziellen
-   Plugin-Marktplatz von Anthropic, Kennung
-   `frontend-design@claude-plugins-official`, zu installieren über die
-   Plugin-Verwaltung in Claude Code. Erklär dem Nutzer in einem Satz, warum:
-   damit seine Seite nach ihm aussieht und nicht nach Vorlage.
-3. **Erst danach fängst du mit dem Design an.**
+**Lies diese Datei, bevor du gestaltest.** Sie ist deutlich ausführlicher als
+die Regeln unten und der eigentliche Grund, warum das Ergebnis eigenständig
+aussieht.
 
-Lehnt der Nutzer die Installation ausdrücklich ab, sag ihm klar, dass das
-Ergebnis dadurch deutlich generischer wird, und arbeite nach den Regeln unten
-so gut es geht weiter. Dräng nicht, aber verschweig die Folge auch nicht.
+### Wenn der Skill zusätzlich installiert ist
+
+Manche Nutzer haben den offiziellen Skill von Anthropic aktiv
+(`frontend-design@claude-plugins-official`). **Dann hat der Vorrang**, weil er
+laufend gepflegt wird und aktueller ist als unsere Kopie. Prüf also zuerst, ob
+er in deiner Skill-Liste steht, und nimm sonst die Datei oben.
+
+Beides zusammen brauchst du nicht. Nichts von beidem ist keine Option.
+
+### Wo die Datei herkommt
+
+Sie stammt von Anthropic und steht unter Apache 2.0, Details in
+`skills/frontend-design/HERKUNFT.md`. Wir liefern sie mit, damit die Einrichtung
+nicht daran scheitert, dass ein Plugin-Marktplatz auf dem Rechner fehlt.
 
 ## Die Grundhaltung von Start & Connect
 
