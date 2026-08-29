@@ -22,14 +22,28 @@ eigene Connector-Adresse, beides steht in seinem Connector-Konto:
   CONNECTOR_BASE=<seine Connector-Adresse>
   CONNECTOR_API_KEY=<sein Schluessel>
 
-Verwaltet von Start & Connect. Kit-Version 0.9.0
+Verwaltet von Start & Connect. Kit-Version 0.9.1
 """
 
 import json
 import os
+import re
 import sys
+import unicodedata
 import urllib.error
 import urllib.request
+
+# Ausgabe fest auf UTF-8, unabhaengig vom Betriebssystem.
+#
+# Windows gibt der Konsole standardmaessig die Zeichentabelle cp1252. Sobald eine Antwort ein
+# Zeichen enthaelt, das dort fehlt - ein Pfeil genuegt - bricht das Skript mit einem
+# UnicodeEncodeError ab, mitten in einer ansonsten fehlerfreien Antwort. Der Behelf war bisher,
+# PYTHONIOENCODING von Hand zu setzen; das muss niemand wissen muessen.
+for _strom in (sys.stdout, sys.stderr):
+    try:
+        _strom.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
 
 
 def load_env():
@@ -53,6 +67,50 @@ def load_env():
         if parent == d:
             break
         d = parent
+
+
+# Zeichen, die man nicht sieht, die aber im Pfad landen.
+#
+# Gemeldet am 27.08.2026: derselbe Aufruf antwortete mit 404, mit einem angehaengten
+# Fragezeichen dagegen mit 200. Nachgemessen gegen den Connector:
+#
+#   /api/tasks          200        /api/tasks<CR>      200
+#   /api/tasks<U+00A0>  404        /api/tasks<U+200B>  404
+#   /api/tasks?<U+00A0> 200
+#
+# Der Unterschied liegt daran, WELCHES unsichtbare Zeichen es ist. Leerzeichen, Tabulator und
+# Wagenruecklauf entfernt der URL-Parser auf dem Server von selbst. Ein geschuetztes
+# Leerzeichen oder eine Breite Null ueberlebt, wird zu %C2%A0 beziehungsweise %E2%80%8B kodiert
+# und haengt damit am Pfad - die Route gibt es unter diesem Namen nicht. Mit dem Fragezeichen
+# rutscht das Zeichen in den Abfrageteil, wo es niemanden stoert. Daher der Eindruck, das
+# Fragezeichen repariere etwas.
+#
+# Solche Zeichen kommen beim Kopieren aus Word, Outlook oder Teams mit, ohne Spur im Text.
+def saeubere_pfad(pfad):
+    """Entfernt unsichtbare Zeichen an beiden Enden. Gibt (pfad, entferntes) zurueck."""
+    def unsichtbar(z):
+        return z.isspace() or unicodedata.category(z) in ("Cc", "Cf", "Zs", "Zl", "Zp")
+
+    sauber = pfad
+    weg = []
+    while sauber and unsichtbar(sauber[0]):
+        weg.append(sauber[0]); sauber = sauber[1:]
+    while sauber and unsichtbar(sauber[-1]):
+        weg.append(sauber[-1]); sauber = sauber[:-1]
+    return sauber, "".join(weg)
+
+
+def melde_gesaeuberten_pfad(original, sauber, weg):
+    """Sagt, dass etwas entfernt wurde - stilles Reparieren verschleiert die Ursache."""
+    if not weg:
+        return
+    namen = ", ".join(f"U+{ord(z):04X} ({unicodedata.name(z, 'ohne Namen')})" for z in weg)
+    print(
+        f"Hinweis: Im Pfad steckten unsichtbare Zeichen, sie wurden entfernt: {namen}. "
+        f"Gesendet wurde \"{sauber}\". Solche Zeichen kommen beim Kopieren aus Word, Outlook "
+        f"oder Teams mit.",
+        file=sys.stderr,
+    )
 
 
 def die(msg):
@@ -84,6 +142,16 @@ def request(path, payload=None, method="GET"):
             return json.loads(r.read().decode() or "{}")
     except urllib.error.HTTPError as e:
         body = e.read().decode(errors="replace")[:800]
+        # Eine HTML-Seite als Antwort heisst fast immer "diese Adresse gibt es nicht" - und
+        # fast nie "du darfst hier nicht". Aus genau dieser Verwechslung ist am 27.08.2026 die
+        # Meldung entstanden, das Wiki sei fuer eine Mitarbeiterin gesperrt. Es war nichts
+        # gesperrt, der Pfad stimmte nicht.
+        if body.lstrip()[:1] == "<":
+            die(
+                f"Der Connector hat mit {e.code} geantwortet, und zwar mit einer Webseite statt "
+                f"einer API-Antwort. Das heisst: unter dieser Adresse liegt keine Schnittstelle. "
+                f"Pruefe den Pfad - es ist keine Sperre und keine fehlende Berechtigung."
+            )
         die(f"Der Connector hat mit {e.code} geantwortet: {body}")
     except urllib.error.URLError as e:
         die(f"Der Connector ist nicht erreichbar: {e.reason}")
@@ -116,10 +184,12 @@ def main(argv):
     elif cmd == "call":
         if len(argv) < 4:
             die("Aufruf: call <integration> <METHODE> <pfad> [json-body]")
+        pfad, entfernt = saeubere_pfad(argv[3])
+        melde_gesaeuberten_pfad(argv[3], pfad, entfernt)
         payload = {
             "integrationId": argv[1],
             "method": argv[2].upper(),
-            "path": argv[3],
+            "path": pfad,
         }
         if len(argv) > 4:
             try:
