@@ -8,8 +8,8 @@ Ohne Freigabe wird nichts gesendet.
 Reine Standardbibliothek, laeuft auf Mac und Windows.
 
 Verwendung:
-  report-issue.py --title "..." --body "..." [--category FUNCTION]
-                  [--severity NORMAL] [--email ...] [--name ...] [--product ...]
+  report-issue.py --title "..." --body "..." --email "seine@mail.de"
+                  [--category FUNCTION] [--severity NORMAL] [--name ...] [--product ...]
 
   category: DISPLAY | FUNCTION | PERFORMANCE | LOGIN | DATA | OTHER
   severity: LOW | NORMAL | HIGH | CRITICAL  (Standard NORMAL)
@@ -17,7 +17,12 @@ Verwendung:
 Der Titel wird als "[Kategorie] Titel" gesendet, damit Start & Connect filtern
 kann. Kit-Version und Plattform werden automatisch als Metadaten mitgeschickt.
 
-Verwaltet von Start & Connect. Kit-Version 0.9.1
+Die E-Mail des Nutzers ist Pflicht. Ohne sie kann Start & Connect weder eine
+Eingangs- noch eine Abschlussbestaetigung schicken - die Meldung verschwindet
+aus Sicht des Nutzers spurlos. Statt --email kann SUPPORT_EMAIL in der .env
+stehen, dann muss niemand jedes Mal danach gefragt werden.
+
+Verwaltet von Start & Connect. Kit-Version 0.9.2
 """
 
 import argparse
@@ -28,6 +33,15 @@ import re
 import sys
 import urllib.error
 import urllib.request
+
+# Ausgabe fest auf UTF-8. Auf Windows steht die Konsole sonst auf cp1252, und ein einzelnes
+# Zeichen ausserhalb dieser Tabelle - im Text einer Fehlermeldung keine Seltenheit - laesst
+# das Skript abbrechen, bevor die Meldung raus ist. Siehe SUP-0163.
+for _strom in (sys.stdout, sys.stderr):
+    try:
+        _strom.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
 
 # Inbound-Ticket-Webhook des Starterkits. Der Token ist ein
 # Rate-Limit-Bezeichner, kein Datenzugang. Bei Missbrauch serverseitig
@@ -52,6 +66,82 @@ def scrub(text):
     for pat in KEY_PATTERNS:
         text = re.sub(pat, "[ENTFERNT]", text)
     return text
+
+
+def aus_env_datei(schluessel):
+    """Sucht die .env vom Skript aus aufwaerts - dieselbe Datei wie connector-call.py."""
+    d = os.path.dirname(os.path.abspath(__file__))
+    for _ in range(5):
+        pfad = os.path.join(d, ".env")
+        if os.path.isfile(pfad):
+            try:
+                with open(pfad, encoding="utf-8") as f:
+                    for zeile in f:
+                        zeile = zeile.strip()
+                        if not zeile or zeile.startswith("#") or "=" not in zeile:
+                            continue
+                        k, v = zeile.split("=", 1)
+                        k = k.strip()
+                        if k.startswith("export "):
+                            k = k[len("export "):].strip()
+                        if k == schluessel:
+                            return v.strip().strip("\"'")
+            except OSError:
+                return None
+            return None
+        eltern = os.path.dirname(d)
+        if eltern == d:
+            break
+        d = eltern
+    return None
+
+
+def sieht_aus_wie_adresse(wert):
+    """Absichtlich grob: erkennt Tippfehler und Platzhalter, nicht jede Feinheit von RFC 5322."""
+    if not wert:
+        return False
+    return re.fullmatch(r"[^@\s]+@[^@\s]+\.[A-Za-z]{2,}", wert.strip()) is not None
+
+
+# Die Adresse ist Pflicht, und zwar aus einem gemessenen Grund.
+#
+# Atlas schickt dem Melder genau zwei Mails: eine Eingangsbestaetigung und eine Nachricht beim
+# Abschluss. Beide haengen an reporterEmail. Fehlt sie, passiert auf seiner Seite NICHTS - kein
+# "angekommen", kein "behoben". Er sieht ein Skript, das "gesendet" sagt, und danach Stille.
+#
+# Bei SUP-0158 und SUP-0163 war das so. Beim ersten schrieb der Melder sogar dazu, er sende
+# lieber doppelt, weil er nicht wusste, ob die erste Meldung angekommen war. Genau diese
+# Unsicherheit entsteht aus der fehlenden Adresse. Ein Hinweis auf stderr hat nicht gereicht;
+# er stand schon in der Anleitung und wurde zweimal ueberlesen.
+def ermittle_adresse(vom_aufruf):
+    quelle = "--email"
+    adresse = vom_aufruf
+    if not adresse:
+        adresse, quelle = os.environ.get("SUPPORT_EMAIL"), "SUPPORT_EMAIL aus der Umgebung"
+    if not adresse:
+        adresse, quelle = aus_env_datei("SUPPORT_EMAIL"), "SUPPORT_EMAIL aus der .env"
+    if not adresse:
+        print(
+            "Fehler: Es fehlt die E-Mail des Nutzers, deshalb wurde nichts gesendet.\n"
+            "\n"
+            "Ohne sie bekommt er weder eine Eingangs- noch eine Abschlussbestaetigung. Die\n"
+            "Meldung verschwindet aus seiner Sicht spurlos, und er meldet sie irgendwann ein\n"
+            "zweites Mal, weil er nicht weiss, ob die erste ankam.\n"
+            "\n"
+            "Frag ihn kurz nach seiner E-Mail und ruf erneut auf mit --email \"seine@mail.de\".\n"
+            "Damit das nicht jedes Mal noetig ist, kann sie als SUPPORT_EMAIL in der .env stehen.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    if not sieht_aus_wie_adresse(adresse):
+        print(
+            f"Fehler: \"{adresse}\" ({quelle}) sieht nicht nach einer E-Mail-Adresse aus, deshalb\n"
+            f"wurde nichts gesendet. Eine falsche Adresse ist so gut wie keine - die Antwort\n"
+            f"geht ins Leere. Frag beim Nutzer nach und ruf erneut auf.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    return adresse.strip()
 
 
 def kit_version():
@@ -81,10 +171,8 @@ def main():
     if severity not in SEVERITIES:
         severity = "NORMAL"
 
-    if not a.email:
-        print("Hinweis: keine E-Mail (--email) mitgegeben. Start & Connect kann "
-              "dann nicht antworten. Sende trotzdem, aber besser mit E-Mail.",
-              file=sys.stderr)
+    email = ermittle_adresse(a.email)
+    name = a.name or os.environ.get("SUPPORT_NAME") or aus_env_datei("SUPPORT_NAME")
 
     title = scrub(a.title.strip())[:190]
     body = scrub(a.body.strip())
@@ -92,8 +180,8 @@ def main():
     payload = {
         "title": f"[{category}] {title}",
         "body": body or None,
-        "reporterEmail": a.email,
-        "reporterName": a.name,
+        "reporterEmail": email,
+        "reporterName": name,
         "severity": severity,
         "metadata": {
             "source": "starterkit",

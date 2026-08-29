@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.9.1 | Stand 2026-07-25
+     Kit-Version 0.9.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -144,13 +144,22 @@ Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
      --email "seine@mail.de" --name "Sein Name"
    ```
 
+   `--email` und `--name` kannst du weglassen, wenn `SUPPORT_EMAIL` und
+   `SUPPORT_NAME` in der `.env` stehen.
+
    Kategorie: `DISPLAY`, `FUNCTION`, `PERFORMANCE`, `LOGIN`, `DATA`, `OTHER`.
    Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`. Kit-Version und Plattform
    hängt das Skript selbst an.
 
-**Schick immer die E-Mail des Nutzers mit** (`--email`), die du aus dem Setup
-kennst. Ohne sie kann Start & Connect nicht antworten, und das Ticket ist eine
-Sackgasse. Hast du sie ausnahmsweise nicht, frag einmal kurz danach.
+**Die E-Mail des Nutzers ist Pflicht.** Das Skript sendet ohne sie nichts und
+sagt dir das. Normalerweise steht sie als `SUPPORT_EMAIL` in der `.env` und du
+musst nichts tun; fehlt sie dort, frag ihn einmal kurz danach.
+
+Der Grund: an dieser Adresse hängen beide Mails, die er zu seiner Meldung
+bekommt - die Eingangsbestätigung und die Nachricht, wenn der Fehler behoben
+ist. Fehlt sie, passiert auf seiner Seite nichts. Er sieht ein Skript, das
+„gesendet" sagt, und danach Stille. Genau daraus entsteht die doppelte Meldung
+Wochen später, weil er nicht weiß, ob die erste angekommen ist.
 
 Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die zurückkommt.
 

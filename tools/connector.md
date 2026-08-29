@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.9.1 | Stand 2026-07-25
+     Kit-Version 0.9.2 | Stand 2026-07-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -35,7 +35,13 @@ Lege im Arbeitsordner eine `.env` an:
 ```
 CONNECTOR_BASE=<seine Connector-Adresse>
 CONNECTOR_API_KEY=<sein Schlüssel>
+SUPPORT_EMAIL=<seine E-Mail-Adresse>
+SUPPORT_NAME=<sein Name>
 ```
+
+`SUPPORT_EMAIL` braucht das Ticket-Skript, und zwar zwingend. Ohne sie bekommt
+der Nutzer weder eine Eingangs- noch eine Abschlussbestätigung zu einer
+Meldung. Frag ihn einmal bei der Einrichtung danach, dann nie wieder.
 
 Danach zwingend prüfen, dass `.env` in `.gitignore` **und** `.dockerignore`
 steht. Fehlt eine, leg sie an.
