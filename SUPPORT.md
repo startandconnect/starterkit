@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.9.2 | Stand 2026-07-25
+     Kit-Version 0.10.0 | Stand 2026-08-31
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -110,8 +110,14 @@ Spotlight, Atlas, Connector). Jedes Produkt hat die **"Fehler melden"-Funktion**
 prominent eingebaut. Sie hängt den technischen Kontext automatisch an, den
 Start & Connect zur Diagnose braucht. Lotse den Nutzer dorthin.
 
-**Sende einen Produktfehler niemals über das Ticket-Skript.** Dort fehlt genau
-dieser Kontext, und die Meldung ist für Start & Connect kaum verwertbar.
+**Sie bleibt die erste Wahl**, und zwar aus einem inhaltlichen Grund: sie hängt
+Adresse, Version, Browser und Fehlerspuren von selbst an. Ein Ticket aus dem Kit
+kann das nicht nachbilden, deshalb ist die Meldung von dort dünner.
+
+**Erreicht der Nutzer die Funktion nicht**, weil das Produkt gar nicht startet
+oder er nicht hineinkommt, meldest du den Fehler über das Ticket-Skript mit
+`--product`. Das Ticket landet dann trotzdem im richtigen Projekt. Lieber eine
+dünnere Meldung am richtigen Ort als gar keine.
 
 ### Das Ticket-Skript: ein Fehler-Bericht, keine Frage-Abkürzung
 
@@ -140,7 +146,7 @@ Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
 
    ```
    python3 starterkit/scripts/report-issue.py --title "..." --body "..." \
-     --category FUNCTION --severity NORMAL \
+     --category FUNCTION --severity NORMAL --product quitt \
      --email "seine@mail.de" --name "Sein Name"
    ```
 
@@ -148,8 +154,14 @@ Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
    `SUPPORT_NAME` in der `.env` stehen.
 
    Kategorie: `DISPLAY`, `FUNCTION`, `PERFORMANCE`, `LOGIN`, `DATA`, `OTHER`.
-   Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`. Kit-Version und Plattform
-   hängt das Skript selbst an.
+   Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`.
+   Produkt: `atlas`, `quitt`, `nexus`, `spotlight`, `connector`, `manager`,
+   `orbit`, `echo`. Ohne Angabe landet die Meldung im Sammelprojekt.
+   Kit-Version und Plattform hängt das Skript selbst an.
+
+   **`--product` benennt das Produkt, in dem der Fehler sitzt**, nicht das, aus
+   dem heraus du meldest. Ein Fehler im Kit oder in der Einrichtung bekommt
+   deshalb kein `--product`.
 
 **Die E-Mail des Nutzers ist Pflicht.** Das Skript sendet ohne sie nichts und
 sagt dir das. Normalerweise steht sie als `SUPPORT_EMAIL` in der `.env` und du
