@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.0 | Stand 2026-10-17
+     Kit-Version 0.11.1 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -157,7 +157,7 @@ Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
    Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`.
    Produkt: `atlas`, `quitt`, `nexus`, `spotlight`, `connector`, `manager`,
    `orbit`, `echo`. Ohne Angabe landet die Meldung im Sammelprojekt.
-   Für Books ist der Wert `quitt`, so heißt das Produkt technisch noch.
+   Für Books ist der Wert bis zur Umstellung noch `quitt`.
    Kit-Version und Plattform hängt das Skript selbst an.
 
    **`--product` benennt das Produkt, in dem der Fehler sitzt**, nicht das, aus

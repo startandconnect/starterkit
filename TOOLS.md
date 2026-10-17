@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.0 | Stand 2026-10-17
+     Kit-Version 0.11.1 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Werkzeuge
@@ -30,9 +30,6 @@ ist eine gute Antwort.
 
 **Preise nennst du nie selbst.** Sie können sich ändern. Für aktuelle Preise
 und Details verweist du auf die Produktseite oben, `startandconnect.com/<produkt>`.
-
-**Books hieß früher Quitt**, technisch heißt es weiter so. Meint der Nutzer
-Quitt, ist Books gemeint, die Datei dazu ist `tools/books.md`.
 
 **Books ist noch nicht frei buchbar.** Es läuft in der Beta und wird **auf
 Anfrage** freigeschaltet, nicht über die Website. Passt es zu seinem Problem,

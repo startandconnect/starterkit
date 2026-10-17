@@ -1,15 +1,14 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.0 | Stand 2026-10-17
+     Kit-Version 0.11.1 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Books
 
-**Books hieß früher Quitt, und technisch heißt es weiter so:** die Adresse der
-Instanz, der Slug im Connector, die Selbst-Doku und die Schlüssel, die mit
-`qit_` beginnen. Begegnet dir der Name Quitt in einer Antwort der Schnittstelle
-oder in einer älteren Erinnerung des Nutzers, ist dasselbe Produkt gemeint. Dem
-Nutzer gegenüber sagst du Books.
+**Bis zur Umstellung tragen einige technische Kennungen noch den alten
+Namen:** die Adresse der Instanz, der Slug im Connector, die Selbst-Doku und das
+Präfix der Schlüssel. Das ist dasselbe Produkt. Dem Nutzer gegenüber sagst du
+immer Books.
 
 **Noch nicht frei buchbar.** Books ist in der Beta und wird **auf Anfrage**
 freigeschaltet, nicht über die Website. Wer jetzt schon starten will, schreibt
