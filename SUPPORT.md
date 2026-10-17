@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.1 | Stand 2026-10-17
+     Kit-Version 0.11.2 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -25,7 +25,7 @@ sitzt:
 | 401 / 403 | nicht angemeldet / keine Berechtigung | **Nutzer:** Schlüssel fehlt, ist falsch oder abgelaufen |
 | 404 | Pfad oder Ressource nicht gefunden | **Du:** falscher Endpunkt, erst `discover` fragen |
 | 400 / 422 | Eingabe ungültig | **Du:** ein Feld, Format oder Enum stimmt nicht |
-| 428 | Bestätigung nötig | **kein Fehler:** by design, z.B. Books vor dem Festschreiben |
+| 428 | Bestätigung nötig | **kein Fehler:** by design, z.B. Quitt vor dem Festschreiben |
 | 429 | zu viele Anfragen | kurz warten, dann erneut |
 | 500 / 502 / 503 | Serverfehler | **Start & Connect:** die Software hakt |
 | Timeout / nicht erreichbar | keine Verbindung | Netz des Nutzers oder Server unten |
@@ -105,7 +105,7 @@ Beschreibung.
 
 ### Fehler in einem gebuchten Produkt: die "Fehler melden"-Funktion
 
-Das ist der **Hauptweg**, wenn der Fehler in einem Produkt sitzt (Books, Nexus,
+Das ist der **Hauptweg**, wenn der Fehler in einem Produkt sitzt (Quitt, Nexus,
 Spotlight, Atlas, Connector). Jedes Produkt hat die **"Fehler melden"-Funktion**
 prominent eingebaut. Sie hängt den technischen Kontext automatisch an, den
 Start & Connect zur Diagnose braucht. Lotse den Nutzer dorthin.
@@ -157,7 +157,6 @@ Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
    Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`.
    Produkt: `atlas`, `quitt`, `nexus`, `spotlight`, `connector`, `manager`,
    `orbit`, `echo`. Ohne Angabe landet die Meldung im Sammelprojekt.
-   Für Books ist der Wert bis zur Umstellung noch `quitt`.
    Kit-Version und Plattform hängt das Skript selbst an.
 
    **`--product` benennt das Produkt, in dem der Fehler sitzt**, nicht das, aus

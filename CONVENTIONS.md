@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.1 | Stand 2026-10-17
+     Kit-Version 0.11.2 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Konventionen
@@ -35,7 +35,7 @@ die du unnötig liest, kostet den Nutzer Geld.
 - Echte Umlaute (ä, ö, ü, ß), niemals ae, oe, ue als Ersatz.
 - **Auch in Daten, die du an ein Programm schickst.** Wenn du deutschen Text in
   ein JSON-Feld packst (zum Beispiel den Titel einer Aufgabe an Atlas oder eine
-  Rechnungsposition an Books), rutschen Umlaute leicht in ae/oe/ue. Die
+  Rechnungsposition an Quitt), rutschen Umlaute leicht in ae/oe/ue. Die
   Produkte korrigieren das serverseitig **nicht**, der falsche Text bleibt
   dauerhaft drin. Vor jedem schreibenden Aufruf mit deutschem Text einmal
   prüfen, dass die Umlaute stimmen.
@@ -200,7 +200,7 @@ Vorhaben.
 | Produkt | Einstieg |
 | --- | --- |
 | Atlas | `GET /api/ai/onboarding`, alles in einem Aufruf `GET /api/ai/info` |
-| Books | `GET /api/ai/info?full=1` |
+| Quitt | `GET /api/ai/info?full=1` |
 | Nexus | `GET /api/ai/onboarding`, pro Bereich `GET /api/<bereich>/info` |
 | Spotlight | `GET /api/ai/onboarding` und `GET /api/ai/info` |
 | Connector | `GET /api/ai/info` |

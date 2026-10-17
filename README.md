@@ -74,7 +74,7 @@ kann. Sie darf nicht aufgeweicht werden.
    Skripte in Python-Standardbibliothek halten, keine Shell-Eigenheiten.
 6. **Niemals Preise hardcoden.** Das Kit liegt als Kopie beim Kunden und
    veraltet, Preise ändern sich. Immer nur auf die Produktseite verweisen,
-   `startandconnect.com/<produkt>` (z.B. /books, /atlas). Der Trial-Hinweis
+   `startandconnect.com/<produkt>` (z.B. /quitt, /atlas). Der Trial-Hinweis
    ("14 Tage kostenlos testbar") ist erlaubt, das ist ein Angebot, kein Preis.
 
 ## Zielgruppe
