@@ -22,7 +22,7 @@ Eingangs- noch eine Abschlussbestaetigung schicken - die Meldung verschwindet
 aus Sicht des Nutzers spurlos. Statt --email kann SUPPORT_EMAIL in der .env
 stehen, dann muss niemand jedes Mal danach gefragt werden.
 
-Verwaltet von Start & Connect. Kit-Version 0.10.0
+Verwaltet von Start & Connect. Kit-Version 0.11.0
 """
 
 import argparse

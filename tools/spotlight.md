@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.10.0 | Stand 2026-08-31
+     Kit-Version 0.11.0 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight

@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.10.0 | Stand 2026-08-31
+     Kit-Version 0.11.0 | Stand 2026-10-17
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -58,7 +58,7 @@ sonst möglich ist. **Einmal lesen, bevor du irgendetwas aufrufst.**
 ## Wenn später weitere Produkte dazukommen
 
 Sobald der Connector steht, ist er die Zieladresse für alle weiteren
-Systemprompts. Fügt der Nutzer später einen Quitt-, Nexus- oder
+Systemprompts. Fügt der Nutzer später einen Books-, Nexus- oder
 Spotlight-Prompt ein, gehören Zugangsdaten und Endpunkte dorthin, statt auf
 seinen Rechner. Das ist der sicherere Weg, weil der Schlüssel dann im
 verschlüsselten Speicher des Connectors liegt und nicht in einer Datei.
@@ -76,7 +76,7 @@ Die Art der Authentifizierung unterscheidet sich je Produkt:
 
 | Produkt | `authType` |
 | --- | --- |
-| Atlas, Quitt, Nexus | `BEARER` |
+| Atlas, Books, Nexus | `BEARER` |
 | Spotlight | `API_KEY_HEADER` (Header `x-api-key`) |
 
 Für bekannte Fremdanbieter gibt es Vorlagen, dann reicht `templateId` statt
