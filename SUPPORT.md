@@ -117,7 +117,7 @@ Beschreibung.
 
 Die Produkte von Start & Connect haben einen Bereich **„Fehler melden“**. Darüber
 gehen die Meldungen raus. Ausnahmen stehen in der Anleitung des Produkts, zum
-Beispiel bei Echo und Orbit. Er hängt Adresse, Version, Browser und Fehlerspuren
+Beispiel bei Orbit. Er hängt Adresse, Version, Browser und Fehlerspuren
 von selbst an, die Start & Connect zur Diagnose braucht.
 
 1. Formuliere die Meldung mit ihm: was er tun wollte, was passiert ist, die
