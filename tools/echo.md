@@ -49,7 +49,7 @@ statt Endpunkte zu raten.
 - Kommentar-Aktionen und Nachrichten-Abläufe gibt es nur auf Instagram.
 - Für TikTok, LinkedIn und YouTube gibt es keinen Posteingang.
 - Den ersten Kommentar auf Instagram kann Echo nicht anpinnen.
-- Rundmails und Nachrichten-Serien an viele gibt es bewusst nicht.
+- Massen-Direktnachrichten und Nachrichten-Serien gibt es bewusst nicht.
 
 **Aufpassen:** Hashtags gehen bei YouTube nur ins Feld für Tags, nie in die
 Beschreibung.
