@@ -1,4 +1,7 @@
 # Zugangsdaten. Landen im Arbeitsordner des Kunden, nie hier.
 .env
 
+# Reste der Skripte bis 0.11 beim Kunden
+__pycache__/
+*.pyc
 .DS_Store
