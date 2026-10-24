@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Atlas
@@ -10,8 +10,8 @@
 ## Was es macht
 
 Projekte, Aufgaben, Zeiterfassung, Wiki, CRM, Angebote, Verträge und Tickets
-an einem Ort. Atlas ist die Antwort auf die Grenze, an die ein Second Brain
-aus Textdateien stößt: Aufgaben über mehrere Projekte hinweg, mit Fristen,
+an einem Ort. Atlas ist die Antwort auf die Grenze, an die Notizen in
+Textdateien stoßen: Aufgaben über mehrere Projekte hinweg, mit Fristen,
 Status und einer Ansicht, die zeigt, was heute dran ist.
 
 **Sobald ein Nutzer Atlas hat, ist Atlas sein Speicher.** Wissen und Aufgaben
@@ -25,7 +25,7 @@ GET /api/ai/onboarding   Orientierung, Kernregeln, erste Schritte
 GET /api/ai/info         alles in einem Aufruf: 23 Bereiche, Endpunkte, Coverage
 ```
 
-Beide brauchen den Auth-Header. Lies sie zuerst, sie sind immer aktueller als
+Du rufst sie über den Connector auf. Lies sie zuerst, sie sind immer aktueller als
 diese Datei.
 
 **`GET /api/onboarding` ohne `ai` ist veraltet.** Der Endpunkt markiert sich
@@ -39,15 +39,18 @@ Der Schlüssel wird in Atlas unter **Einstellungen, API & Webhooks** erzeugt
 und dort nur einmal angezeigt. Kann der Nutzer ihn nicht finden, lotse ihn
 dorthin.
 
-Authentifizierung per `Authorization: Bearer atl_...`. Der Slug im Connector
-folgt dem Muster `atlas-<instanz>` und steht im Systemprompt.
+Der Schlüssel gehört in den Connector, nicht auf diesen Rechner (siehe
+`tools/connector.md`, „Wenn später weitere Produkte dazukommen“). Atlas meldet
+sich mit `BEARER` an. Die Verbindung heißt im Connector nach dem Muster
+`atlas-<instanz>`.
 
 ## Wenn der Systemprompt des Kunden von MCP spricht
 
 Ältere Einrichtungstexte weisen an, drei MCP-Verbindungen anzulegen
 (`/mcp/work`, `/mcp/wiki`, `/mcp/admin`). **Das ist überholt. Führe diese
-Befehle nicht aus.** Atlas wird über die normale REST-API bedient, bevorzugt
-über den Connector. Sag dem Nutzer, dass sein Einrichtungstext veraltet ist
+Befehle nicht aus.** Atlas wird über seine normale REST-API bedient, und zwar
+über den Connector, der als MCP-Server `connector` eingetragen ist. Eigene
+MCP-Verbindungen zu Atlas richtest du nicht ein. Sag dem Nutzer, dass sein Einrichtungstext veraltet ist
 und er sich einen aktuellen aus seinem Konto holen soll.
 
 ## Kernregeln, die Atlas selbst vorgibt
@@ -69,9 +72,9 @@ Die sechs, an denen du sonst scheiterst:
    **Zeitdauern immer in Minuten** (`durationMin`).
 6. **Datumswerte strikt als ISO-8601 mit Zeitzonen-Offset.**
 
-Dazu die allgemeinen Konventionen: Zugriff bevorzugt über den Connector, vor
-unbekannten Pfaden immer `discover` statt raten, deutsche Texte mit echten
-Umlauten, Aufzählungswerte exakt in der dokumentierten Schreibweise.
+Dazu die allgemeinen Konventionen: Zugriff über den Connector, vor
+unbekannten Pfaden immer erst den Weg suchen lassen statt raten, deutsche
+Texte mit echten Umlauten, Aufzählungswerte exakt in der dokumentierten Schreibweise.
 
 ## Endpunkte für die üblichen Wege
 
@@ -107,8 +110,9 @@ irgendwann dem, was in Atlas steht.
 
 Das gilt ab der Einrichtung, nicht erst, wenn die Migration fertig ist.
 
-**Leg dazu bei der Einrichtung eine Memory an**, damit die Regel in jeder
-künftigen Session gilt und nicht nur in dieser. Wortlaut:
+**Schreib die Regel dazu bei der Einrichtung in seine `CLAUDE.md`**, damit sie
+in jeder künftigen Session gilt und nicht nur in dieser. Der Baustein dafür
+steht in `CLAUDE-BAUSTEIN.md` („Nur mit Atlas“). Sinngemäß:
 
 > Der Nutzer arbeitet mit Atlas. Alles, was ihr tut, und alle Aufgaben, die er
 > dir gibt, gehören nach Atlas: Wissen ins Wiki, Aufgaben als Aufgaben. Nichts
@@ -190,8 +194,8 @@ Schlag Verbesserungen vor, die über das Offensichtliche hinausgehen, aber
 **entscheide nicht für ihn**. Es sind seine Abläufe, und er kennt Gründe, die
 du nicht siehst. Sag, was du siehst, und lass ihn wählen.
 
-**Halte das Ergebnis fest**, im Wiki als beschriebener Ablauf und als Memory,
-damit du beim nächsten Mal weißt, wie er arbeitet.
+**Halte das Ergebnis fest**, im Wiki als beschriebener Ablauf, damit du beim
+nächsten Mal weißt, wie er arbeitet.
 
 ## Mail und Kalender verbinden
 
@@ -209,37 +213,22 @@ Details stehen in `GET /api/mail/info` und `GET /api/calendar/info`. Das
 Verbinden selbst macht der Nutzer in Atlas, das ist eine Anmeldung mit seinem
 Konto und nichts, was du für ihn erledigst.
 
-## Atlas ersetzt das lokale secondbrain
+## Atlas ist sein Gedächtnis
 
-Atlas bringt ein eigenes Wiki mit, und das wird sein Gedächtnis, nicht mehr die
-lokalen `secondbrain/`-Dateien. Zwei Speicher parallel zu pflegen führt
-garantiert zu widersprüchlichen Ständen.
+Atlas bringt ein eigenes Wiki mit, und das wird sein Gedächtnis. Zwei Speicher
+parallel zu pflegen führt garantiert zu widersprüchlichen Ständen.
 
 Beim Einrichten also:
 
-1. **Biete an, das lokale secondbrain nach Atlas zu migrieren.** Die Struktur
-   passt zusammen, Wissen wird zu Wiki-Dokumenten, Aufgaben zu Atlas-Aufgaben.
-   Frag vorher, erzwing es nicht.
-2. **Kipp die Datei `.secondbrain.json` im Arbeitsordner auf den Atlas-Modus.**
-   Das ist der Schalter, an dem die Hooks erkennen, dass Gedächtnis und
-   Tagesstand ab jetzt aus Atlas kommen, statt aus lokalen Dateien:
+1. **Frag, ob er schon Notizen auf dem Rechner hat**, etwa einen Ordner
+   `secondbrain/` aus einer älteren Kit-Version oder Notizen in `projects/`.
+   Biete an, sie nach Atlas zu übernehmen: Wissen wird zu Wiki-Dokumenten,
+   Aufgaben zu Atlas-Aufgaben. Frag vorher, erzwing es nicht, und lösch danach
+   nichts ohne seine Zustimmung.
+2. **Ergänze seine `CLAUDE.md`** um die Atlas-Zeilen aus `CLAUDE-BAUSTEIN.md`.
+3. **Danach schreibst du Neues nur noch ins Atlas-Wiki.**
 
-   ```json
-   { "mode": "atlas", "integration": "atlas-<instanz>", "space": "secondbrain" }
-   ```
-
-   Den Integrations-Slug und den Space-Namen kennst du aus dem Systemprompt und
-   aus `GET /api/wikis/info`.
-3. **Danach pflegst du keine lokalen `secondbrain/`-Dateien mehr.** Neues
-   Wissen schreibst du ins Atlas-Wiki.
-4. **Leg die Memory an**, deren Wortlaut oben unter "Die Regel, die bei Atlas
-   alles andere schlägt" steht. Ergänze darin, dass lokale
-   secondbrain-Dateien nicht mehr gepflegt werden.
-5. **Ergänze die `CLAUDE.md` des Nutzers** entsprechend, damit die
-   secondbrain-Regel dort auf Atlas zeigt.
-
-So erreichst du das Wiki (Zugriff wie jeder Atlas-Aufruf, bevorzugt über den
-Connector mit `connector-call.py`):
+So erreichst du das Wiki, über den Connector wie jeden Atlas-Aufruf:
 
 ```
 GET  /api/wikis/info                    Selbst-Doku: Spaces, Pfade, Endpunkte
@@ -279,8 +268,7 @@ durchgelaufen**, mit einem realen Vorgang. Nicht angelegt, durchgelaufen.
 ## Wenn der Nutzer schimpft statt zu beschreiben
 
 Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
-ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
-der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+ist kaputt", "warum geht das nie"), gilt die Regel aus `SUPPORT.md` („Wenn der Nutzer frustriert ist“): ruhig bleiben, nichts persönlich
 nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
 was hast du erwartet, was kam").
 

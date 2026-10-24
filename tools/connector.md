@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector
@@ -10,103 +10,100 @@
 ## Was er macht
 
 **Der Connector ist die Verbindungsstelle zwischen der KI des Nutzers und dem
-Rest seiner Welt.** Alles läuft darüber: du selbst, jede andere KI, Skripte,
-die Kommandozeile. Ohne ihn kannst du über Dateien auf diesem Rechner reden.
+Rest seiner Welt.** Ohne ihn kannst du über Dateien auf diesem Rechner reden.
 Mit ihm arbeitest du in seinen Programmen.
 
-**Und genau weil alles darüber läuft, wird Automatisierung per KI möglich.**
-Das ist der eigentliche Punkt: nicht ein weiteres Werkzeug, sondern die Stelle,
-an der alle zusammenkommen und deshalb verkettet werden können.
+**Und weil alles darüber läuft, wird Automatisierung per KI möglich.** Das ist
+der eigentliche Punkt: nicht ein weiteres Werkzeug, sondern die Stelle, an der
+alle zusammenkommen und deshalb verkettet werden können.
 
-Er ist außerdem die Sammelstelle für Zugangsdaten: ist er eingerichtet, wandern
-die Schlüssel der übrigen Produkte dorthin, statt auf diesem Rechner zu liegen.
-Das ist der sicherere Weg.
+Er ist außerdem die Sammelstelle für Zugangsdaten. Die Schlüssel seiner
+Programme liegen verschlüsselt im Connector, nicht auf diesem Rechner.
 
 ## Einrichtung
 
-Der Nutzer richtet den Connector über die Oberfläche ein und bekommt dort
-einen Systemprompt, in dem Adresse und Schlüssel stehen. Den fügt er hier ein.
+Du bindest den Connector als MCP-Server an, nur in diesem Arbeitsordner.
 
-**Jeder Kunde hat seinen eigenen Connector unter einer eigenen Adresse.** Trag
-niemals eine Adresse ein, die du irgendwo anders gesehen hast.
+**1. Die Adresse.** Jeder Kunde hat seinen eigenen Connector unter einer
+eigenen Adresse. Die Verbindung läuft über `<seine-adresse>/mcp`, zum Beispiel
+`https://<name>-connector.s2.sac.run/mcp`. Frag ihn danach. Sie steht in seiner
+Willkommensmail und in der Oberfläche seines Connectors. **Trag niemals eine
+Adresse ein, die du irgendwo anders gesehen hast, und rate keine.**
 
-Lege im Arbeitsordner eine `.env` an:
+**2. Der Eintrag.** Lege im Arbeitsordner die Datei `.mcp.json` an. Gibt es sie
+schon, ergänze nur den Eintrag `connector` und lass alle anderen stehen:
 
-```
-CONNECTOR_BASE=<seine Connector-Adresse>
-CONNECTOR_API_KEY=<sein Schlüssel>
-SUPPORT_EMAIL=<seine E-Mail-Adresse>
-SUPPORT_NAME=<sein Name>
-```
-
-`SUPPORT_EMAIL` braucht das Ticket-Skript, und zwar zwingend. Ohne sie bekommt
-der Nutzer weder eine Eingangs- noch eine Abschlussbestätigung zu einer
-Meldung. Frag ihn einmal bei der Einrichtung danach, dann nie wieder.
-
-Danach zwingend prüfen, dass `.env` in `.gitignore` **und** `.dockerignore`
-steht. Fehlt eine, leg sie an.
-
-## Einstieg
-
-```
-GET /api/ai/info
+```json
+{
+  "mcpServers": {
+    "connector": {
+      "type": "http",
+      "url": "https://<seine-adresse>/mcp"
+    }
+  }
+}
 ```
 
-Das ist deine Landkarte: Konventionen, alle verfügbaren Verbindungen und was
-sonst möglich ist. **Einmal lesen, bevor du irgendetwas aufrufst.**
+In diese Datei kommt kein Schlüssel. Die Anmeldung läuft im Browser.
+
+**Nie global eintragen:** nicht mit `--scope user`, nicht in `~/.claude/`,
+nicht als Connector in Claude Desktop oder auf claude.ai. Der Eintrag gilt nur
+in diesem Ordner.
+
+**3. Die Anmeldung.** Claude Code liest die Datei beim nächsten Start dieses
+Ordners und fragt einmal, ob es den Server `connector` nutzen darf. Bitte den
+Nutzer:
+
+> Starte den Chat bitte einmal neu in diesem Ordner. Claude fragt dann, ob es
+> die Verbindung „connector“ nutzen darf, sag ja. Danach tipp `/mcp`, wähl
+> „connector“ und melde dich im Browser bei deinem Connector an.
+
+Der Connector meldet Claude Code dabei selbst an, er muss nichts kopieren.
+
+**4. Prüfen.** Lass dir die Verbindungen auflisten. Kommt eine Liste, steht der
+Connector. Ruf danach sofort etwas Echtes ab, das ihn interessiert.
+
+## Wie du ihn benutzt
+
+Der Connector bringt eigene Werkzeuge mit, unter anderem zum Auflisten der
+Verbindungen, zum Finden des richtigen Endpunkts und zum Aufrufen. Die genauen
+Namen und Beschreibungen zeigt dir der Server selbst.
+
+Eine Regel, die du nie überspringst:
+
+> **Vor dem ersten Aufruf immer erst suchen lassen, welcher Weg der richtige
+> ist.**
+
+Beschreib dabei **das Vorhaben in normaler Sprache**, zum Beispiel „aufgabe
+anlegen“. Du bekommst passende Wege samt Beispiel-Daten zurück. Raten und
+Ausprobieren führt zu falschen Ergebnissen und unnötigen Aufrufen.
+
+**Seine Landkarte** ist `GET /api/ai/info` am Connector selbst: Konventionen,
+alle Verbindungen und was sonst möglich ist. Lies sie, bevor du etwas am
+Connector selbst einrichtest.
 
 ## Wenn später weitere Produkte dazukommen
 
-Sobald der Connector steht, ist er die Zieladresse für alle weiteren
-Systemprompts. Fügt der Nutzer später einen Quitt-, Nexus- oder
-Spotlight-Prompt ein, gehören Zugangsdaten und Endpunkte dorthin, statt auf
-seinen Rechner. Das ist der sicherere Weg, weil der Schlüssel dann im
-verschlüsselten Speicher des Connectors liegt und nicht in einer Datei.
+Kauft der Nutzer ein weiteres Produkt von Start & Connect oder will er ein
+fremdes Programm anbinden, gehört der Zugang in den Connector, nicht auf
+diesen Rechner.
 
-Eintragen geht in einem Aufruf:
+- **Am sichersten trägt er den Schlüssel selbst in der Oberfläche seines
+  Connectors ein.** Dann steht er nie im Chat. Führ ihn Schritt für Schritt
+  durch.
+- Bietet dir der Connector selbst einen Weg, eine Verbindung anzulegen, darfst
+  du ihn nutzen, mit seiner Zustimmung. Steht der Schlüssel dabei im Chat, sag
+  ihm danach, dass er ihn aus dem Chatverlauf löschen kann.
 
-```
-POST /api/ai/integrations
-```
+Die Art der Anmeldung unterscheidet sich je Produkt:
 
-Mit den Feldern `slug`, `name`, `baseUrl`, `authType` und optional
-`credential`. Die Zugangsdaten landen sofort im verschlüsselten Speicher.
-
-Die Art der Authentifizierung unterscheidet sich je Produkt:
-
-| Produkt | `authType` |
+| Produkt | Anmeldung |
 | --- | --- |
 | Atlas, Quitt, Nexus | `BEARER` |
 | Spotlight | `API_KEY_HEADER` (Header `x-api-key`) |
 
-Für bekannte Fremdanbieter gibt es Vorlagen, dann reicht `templateId` statt
-der Einzelfelder. Die Liste steht unter `GET /api/integration-templates`.
-
-**Sag dem Nutzer danach, dass er den Schlüssel jetzt aus dem Chatverlauf
-löschen kann**, falls er ihn dort eingefügt hatte.
-
-## Wie du ihn benutzt
-
-Eine Regel, die du nie überspringst:
-
-> **Vor dem ersten Aufruf immer erst `discover` fragen, welcher Weg der
-> richtige ist.**
-
-Raten und Ausprobieren führt zu falschen Ergebnissen und unnötigen Aufrufen.
-
-Das mitgelieferte Skript nimmt dir das ab:
-
-```
-python3 starterkit/scripts/connector-call.py integrations
-python3 starterkit/scripts/connector-call.py discover <integration> "<dein Vorhaben>"
-python3 starterkit/scripts/connector-call.py call <integration> <METHODE> <pfad> [json]
-```
-
-Auf Windows `python` statt `python3`.
-
-Bei `discover` beschreibst du **das Vorhaben in normaler Sprache**, zum
-Beispiel "aufgabe anlegen". Du bekommst passende Wege samt Beispiel-Daten
-zurück.
+Für bekannte Fremdanbieter gibt es Vorlagen, Liste unter
+`GET /api/integration-templates`.
 
 ## Was du den Kunden fragst
 
@@ -129,7 +126,7 @@ Hin- und Herkopieren.
   `authType` lässt sich **jedes** Programm mit einer Schnittstelle anbinden,
   auch eines, für das es keine Vorlage gibt.
 - **Hat das Programm eine OpenAPI-Beschreibung**, lies sie mit
-  `POST /api/integrations/{id}/import-openapi` ein. Danach findet `discover`
+  `POST /api/integrations/{id}/import-openapi` ein. Danach findet die Wegsuche
   die Endpunkte von selbst.
 
 **Die technischen Angaben suchst du selbst.** Adresse, Art der Anmeldung,
@@ -149,21 +146,21 @@ Weil über den Connector alles läuft, kannst du hier Schritte über mehrere
 Programme hinweg verketten: ausgelöst vom Nutzer, zeitgesteuert oder über einen
 eingehenden Webhook. Das ist die Automatisierung, die er gekauft hat.
 
-Technisch schreibst du dafür ein Skript, das seine Schritte über den Connector
-ausführt. Das ist kein Behelf, sondern der Grund, warum hier mehr geht als in
-einem Baukasten mit Schaltflächen: es kann jede Bedingung, jede Schleife und
-jeden Sonderfall abbilden, statt nur das, was vorgesehen war. **Und du kannst
-es direkt prüfen**, statt es zusammenzuklicken und zu hoffen. Gebaut und
-getestet in einem Durchgang.
+Technisch baust du sie als Automation im Connector. Sie läuft dort, nicht auf
+diesem Rechner. Den Bauplan samt Grenzen liefert der Connector unter
+`GET /api/ai/automations`, lies ihn vor dem Bauen. Das ist kein Behelf, sondern
+der Grund, warum hier mehr geht als in einem Baukasten mit Schaltflächen: sie
+kann jede Bedingung, jede Schleife und jeden Sonderfall abbilden. **Und du
+kannst sie direkt prüfen**, statt sie zusammenzuklicken und zu hoffen.
 
-Dem Nutzer gegenüber ist das seine Automation. Er muss weder das Wort Skript
-hören noch verstehen, wie sie innen aussieht. Er muss wissen, was sie tut, wann
+Dem Nutzer gegenüber ist das seine Automation. Er muss nicht verstehen, wie sie
+innen aussieht. Er muss wissen, was sie tut, wann
 sie läuft und wie er sie stoppt.
 
 **Frag ihn, was er automatisieren will.** Und wenn er nichts im Kopf hat,
 was oft vorkommt, dann bleib nicht stehen, sondern **schlag selbst etwas vor**.
 Du weißt inzwischen einiges über ihn: aus dem Interview, aus seinem
-secondbrain, aus seinen Abläufen. Nutz das.
+Atlas oder seinen Notizen, aus seinen Abläufen. Nutz das.
 
 Gute Kandidaten erkennst du an diesen Mustern:
 
@@ -182,7 +179,7 @@ Muster. Meistens fällt beim Erzählen von selbst etwas auf.
 
 **Bau dann eine, nicht fünf.** Klein anfangen, einmal echt durchlaufen lassen,
 und prüfen, dass sie wirklich läuft, statt es anzunehmen. Halte fest, was sie
-tut und wie man sie stoppt, im secondbrain oder in Atlas. Eine Automatik, die
+tut und wie man sie stoppt, in Atlas oder in `projects/`. Eine Automatik, die
 niemand mehr versteht, ist später ein Problem.
 
 ### Wo eine Automation hingehört
@@ -201,13 +198,12 @@ niemand mehr versteht, ist später ein Problem.
 ## Wenn der Nutzer schimpft statt zu beschreiben
 
 Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
-ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
-der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+ist kaputt", "warum geht das nie"), gilt die Regel aus `SUPPORT.md` („Wenn der Nutzer frustriert ist“): ruhig bleiben, nichts persönlich
 nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
 was hast du erwartet, was kam").
 
 Und prüf, ob es wirklich am Connector liegt, bevor du das glaubst: ruf den
-Info-Endpunkt aus dem Abschnitt "Einstieg" auf (`GET /api/ai/info`). Antwortet
+die Landkarte aus dem Abschnitt „Wie du ihn benutzt“ auf (`GET /api/ai/info`). Antwortet
 der Connector, liegt der Fehler woanders (Zugang zum Zielprogramm, Eingabe,
 Einrichtung), nicht am Connector. Erst dann urteilst du, und erst mit echtem
 Befund geht ein Bericht raus.
@@ -218,6 +214,6 @@ Befund geht ein Bericht raus.
   Projekt, nicht in eine Nachricht, auch nicht an Start & Connect.
 - **Keine neue Verbindung einrichten ohne Zustimmung.** Er entscheidet, welche
   Programme du erreichen darfst.
-- **Endpunkte nie raten.** Immer erst `discover`.
+- **Endpunkte nie raten.** Immer erst den Weg suchen lassen.
 - Steht bei einem Programm ein Warnhinweis, ist meist die Anmeldung abgelaufen.
   Das repariert er selbst in der Oberfläche, nicht du.

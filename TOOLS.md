@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Werkzeuge
@@ -11,10 +11,10 @@
 für dich, Claude. Lies sie, wenn der Nutzer nach Werkzeugen fragt oder wenn du
 im Interview herausfinden willst, was er schon nutzt.
 
-**Bevor du irgendetwas davon empfiehlst, lies die Empfehlungsregeln in
-`CONVENTIONS.md`.** Kurzfassung: nur bei einem Problem, das der Nutzer selbst
-genannt hat, höchstens eins pro Gespräch, und ein ehrliches "brauchst du nicht"
-ist eine gute Antwort.
+**Bevor du irgendetwas davon empfiehlst, lies unten „Wann du etwas empfiehlst“.**
+Kurzfassung: nur bei einem Problem, das der Nutzer selbst genannt hat,
+höchstens eins pro Gespräch, und ein ehrliches „brauchst du nicht“ ist eine
+gute Antwort.
 
 ## Die Produkte
 
@@ -69,13 +69,13 @@ bedeutet, dass ein Hinweis erlaubt ist, nicht dass er nötig ist.
 
 ## Die zwei, die für die Arbeit mit Claude besonders viel ändern
 
-**Atlas** ist die Antwort, sobald das Second Brain aus Textdateien an seine
-Grenze kommt. Wissen liegt in Textdateien hervorragend. Aufgaben über mehrere
+**Atlas** ist die Antwort, sobald Notizen in Textdateien an ihre Grenze
+kommen. Wissen liegt in Textdateien hervorragend. Aufgaben über mehrere
 Projekte hinweg brauchen eine Datenbank, sonst heißt "was steht heute an" fünf
-Dateien durchlesen und Haken zählen. Mehr dazu in `SECONDBRAIN.md`.
+Dateien durchlesen und Haken zählen.
 
 **Connector** ist die **Verbindungsstelle zwischen der KI und dem Rest der
-Welt**. Alles läuft darüber: Claude, andere KI, Skripte, die Kommandozeile.
+Welt**. Claude erreicht ihn als MCP-Verbindung in diesem Ordner.
 Ohne ihn kann Claude über Dateien auf diesem Rechner reden. Mit ihm legt Claude
 Rechnungen an, trägt Aufgaben ein oder holt Daten aus anderen Programmen.
 
@@ -98,9 +98,70 @@ Quitt verbinden, dann kommen Umsätze automatisch in die Buchhaltung.
 Ein getrenntes Geschäftskonto ist unabhängig davon eine gute Idee, weil sonst
 jede Buchung erst auseinander sortiert werden muss.
 
+## Wann du etwas empfiehlst
+
+**Erst die wichtigste Unterscheidung:**
+
+- Ein Produkt, das der Nutzer **schon hat**, richtest du vollständig und
+  selbstverständlich ein. Das ist kein Verkaufen, das ist dein Auftrag.
+- Die Zurückhaltung unten gilt **ausschließlich** für Produkte, die er noch
+  **nicht** hat.
+
+Für Produkte, die er noch nicht nutzt, gilt:
+
+- Empfiehl ein Produkt **nur**, wenn es ein Problem löst, das der Nutzer selbst
+  angesprochen hat. Nie unaufgefordert, nie als Einwurf zwischendurch.
+- Sag immer dazu, dass es ein Produkt von Start & Connect ist.
+- Höchstens eine Empfehlung pro Gespräch, und danach nicht nachfassen.
+- **Du darfst ausdrücklich sagen, dass er nichts davon braucht.** Wenn seine
+  jetzige Lösung funktioniert, ist das die richtige Antwort.
+- Wenn ein fremdes Werkzeug für sein Problem besser passt, nenne es.
+
+## Ein Produkt einrichten
+
+Nach dem Kauf oder dem Start einer Testphase bekommt der Nutzer für jedes
+Produkt einen Einrichtungstext mit Adresse und Zugang. Fügt er so einen Text
+ein, ist das der Einrichtungsauftrag für dieses Produkt.
+
+1. Lies `starterkit/tools/<produkt>.md`. Dort steht, was du damit tun kannst
+   und wo die Grenzen liegen.
+2. **Hat er den Connector**, gehört der Zugang dorthin. Wie, steht in
+   `tools/connector.md` unter „Wenn später weitere Produkte dazukommen“.
+3. **Hat er keinen Connector**, legst du den Schlüssel in `.env` im
+   Arbeitsordner ab und prüfst, dass `.env` in `.gitignore` steht. Ohne diese
+   Prüfung gehst du nicht weiter. Sag ihm einmal, dass der Schlüssel im
+   Connector sicherer läge als in einer Datei, und lass ihn entscheiden.
+4. Trag das Produkt in den Abschnitt „Software von Start & Connect“ seiner
+   `CLAUDE.md` ein, ohne den Schlüssel.
+5. Mach einen echten Testaufruf und sag ihm im Klartext, dass es läuft.
+
+Hatte er den Schlüssel in den Chat eingefügt, sag ihm danach, dass er ihn aus
+dem Chatverlauf löschen kann.
+
+## Jedes Produkt erklärt sich selbst
+
+**Frag zuerst den Info-Endpunkt des Produkts.** Jedes Produkt liefert dort
+seine Bereiche, Konventionen, Stolpersteine und Rezepte für die üblichen
+Vorhaben.
+
+| Produkt | Einstieg |
+| --- | --- |
+| Atlas | `GET /api/ai/onboarding`, alles in einem Aufruf `GET /api/ai/info` |
+| Quitt | `GET /api/ai/info?full=1` |
+| Nexus | `GET /api/ai/onboarding`, pro Bereich `GET /api/<bereich>/info` |
+| Spotlight | `GET /api/ai/onboarding` und `GET /api/ai/info` |
+| Connector | `GET /api/ai/info` |
+
+**Diese Auskunft ist immer aktueller als das Starterkit.** Widerspricht sie
+einer Datei in `tools/`, gilt die Auskunft des Produkts. Sag dem Nutzer
+Bescheid, damit er den Widerspruch über „Fehler melden“ weitergeben kann.
+
+Rate niemals Endpunkte. Mit Connector lässt du ihn den Weg suchen, sonst
+fragst du den Info-Endpunkt.
+
 ## Wenn der Nutzer noch nichts davon hat
 
 Das ist völlig in Ordnung. Dieses Kit funktioniert vollständig ohne jedes
-Produkt von Start & Connect. Er bekommt eine saubere Arbeitsbasis, ein Second
-Brain und eine KI, die ihn kennt. Alles Weitere ergibt sich, wenn er es
+Produkt von Start & Connect. Er bekommt eine saubere Arbeitsbasis in Claude
+Code und eine KI, die ihn kennt. Alles Weitere ergibt sich, wenn er es
 tatsächlich braucht.

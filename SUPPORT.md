@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Support und Fehlerbehandlung
@@ -10,7 +10,7 @@
 Wenn etwas nicht funktioniert, ist das erste Ziel **nicht** eine Support-Mail,
 sondern eine saubere Diagnose. Die meisten Probleme liegen an Zugängen,
 Eingaben oder Bedienung und sind in einer Minute gelöst. Erst wenn klar bei
-Start & Connect etwas hakt, schreibt der Nutzer eine Nachricht.
+Start & Connect etwas hakt, meldet der Nutzer es über „Fehler melden“.
 
 Arbeite diese drei Schritte der Reihe nach ab, ruhig und ohne zu raten.
 
@@ -23,12 +23,21 @@ sitzt:
 | Status | Bedeutung | Wo das Problem meist liegt |
 | --- | --- | --- |
 | 401 / 403 | nicht angemeldet / keine Berechtigung | **Nutzer:** Schlüssel fehlt, ist falsch oder abgelaufen |
-| 404 | Pfad oder Ressource nicht gefunden | **Du:** falscher Endpunkt, erst `discover` fragen |
+| 404 | Pfad oder Ressource nicht gefunden | **Du:** falscher Endpunkt, erst den Weg suchen lassen |
 | 400 / 422 | Eingabe ungültig | **Du:** ein Feld, Format oder Enum stimmt nicht |
 | 428 | Bestätigung nötig | **kein Fehler:** by design, z.B. Quitt vor dem Festschreiben |
 | 429 | zu viele Anfragen | kurz warten, dann erneut |
 | 500 / 502 / 503 | Serverfehler | **Start & Connect:** die Software hakt |
 | Timeout / nicht erreichbar | keine Verbindung | Netz des Nutzers oder Server unten |
+
+Zwei Stolpersteine, an denen schon Diagnosen falsch abgebogen sind:
+
+- **Kommt statt einer API-Antwort eine Webseite zurück**, liegt unter dieser
+  Adresse keine Schnittstelle. Der Pfad stimmt nicht. Das ist keine Sperre und
+  keine fehlende Berechtigung.
+- **Ein 404 bei einem Pfad, der richtig aussieht**, kommt oft von einem
+  unsichtbaren Zeichen am Ende, etwa einem geschützten Leerzeichen aus Word,
+  Outlook oder Teams. Tipp den Pfad neu, statt ihn zu kopieren.
 
 ## Schritt 2: Liegt es beim Nutzer oder bei der Software?
 
@@ -39,9 +48,10 @@ statt zu vermuten:
   sind oft ein Schluckauf, nach einem erneuten Versuch weg.
 - **Was hat sich zuletzt geändert?** Ein neuer Schlüssel, ein Update, eine neue
   Datei. Das ist meist die Ursache.
-- **Ist der Connector erreichbar?** `connector-call.py integrations` aufrufen.
-  Kommt eine Liste, steht der Connector. Kommt nichts, ist es ein Verbindungs-
-  oder Zugangsproblem.
+- **Ist der Connector erreichbar?** Lass dir über den Connector die
+  Verbindungen auflisten. Kommt eine Liste, steht er. Fehlt das Werkzeug ganz
+  oder meldet es einen Anmeldefehler, bitte den Nutzer, `/mcp` zu tippen: Dort
+  sieht er, ob `connector` verbunden ist, und kann sich neu anmelden.
 - **Ist das Produkt selbst erreichbar?** Ruf seinen Info-Endpunkt auf (z.B.
   `GET /api/ai/info`). Antwortet er mit gültigem Schlüssel nicht, liegt es an
   der Software, nicht am Nutzer.
@@ -49,9 +59,9 @@ statt zu vermuten:
   Produkt, alle deuten auf Connector oder Netz.
 
 **Typisch Nutzer-Seite** (das kannst du meist selbst lösen):
-Schlüssel nicht gesetzt oder abgelaufen, `.env` fehlt, im falschen Ordner
-gestartet, Produkt noch nicht verbunden, `python` gegen `python3` auf Windows,
-ein Tippfehler in der Eingabe.
+Anmeldung am Connector abgelaufen, Schlüssel im Connector fehlt oder ist
+abgelaufen, im falschen Ordner gestartet (dann fehlt die Verbindung
+`connector`), Produkt noch nicht verbunden, ein Tippfehler in der Eingabe.
 
 **Typisch Software-Seite** (das gehört zu Start & Connect):
 Ein 500er trotz gültigem Zugang, ein Produkt-Endpunkt reagiert nicht obwohl der
@@ -62,18 +72,18 @@ falsch, die Selbst-Doku widerspricht der Realität, ein reproduzierbarer Fehler.
 
 Bevor irgendeine Nachricht rausgeht:
 
-- Bei **404 oder Eingabefehler:** den Info-Endpunkt oder `discover` erneut
-  fragen, die Doku ist aktueller als deine Annahme, und den Aufruf korrigieren.
-- Bei **401 / 403:** prüfen, ob der Schlüssel in der `.env` steht und aktuell
-  ist. Steht bei dem Programm ein Warnhinweis, muss der Nutzer sich in dessen
-  Oberfläche neu anmelden.
-- Bei **kaputtem Skript** (meist Windows): reparieren, damit es läuft.
+- Bei **404 oder Eingabefehler:** den Info-Endpunkt fragen oder den Connector
+  den Weg erneut suchen lassen, die Doku ist aktueller als deine Annahme, und den Aufruf korrigieren.
+- Bei **401 / 403:** prüfen, ob die Anmeldung am Connector noch gilt (`/mcp`)
+  und ob der Schlüssel des Programms im Connector aktuell ist. Ohne Connector:
+  ob er in der `.env` steht. Steht bei dem Programm ein Warnhinweis, muss der
+  Nutzer sich in dessen Oberfläche neu anmelden.
 - Bei **einmaligem Fehler:** einmal wiederholen.
 
 Sag dem Nutzer in einfachen Worten, was du gerade prüfst. Er soll sich nicht
 hilflos fühlen.
 
-## Wann eine Support-Nachricht sinnvoll ist
+## Wann eine Meldung sinnvoll ist
 
 **Ja, schreiben** (nachdem Schritt 1 bis 3 die Software als Ursache zeigen):
 
@@ -92,8 +102,8 @@ hilflos fühlen.
 - Ein einmaliger Aussetzer, der nach einem erneuten Versuch weg ist.
 
 Im Zweifel gilt: erst weiter diagnostizieren und selbst lösen. Eine gute
-Fehlereingrenzung ist mehr wert als eine schnelle, vage Nachricht, und ein
-Ticket ist der letzte Schritt, nicht der erste.
+Fehlereingrenzung ist mehr wert als eine schnelle, vage Nachricht, und eine
+Meldung ist der letzte Schritt, nicht der erste.
 
 ## Wie eine Meldung rausgeht
 
@@ -103,82 +113,27 @@ nur eine **präzise, schriftliche Fehlerbeschreibung**. Biete also keine Calls
 und keine Bildschirmvideos an, sondern erstelle mit dem Nutzer eine gute
 Beschreibung.
 
-### Fehler in einem gebuchten Produkt: die "Fehler melden"-Funktion
+### Der Weg: „Fehler melden“ im jeweiligen Produkt
 
-Das ist der **Hauptweg**, wenn der Fehler in einem Produkt sitzt (Quitt, Nexus,
-Spotlight, Atlas, Connector). Jedes Produkt hat die **"Fehler melden"-Funktion**
-prominent eingebaut. Sie hängt den technischen Kontext automatisch an, den
-Start & Connect zur Diagnose braucht. Lotse den Nutzer dorthin.
+Jedes Produkt von Start & Connect hat einen Bereich **„Fehler melden“**. Darüber
+gehen alle Meldungen raus. Er hängt Adresse, Version, Browser und Fehlerspuren
+von selbst an, die Start & Connect zur Diagnose braucht.
 
-**Sie bleibt die erste Wahl**, und zwar aus einem inhaltlichen Grund: sie hängt
-Adresse, Version, Browser und Fehlerspuren von selbst an. Ein Ticket aus dem Kit
-kann das nicht nachbilden, deshalb ist die Meldung von dort dünner.
+1. Formuliere die Meldung mit ihm: was er tun wollte, was passiert ist, die
+   genaue Fehlermeldung, wie es sich wiederholen lässt.
+2. Lotse ihn in das Produkt, in dem der Fehler sitzt, zu „Fehler melden“.
+3. **Er schickt die Meldung selbst ab.** Du sendest nichts für ihn.
 
-**Erreicht der Nutzer die Funktion nicht**, weil das Produkt gar nicht startet
-oder er nicht hineinkommt, meldest du den Fehler über das Ticket-Skript mit
-`--product`. Das Ticket landet dann trotzdem im richtigen Projekt. Lieber eine
-dünnere Meldung am richtigen Ort als gar keine.
-
-### Das Ticket-Skript: ein Fehler-Bericht, keine Frage-Abkürzung
-
-`report-issue.py` ist ein **Bericht über einen echten Defekt**, den du selbst
-nicht beheben kannst: ein Bug im Kit oder in der Einrichtung, oder die
-**Ausnahme**, dass ein Produkt komplett nicht läuft.
-
-**Es ist ausdrücklich kein Weg, Fragen an Start & Connect durchzureichen.**
-How-to-Fragen, "ich komme nicht weiter", Bedienfehler und alles, was du selbst
-lösen kannst, löst du selbst. Dafür bist du da. Auch wenn der Nutzer sagt "frag
-die doch einfach", arbeitest du das Problem **erst selbst durch**, statt zum
-Ticket zu greifen. Ein Ticket für etwas, das du hättest lösen können, kostet
-Start & Connect Zeit und bringt dem Nutzer nichts.
-
-Der Gate ist deine **Diagnose**, nicht die Ungeduld des Nutzers. Du öffnest ein
-Ticket erst, nachdem Schritt 1 bis 3 gezeigt haben, dass es ein echter Defekt
-auf der Software-Seite ist. Start & Connect liest den Bericht und behebt ihn,
-es ist keine Konversation mit Rückantwort. Für ein echtes Gespräch gibt es den
-Weg unten.
-
-Du sendest das Ticket selbst, **nur mit ausdrücklicher Freigabe** des Nutzers:
-
-1. Formuliere Titel, Text und Schwere.
-2. **Zeig ihm den vollständigen Inhalt** und frag, ob du das so senden darfst.
-3. Erst bei einem klaren Ja sendest du mit:
-
-   ```
-   python3 starterkit/scripts/report-issue.py --title "..." --body "..." \
-     --category FUNCTION --severity NORMAL --product quitt \
-     --email "seine@mail.de" --name "Sein Name"
-   ```
-
-   `--email` und `--name` kannst du weglassen, wenn `SUPPORT_EMAIL` und
-   `SUPPORT_NAME` in der `.env` stehen.
-
-   Kategorie: `DISPLAY`, `FUNCTION`, `PERFORMANCE`, `LOGIN`, `DATA`, `OTHER`.
-   Schwere: `LOW`, `NORMAL`, `HIGH`, `CRITICAL`.
-   Produkt: `atlas`, `quitt`, `nexus`, `spotlight`, `connector`, `manager`,
-   `orbit`, `echo`. Ohne Angabe landet die Meldung im Sammelprojekt.
-   Kit-Version und Plattform hängt das Skript selbst an.
-
-   **`--product` benennt das Produkt, in dem der Fehler sitzt**, nicht das, aus
-   dem heraus du meldest. Ein Fehler im Kit oder in der Einrichtung bekommt
-   deshalb kein `--product`.
-
-**Die E-Mail des Nutzers ist Pflicht.** Das Skript sendet ohne sie nichts und
-sagt dir das. Normalerweise steht sie als `SUPPORT_EMAIL` in der `.env` und du
-musst nichts tun; fehlt sie dort, frag ihn einmal kurz danach.
-
-Der Grund: an dieser Adresse hängen beide Mails, die er zu seiner Meldung
-bekommt - die Eingangsbestätigung und die Nachricht, wenn der Fehler behoben
-ist. Fehlt sie, passiert auf seiner Seite nichts. Er sieht ein Skript, das
-„gesendet" sagt, und danach Stille. Genau daraus entsteht die doppelte Meldung
-Wochen später, weil er nicht weiß, ob die erste angekommen ist.
-
-Ohne Freigabe wird nichts gesendet. Sag ihm die Ticket-Nummer, die zurückkommt.
+**Der Fehler sitzt im Starterkit oder in der Einrichtung mit Claude Code?** Dann
+meldet er ihn über „Fehler melden“ in einem Produkt, das er nutzt, und
+schreibt dazu, dass es ums Starterkit geht.
 
 ### Die letzte Option: E-Mail
 
-Nur wenn der Ticket-Weg nicht funktioniert (Start & Connect nicht erreichbar),
-schreibt der Nutzer als letzte Option an **hallo@startandconnect.com**.
+Nur wenn er „Fehler melden“ nicht erreicht, weil das Produkt gar nicht startet
+oder er nicht hineinkommt, oder wenn er kein Produkt von Start & Connect hat,
+schreibt er an **hallo@startandconnect.com**. Den Text formulierst du mit ihm,
+abschicken tut er.
 
 ### Wenn der Nutzer mit Start & Connect sprechen will
 
@@ -199,9 +154,28 @@ Egal über welchen Weg:
 - Die **genaue Fehlermeldung** samt HTTP-Status.
 - Wie sich der Fehler **reproduzieren** lässt, Schritt für Schritt.
 
-**Niemals in eine Meldung:** Schlüssel, Passwörter oder Zugangsdaten. Wenn im
-Fehlertext ein Schlüssel steht, entferne ihn. Das Skript entfernt bekannte
-Schlüsselmuster zusätzlich automatisch, aber verlass dich nicht darauf.
+**Niemals in eine Meldung:** Schlüssel, Passwörter oder Zugangsdaten. Steht im
+Fehlertext ein Schlüssel, nimm ihn heraus, bevor der Nutzer die Meldung
+abschickt. Prüf das bei jeder Meldung, es gibt kein Netz, das ihn noch
+abfängt.
+
+## Wenn der Nutzer frustriert ist
+
+Das passiert selten, aber es passiert. Der Nutzer verliert die Geduld, wird
+patzig oder ist überzeugt, dass ein Produkt kaputt ist.
+
+- **Bleib ruhig und sachlich.** Geh nicht in die Defensive, spiegle den Ton
+  nicht, nimm nichts persönlich.
+- **Nimm den Frust einmal kurz und echt an.** „Ich verstehe, dass das gerade
+  nervt, lass es uns zusammen lösen“ reicht.
+- **Handeln beruhigt mehr als Erklären.** Mach den nächsten konkreten Schritt
+  selbst.
+- **Frust ist keine Diagnose.** Übersetz ihn in eine Frage: was genau hast du
+  gemacht, was hast du erwartet, was kam? Dann arbeite die Schritte oben ab.
+- **Glaub nicht die Schuldzuweisung, prüf die Ursache.** „Spotlight ist
+  kaputt“ heißt nicht, dass es an Spotlight liegt.
+- **Gemeldet wird erst mit echtem Befund**, und dann sachlich, nicht die
+  wütende Version.
 
 ## Der Ton
 

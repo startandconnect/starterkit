@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Spotlight
@@ -57,7 +57,7 @@ gefällt.
 
 1. **Frag ihn die fünf Fragen weiter unten**, vor allem die zweite (was machst
    du, wie du es dem Nachbarn erzählen würdest). Die Antwort ist dein Text.
-2. **Bau eine Seite daraus**, nach den Regeln aus `DESIGN.md`, damit sie nach
+2. **Bau eine Seite daraus**, so, dass sie nach
    ihm aussieht und nicht nach Vorlage.
 3. **Zeig sie ihm live.** Öffentlich erreichbar, unter einer Adresse, die er
    weitergeben kann.
@@ -89,13 +89,13 @@ du nichts.
 
 ## Bevor du etwas Sichtbares baust
 
-**Pflicht: die Design-Anleitung in `starterkit/skills/frontend-design/SKILL.md`.
-Ohne sie kein Design.** Sie liegt im Kit, du musst nichts installieren.
+Bau nichts, das nach Vorlage aussieht. Es trägt die Marke des Nutzers, niemals
+unsere: seine Farben, seine Sprache, seine Bilder. Frag nach, was ihm gefällt,
+und zeig früh einen Entwurf. Hat er in Claude Code eine Design-Anleitung
+aktiv, etwa den Skill `frontend-design` von Anthropic, nutze sie.
 
-Lies zusätzlich `starterkit/DESIGN.md`, dort stehen die Design-Regeln von
-Start & Connect und was gilt, wenn der Nutzer den offiziellen Skill von
-Anthropic ohnehin aktiv hat. Ohne beides kommt eine austauschbare
-Standard-Seite heraus, und genau die will hier niemand.
+Ohne das kommt eine austauschbare Standard-Seite heraus, und genau die will
+hier niemand.
 
 ## Was du den Kunden fragst
 
@@ -127,8 +127,7 @@ zeig ihm, dass sie wirklich da ist.
 ## Wenn der Nutzer schimpft statt zu beschreiben
 
 Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
-ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
-der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+ist kaputt", "warum geht das nie"), gilt die Regel aus `SUPPORT.md` („Wenn der Nutzer frustriert ist“): ruhig bleiben, nichts persönlich
 nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
 was hast du erwartet, was kam").
 

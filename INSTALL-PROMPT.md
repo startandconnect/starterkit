@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Installer-Prompt
@@ -12,7 +12,8 @@ Claude Code ein.
 Arbeitsordner angelegt und Claude Code in genau diesem Ordner geöffnet. Der
 Prompt setzt das voraus und legt keinen Ordner selbst an. Grund: die
 Erinnerungen aus der Einrichtung hängen an dem Ordner, in dem diese erste
-Session läuft. Läuft sie im falschen Ordner, sind sie später weg.
+Session läuft. Läuft sie im falschen Ordner, fehlen sie später, und auch die
+Verbindung zum Connector gilt nur in diesem Ordner.
 
 Bewusst kurz. Die ganze Logik liegt in `SETUP.md` und ist damit versioniert.
 Ändert sich der Ablauf, bleibt dieser Text gleich.
@@ -53,7 +54,9 @@ Der Prompt allein reicht nicht, er braucht den Rahmen:
    - Einen Ordner für die eigene Arbeit anlegen, zum Beispiel `Dokumente/claude`.
    - Diesen Ordner in Claude Code öffnen.
 2. **Dann:** den Prompt kopieren und einfügen.
-3. Ein Satz, was passiert und wie lange es dauert (etwa 10 Minuten).
+3. Ein Satz, was passiert und wie lange es dauert (etwa 5 Minuten). Hat er den
+   Connector, braucht er dessen Adresse aus der Willkommensmail und meldet
+   sich einmal im Browser an.
 
 Der Kopieren-Button ist wichtiger als jede Erklärung daneben.
 

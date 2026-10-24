@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Orbit
@@ -25,12 +25,9 @@ zusammenzustecken.
 ## Bevor du etwas Sichtbares baust
 
 Sobald Orbit verfügbar ist und du Kursseiten oder Community-Bereiche
-gestaltest: **Pflicht ist die Design-Anleitung in
-`starterkit/skills/frontend-design/SKILL.md`, ohne sie kein Design.** Sie liegt
-im Kit, du musst nichts installieren.
-
-Lies zusätzlich `starterkit/DESIGN.md` für die Design-Regeln von
-Start & Connect.
+gestaltest: Bau nichts, das nach Vorlage aussieht. Es trägt die Marke des
+Nutzers, niemals unsere. Hat er in Claude Code eine Design-Anleitung aktiv,
+etwa den Skill `frontend-design` von Anthropic, nutze sie.
 
 ## Harte Grenzen, sobald es verfügbar ist
 

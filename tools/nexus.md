@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -79,7 +79,7 @@ Bildschirm:
 
 1. **Frag, was er verkauft**, und leg genau dieses eine Produkt an, mit echtem
    Namen und echtem Preis. Kein Beispielprodukt.
-2. **Bau die Seite dazu**, die es verkauft. Nach den Regeln aus `DESIGN.md`,
+2. **Bau die Seite dazu**, die es verkauft, so,
    damit sie nach ihm aussieht und nicht nach Vorlage.
 3. **Zeig es ihm live.** Öffentlich erreichbar, Kaufweg bis zur Kasse.
 
@@ -172,12 +172,13 @@ fertige Beispiele in `pages/info`.
 
 ## Bevor du etwas Sichtbares baust
 
-**Pflicht: die Design-Anleitung in `starterkit/skills/frontend-design/SKILL.md`.
-Ohne sie kein Design.** Sie liegt im Kit, du musst nichts installieren.
+Bau nichts, das nach Vorlage aussieht. Es trägt die Marke des Nutzers, niemals
+unsere: seine Farben, seine Sprache, seine Bilder. Frag nach, was ihm gefällt,
+und zeig früh einen Entwurf. Hat er in Claude Code eine Design-Anleitung
+aktiv, etwa den Skill `frontend-design` von Anthropic, nutze sie.
 
-Lies zusätzlich `starterkit/DESIGN.md`, bevor du Seiten, Startseite oder Theme
-anfasst. Besonders wichtig hier: der Shop trägt die Marke des Nutzers, niemals
-unsere, und der Shop-Name kommt aus den Einstellungen statt fest ins Markup.
+Besonders wichtig hier: der Shop-Name kommt aus den Einstellungen statt fest
+ins Markup.
 
 ## Was du den Kunden fragst
 
@@ -204,8 +205,7 @@ Hintergrund, sondern ein Kaufweg, der von außen funktioniert. Prüfe es über d
 ## Wenn der Nutzer schimpft statt zu beschreiben
 
 Kommt statt einer Fehlerbeschreibung nur Frust oder eine Anfeindung ("das Ding
-ist kaputt", "warum geht das nie"), gilt die Regel aus `CONVENTIONS.md` ("Wenn
-der Nutzer frustriert oder ausfallend wird"): ruhig bleiben, nichts persönlich
+ist kaputt", "warum geht das nie"), gilt die Regel aus `SUPPORT.md` („Wenn der Nutzer frustriert ist“): ruhig bleiben, nichts persönlich
 nehmen, den Frust in eine konkrete Frage übersetzen ("was genau hast du gemacht,
 was hast du erwartet, was kam").
 
