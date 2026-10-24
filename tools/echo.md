@@ -68,6 +68,7 @@ Hier schreibst du echten Menschen.
 
 ## Wenn etwas klemmt
 
-Es gilt `SUPPORT.md`. Echo hat noch keinen Bereich „Fehler melden“. Bis es ihn
-gibt, schreibt der Nutzer an **hallo@startandconnect.com**. Den Text
-formulierst du mit ihm, abschicken tut er.
+Es gilt `SUPPORT.md`. Fehler meldet der Nutzer über „Fehler melden“ in Echo, in
+der Seitenleiste über den Einstellungen. Den Text formulierst du mit ihm,
+abschicken tut er. Erreicht er Echo nicht oder kommt beim Absenden ein Fehler,
+bleibt als letzter Weg **hallo@startandconnect.com**.
