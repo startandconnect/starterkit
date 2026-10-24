@@ -18,7 +18,7 @@ Danach gehört die Umgebung dem Kunden und er baut sie selbst weiter aus. Wir
 
 ## Nur Text, kein Code
 
-Seit Version 1.0 enthält das Kit **keinen ausführbaren Code von uns**: keine
+Ab Version 1.0 enthält das Kit **keinen ausführbaren Code von uns**: keine
 Skripte, keine Hooks, keine lokalen MCP-Server, keine längeren Shell- oder
 Python-Blöcke zum Abtippen. Grund ist der Cyber Resilience Act. Laut Anwalt
 sind Text, Prompts und Konfiguration, kurze Standardbefehle wie `git pull` und
@@ -35,7 +35,7 @@ etwas Ausführbares hinzufügen will, klärt das vorher mit Ben.
 | `TOOLS.md` | Übersicht aller Produkte, Empfehlungsregeln, Einrichten eines Produkts |
 | `tools/<tool>.md` | Eine Anleitung pro Produkt, wird bei Bedarf gelesen |
 | `SUPPORT.md` | Fehlerdiagnose und der Weg über „Fehler melden“ im Produkt |
-| `MIGRATION.md` | Umstieg von 0.x: Hook raus, Connector als MCP, `CLAUDE.md` anpassen |
+| `MIGRATION.md` | Umstieg von 0.11 und älter: Hook raus, Connector als MCP, `CLAUDE.md` anpassen |
 | `UNINSTALL.md` | Vollständiger Rückbau |
 | `CONVENTIONS.md` | Nur noch ein Wegweiser für alte `CLAUDE.md`-Verweise auf `MIGRATION.md` |
 | `VERSION` | Kit-Version, für Support und Updates |
@@ -54,9 +54,19 @@ etwas Ausführbares hinzufügen will, klärt das vorher mit Ben.
 
 Es gibt keinen automatischen Update-Check mehr. Der `CLAUDE.md`-Baustein weist
 Claude an, auf Nachfrage `git -C starterkit fetch` und `status` zu prüfen und
-den `pull` erst nach Zustimmung auszuführen. Kunden mit 0.x erreichen 1.0 über
-ihren alten Update-Hinweis. Danach führt sie `CONVENTIONS.md` zu
-`MIGRATION.md`. Altkunden bekommen keine Mail.
+den `pull` erst nach Zustimmung auszuführen.
+
+Altkunden (0.11 und älter) bekommen keine Mail, das Supportende für 0.11.x gilt
+ab sofort (Ben, 24.10.2026). Sie erreichen den Umstieg in zwei Stufen:
+
+1. **0.12.0, Migrationsversion.** Alle Texte wie 1.0, dazu als einziges Skript
+   noch `scripts/session-start.py`. Es gibt nur den festen Hinweis „Bitte
+   migrieren“ aus, ohne git, ohne Netz, ohne Schreibzugriff. So läuft der alte
+   Hook weiter, ohne Fehler, bis `MIGRATION.md` ihn entfernt. Der alte
+   Update-Check bietet den Pull auf 0.12.0 von selbst an.
+2. **1.0.0.** Entfernt auch dieses Skript. Wer dann noch den alten Hook hat,
+   sieht beim Start einen Hook-Fehler, und `CONVENTIONS.md` führt Claude zu
+   `MIGRATION.md`.
 
 ## Grundregeln beim Weiterentwickeln
 

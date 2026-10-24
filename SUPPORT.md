@@ -115,8 +115,9 @@ Beschreibung.
 
 ### Der Weg: „Fehler melden“ im jeweiligen Produkt
 
-Jedes Produkt von Start & Connect hat einen Bereich **„Fehler melden“**. Darüber
-gehen alle Meldungen raus. Er hängt Adresse, Version, Browser und Fehlerspuren
+Die Produkte von Start & Connect haben einen Bereich **„Fehler melden“**. Darüber
+gehen die Meldungen raus. Ausnahmen stehen in der Anleitung des Produkts, zum
+Beispiel bei Echo und Orbit. Er hängt Adresse, Version, Browser und Fehlerspuren
 von selbst an, die Start & Connect zur Diagnose braucht.
 
 1. Formuliere die Meldung mit ihm: was er tun wollte, was passiert ist, die
@@ -131,7 +132,9 @@ schreibt dazu, dass es ums Starterkit geht.
 ### Die letzte Option: E-Mail
 
 Nur wenn er „Fehler melden“ nicht erreicht, weil das Produkt gar nicht startet
-oder er nicht hineinkommt, oder wenn er kein Produkt von Start & Connect hat,
+oder er nicht hineinkommt, wenn das Produkt keinen solchen Bereich hat, wenn
+nach dem Absenden eine Fehlermeldung statt einer Bestätigung kommt, oder wenn
+er kein Produkt von Start & Connect hat,
 schreibt er an **hallo@startandconnect.com**. Den Text formulierst du mit ihm,
 abschicken tut er.
 

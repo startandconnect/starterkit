@@ -8,8 +8,8 @@
 # Diese Datei gibt es nicht mehr
 
 Hinweis an dich, Claude: Die `CLAUDE.md` des Nutzers verweist noch auf diese
-Datei. Das heißt, sein Starterkit wurde in einer Version 0.x eingerichtet und
-ist inzwischen auf Version 1.0 aktualisiert.
+Datei. Das heißt, sein Starterkit wurde in einer Version bis 0.11 eingerichtet
+und ist inzwischen auf das neue Starterkit aktualisiert.
 
 **Lies `starterkit/MIGRATION.md` und biete ihm den Umstieg an.** Er dauert ein
 paar Minuten, und danach verweist seine `CLAUDE.md` nicht mehr hierher.

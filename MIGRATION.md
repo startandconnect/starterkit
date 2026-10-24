@@ -5,10 +5,12 @@
      Kit-Version 1.0.0 | Stand 2026-10-25
      ═══════════════════════════════════════════════════════════════ -->
 
-# Umstieg auf Version 1.0
+# Umstieg auf das neue Starterkit
 
 Anleitung an dich, Claude, für Nutzer, die das Starterkit in einer Version
-0.x eingerichtet haben. Du erkennst das an einem dieser Zeichen:
+bis 0.11 eingerichtet haben. Du erkennst das an einem dieser Zeichen:
+
+- Beim Start erscheint der Hinweis „Bitte migrieren“ aus dem alten Hook.
 
 - In `.claude/settings.local.json` steht ein Hook, der auf
   `starterkit/scripts/session-start.py` zeigt, oder beim Start erscheint ein
@@ -21,7 +23,7 @@ Trifft nichts davon zu, ist nichts zu tun.
 
 ## Was sich geändert hat
 
-Ab Version 1.0 besteht das Starterkit nur noch aus Text. Es gibt keinen Hook
+Ab Version 0.12 besteht das Starterkit nur noch aus Text. Es gibt keinen Hook
 und keine Skripte mehr. Den Connector erreichst du jetzt direkt als
 MCP-Verbindung, ohne Schlüssel in einer Datei auf dem Rechner.
 
@@ -95,8 +97,9 @@ Frag zu jedem Punkt einzeln:
   Rechner. Läuft die neue Verbindung, soll er ihn in der Oberfläche seines
   Connectors widerrufen. Führ ihn hin, das macht er selbst.
 - **`.secondbrain.json`:** wird nicht mehr gelesen und darf weg.
-- **Reste in `starterkit/scripts/`:** Liegt der Ordner nach dem Update noch da,
-  etwa mit `__pycache__`, gehört er zur alten Version und darf weg.
+- **Reste in `starterkit/scripts/`:** Ein Ordner `__pycache__` dort gehört zur
+  alten Version und darf weg. Alles andere in `starterkit/` löschst du nicht
+  von Hand, das räumt das nächste Update selbst auf.
 
 ## Schritt 5: Prüfen und berichten
 

@@ -32,7 +32,7 @@ Connector. Beides ist getrennt möglich.
 
 ### 1. Ein alter Hook, falls vorhanden
 
-Ab Version 1.0 richtet das Kit keinen Hook mehr ein. Wurde es früher
+Ab Version 0.12 richtet das Kit keinen Hook mehr ein. Wurde es früher
 eingerichtet, kann in `<arbeitsordner>/.claude/settings.local.json` noch ein
 Eintrag auf `starterkit/scripts/session-start.py` stehen. Entferne ihn wie in
 `MIGRATION.md`, Schritt 1: Sicherungskopie, nur diesen Eintrag, alles andere

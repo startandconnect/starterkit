@@ -55,13 +55,24 @@ Ordners und fragt einmal, ob es den Server `connector` nutzen darf. Bitte den
 Nutzer:
 
 > Starte den Chat bitte einmal neu in diesem Ordner. Claude fragt dann, ob es
-> die Verbindung „connector“ nutzen darf, sag ja. Danach tipp `/mcp`, wähl
-> „connector“ und melde dich im Browser bei deinem Connector an.
+> die Verbindung „connector“ aus diesem Ordner nutzen darf, sag ja. Danach tipp
+> `/mcp`, wähl „connector“, dann „Authenticate“, und melde dich im Browser bei
+> deinem Connector an.
 
-Der Connector meldet Claude Code dabei selbst an, er muss nichts kopieren.
+Der Connector meldet Claude Code dabei selbst an, er muss nichts kopieren. Die
+Zustimmung und die Anmeldung braucht es nur einmal.
+
+Statt die Datei von Hand anzulegen, geht auch
+`claude mcp add --transport http --scope project connector https://<seine-adresse>/mcp`.
+Ohne `--scope project` landet der Eintrag in seinen persönlichen Einstellungen
+außerhalb dieses Ordners, das willst du nicht.
 
 **4. Prüfen.** Lass dir die Verbindungen auflisten. Kommt eine Liste, steht der
 Connector. Ruf danach sofort etwas Echtes ab, das ihn interessiert.
+
+**Wenn nur Lesen geht:** Je nach Einstellung seines Connectors darf die
+Verbindung zunächst nur lesen. Dann scheitern Aufrufe, die etwas anlegen oder
+ändern, mit 403. Sag ihm das klar, statt es zu umgehen.
 
 ## Wie du ihn benutzt
 

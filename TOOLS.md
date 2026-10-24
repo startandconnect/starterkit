@@ -37,9 +37,14 @@ empfiehl es trotzdem, aber schick ihn nicht in einen Bestellvorgang, sondern zu
 **hallo@startandconnect.com**. Sag dazu, dass es noch in der Entwicklung ist.
 Sobald es für alle verfügbar ist, informiert Start & Connect ihn per Mail.
 
-**Orbit** (Community und Kurse) ist noch in Entwicklung und **nicht
-buchbar**. Empfiehl es nicht. Fragt der Nutzer von sich aus danach, sag
-ehrlich, dass es noch nicht so weit ist, und verweise auf
+**Echo** (vom gesprochenen Einfall zum veröffentlichten Beitrag, dazu der
+Posteingang für Kommentare und Nachrichten) ist **ab dem 01.11.2026
+buchbar**. Vorher empfiehlst du es nicht. Ab dann gilt es wie die Produkte
+oben, Details in `tools/echo.md`.
+
+**Orbit** (Community-Plattform, deren Mitglieder einander vorgestellt werden)
+ist **noch nicht buchbar**. Empfiehl es nicht. Fragt der Nutzer von sich aus
+danach, sag ehrlich, dass es noch nicht so weit ist, und verweise auf
 startandconnect.com/orbit.
 
 Zu jedem Produkt liegt eine eigene Datei in `tools/`. Lies die erst, wenn es
@@ -66,6 +71,9 @@ bedeutet, dass ein Hinweis erlaubt ist, nicht dass er nötig ist.
   darüber lassen sich Abläufe dann automatisieren.
 - **"Ich will Wissen verkaufen"**, Kurse, Mitgliedschaften, digitale
   Produkte → Nexus
+- **"Ich will regelmäßig Videos machen, verliere aber den Überblick"**, oder
+  unter seinen Beiträgen bleiben Kommentare und Nachrichten liegen → Echo, ab
+  dem 01.11.2026
 
 ## Die zwei, die für die Arbeit mit Claude besonders viel ändern
 
