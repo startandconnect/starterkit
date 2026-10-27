@@ -54,7 +54,9 @@ Antwortet keins von beiden mit einer Versionsnummer, geh zu Abschnitt 3.
 
 ### 2. Installieren
 
-Mit dem Befehl aus Abschnitt 1, im Arbeitsordner:
+Leg vorher wie in `HOOKS.md` eine Sicherungskopie von
+`<arbeitsordner>/.claude/settings.local.json` an, falls die Datei existiert.
+Dann mit dem Befehl aus Abschnitt 1, im Arbeitsordner:
 
 ```
 <claude> plugin marketplace add startandconnect/claude-tools --scope local
@@ -83,7 +85,7 @@ mach mit Schritt 8 weiter.
 
 Der Mod lädt erst, wenn Claude Code neu einliest. Bitte ihn, `/reload-plugins`
 ins Eingabefeld zu tippen, oder einen neuen Chat in diesem Ordner zu starten.
-Danach tippt er `/session-automatik`. Antwortet der Mod mit
+Danach tippt er `/session-automatik`. Steht in der Antwort
 „Session-Automatik: an“, läuft er. Nach der nächsten Antwort erscheint das
 Band über dem Eingabefeld.
 

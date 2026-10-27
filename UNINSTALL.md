@@ -53,9 +53,12 @@ in `CACHE-CONTEXT.md`, Abschnitt 1, und führ im Arbeitsordner aus:
 Entferne danach in `<arbeitsordner>/.claude/settings.local.json`, mit
 Sicherungskopie wie beim Hook, nur den Eintrag `claude-tools` unter
 `extraKnownMarketplaces` und, falls noch da, `cache-context@claude-tools` unter
-`enabledPlugins`. Leere Schlüssel kannst du entfernen. Den Marktplatz selbst
-nicht mit `plugin marketplace remove` löschen, das würde ihn auch in anderen
-Ordnern entfernen.
+`enabledPlugins`. Der zweite fehlt nach dem Befehl meist schon, und ein leeres
+`enabledPlugins` bleibt zurück. Leere Schlüssel kannst du entfernen.
+
+Den Marktplatz nicht mit `plugin marketplace remove` löschen, das würde ihn
+auch in anderen Ordnern entfernen. Dass `claude-tools` danach noch in
+`plugin marketplace list` steht, ist gewollt und harmlos.
 
 Läuft kein Befehl `claude`, entfernt er den Mod in Claude Desktop über das
 **+** neben dem Eingabefeld, dann **Plugins**.
