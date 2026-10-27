@@ -9,7 +9,8 @@ Downloadseite und danach das, was Claude ihnen erzählt.
 Ein Kunde hat Claude Code über Claude Desktop laufen und sonst nichts. Er fügt
 einen Prompt ein, und Claude richtet ihm daraufhin eine saubere Arbeitsbasis
 ein: einen festen Ordner, ein Second Brain, Konventionen, Memories, einen
-Update-Hook und, falls er ein Produkt von uns hat, den Zugang dazu.
+Update-Hook, den Mod cache-context und, falls er ein Produkt von uns hat, den
+Zugang dazu.
 
 **Das Kit ist ausschließlich für die Einrichtung da.** Danach gehört die
 Umgebung dem Kunden und er baut sie selbst weiter aus. Wir übernehmen keine
@@ -30,6 +31,7 @@ Verantwortung für seine Konfiguration und pflegen sie nicht.
 | `SECONDBRAIN.md` | Erklärt und installiert das Second Brain |
 | `MEMORIES.md` | Was Claude sich dauerhaft merken soll |
 | `HOOKS.md` | Welche Hooks gesetzt werden und wie |
+| `CACHE-CONTEXT.md` | Installiert den Mod cache-context aus `startandconnect/claude-tools` (MIT), nur für den Arbeitsordner |
 | `UNINSTALL.md` | Vollständiger Rückbau |
 | `tools/<tool>.md` | Ein File pro Produkt, wird bei Bedarf gelesen |
 | `scripts/` | Helfer, die mitgeliefert werden |
@@ -51,7 +53,7 @@ kann. Sie darf nicht aufgeweicht werden.
 ```
 ~/Documents/claude/          Der eine Ordner, jeder Chat startet hier
 ├── CLAUDE.md                Gehört dem Kunden, wir ergänzen nur Pointer
-├── .claude/                 settings.local.json + hooks
+├── .claude/                 settings.local.json: Hook und Mod cache-context
 ├── secondbrain/                   Second Brain, eigenes Repo
 ├── projects/                Echte Arbeit, oft eigene Repos
 └── starterkit/              Diese verwaltete Kopie

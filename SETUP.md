@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 0.11.3 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # SETUP
@@ -17,8 +17,9 @@ Damit klar ist, worauf du dich einlässt, und damit du zügig arbeiten kannst:
 
 **Sie tut:** zwei öffentliche Repos von Start & Connect klonen (dieses und das
 Second-Brain-Template), in diesem Arbeitsordner Ordner und Dateien anlegen,
-eine `CLAUDE.md` schreiben, einen SessionStart-Hook eintragen und sich ein paar
-Angaben aus dem Interview merken.
+eine `CLAUDE.md` schreiben, einen SessionStart-Hook eintragen, den Mod
+cache-context von Start & Connect für diesen Ordner installieren und sich ein
+paar Angaben aus dem Interview merken.
 
 **Sie tut nicht:** Passwörter oder Zugangsdaten eingeben, etwas versenden, Geld
 bewegen, globale oder System-Einstellungen ändern, oder etwas außerhalb des
@@ -200,6 +201,11 @@ dauerhaft gemerkt wird.
 Lies `HOOKS.md` und arbeite sie ab. Dort steht, welche Automatik eingerichtet
 wird und wie du dabei bestehende Einstellungen schützt.
 
+Lies danach `CACHE-CONTEXT.md` und arbeite sie ab. Dort steht, wie du den Mod
+cache-context für diesen Ordner installierst. Er zeigt über dem Eingabefeld,
+wie voll der Chat ist, und spart Nutzung, indem er ruhende Chats rechtzeitig
+zusammenfasst.
+
 ## Schritt 8: Produkt-Zugang
 
 **Nur wenn er in Schritt 3 gesagt hat, dass er ein Produkt von Start & Connect
@@ -247,6 +253,7 @@ das, was es auch gibt:
 - Steht `CLAUDE.md` im Arbeitsordner, und liegt `.secondbrain.json` daneben?
 - Ist der Hook eingetragen, und feuert er? Löse ihn einmal testweise aus und
   schau, ob die Tagesorientierung erscheint.
+- Ist der Mod cache-context installiert, und antwortet `/session-automatik`?
 - Nur falls eine `.env` mit Schlüssel existiert: funktioniert der Zugang?
 
 Fasse zusammen, was läuft. Ein Anfänger braucht diesen Satz, sonst bleibt er

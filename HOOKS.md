@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 0.11.3 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Hooks
@@ -47,7 +47,7 @@ Arbeitsordner. Die legst du in Schritt 4 an, der Atlas-Umschalter ändert sie.
 Finde heraus, womit Python auf diesem Rechner läuft. Probiere in dieser
 Reihenfolge `python3`, dann `python`, und merke dir, was funktioniert. Auf
 Windows ist es meistens `python`, auf dem Mac `python3`. Findest du nichts,
-überspringe den Hook, sag es dem Nutzer, und mach mit Schritt 8 weiter. Ohne
+überspringe den Hook, sag es dem Nutzer, und mach mit `CACHE-CONTEXT.md` weiter. Ohne
 diesen Hook funktioniert alles andere trotzdem, nur die Automatik beim Start
 fehlt.
 

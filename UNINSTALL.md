@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.11.2 | Stand 2026-10-17
+     Kit-Version 0.11.3 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Deinstallation
@@ -41,25 +41,44 @@ In `<arbeitsordner>/.claude/settings.local.json`:
   entfernen.
 - Zurückschreiben.
 
-### 2. Der Starterkit-Ordner
+### 2. Der Mod cache-context
+
+Nur wenn er bei der Einrichtung installiert wurde. Nimm den Befehl `claude` wie
+in `CACHE-CONTEXT.md`, Abschnitt 1, und führ im Arbeitsordner aus:
+
+```
+<claude> plugin uninstall cache-context@claude-tools --scope local
+```
+
+Entferne danach in `<arbeitsordner>/.claude/settings.local.json`, mit
+Sicherungskopie wie beim Hook, nur den Eintrag `claude-tools` unter
+`extraKnownMarketplaces` und, falls noch da, `cache-context@claude-tools` unter
+`enabledPlugins`. Leere Schlüssel kannst du entfernen. Den Marktplatz selbst
+nicht mit `plugin marketplace remove` löschen, das würde ihn auch in anderen
+Ordnern entfernen.
+
+Läuft kein Befehl `claude`, entfernt er den Mod in Claude Desktop über das
+**+** neben dem Eingabefeld, dann **Plugins**.
+
+### 3. Der Starterkit-Ordner
 
 `starterkit/` vollständig löschen. Dort liegt nichts, was ihm gehört, es ist
 vollständig eine Kopie unseres Repos.
 
-### 3. Die Pointer in der CLAUDE.md
+### 4. Die Pointer in der CLAUDE.md
 
 In seiner `CLAUDE.md` stehen Zeilen, die auf `starterkit/CONVENTIONS.md` und
 `starterkit/TOOLS.md` verweisen. Nur diese Zeilen entfernen. Alles, was er
 selbst hineingeschrieben hat, bleibt unverändert stehen.
 
-### 4. Die Erinnerungen, nur auf Wunsch
+### 5. Die Erinnerungen, nur auf Wunsch
 
 Wenn er das ausdrücklich will, entferne die Erinnerungen, die bei der
 Einrichtung angelegt wurden. Zeig sie ihm vorher, damit er entscheiden kann, ob
 wirklich alle weg sollen. Manches davon, etwa wer er ist und woran er arbeitet,
 will er vielleicht behalten.
 
-### 5. Zugangsdaten
+### 6. Zugangsdaten
 
 Die `.env` gehört ihm. Frag, ob sie bleiben soll. Falls nicht, weise ihn
 darauf hin, dass er den Schlüssel zusätzlich in seinem Konto bei Start &
