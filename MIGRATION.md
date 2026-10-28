@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 1.0.0 | Stand 2026-10-25
+     Kit-Version 1.0.0 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Umstieg auf das neue Starterkit
@@ -50,6 +50,9 @@ zeigt:
    Einstellungen bleiben unberührt. Ist das `SessionStart`-Array danach leer,
    entferne den leeren Schlüssel, ist `hooks` danach leer, ebenso.
 4. Zurückschreiben und prüfen, dass die Datei gültiges JSON ist.
+
+Steht dort auch der Mod cache-context (`cache-context@claude-tools` unter
+`enabledPlugins`), bleibt er. Er gehört nicht zum alten Hook.
 
 Findest du in diesem Ordner keinen Eintrag, frag den Nutzer, ob du in den
 globalen Einstellungen `~/.claude/settings.json` nachsehen darfst. Dort gehört
@@ -101,7 +104,12 @@ Frag zu jedem Punkt einzeln:
   alten Version und darf weg. Alles andere in `starterkit/` löschst du nicht
   von Hand, das räumt das nächste Update selbst auf.
 
-## Schritt 5: Prüfen und berichten
+## Schritt 5: Den Mod cache-context anbieten
+
+Hat er den Mod noch nicht, biete ihn nach `CACHE-CONTEXT.md` an. Er ist
+freiwillig.
+
+## Schritt 6: Prüfen und berichten
 
 - Startet ein neuer Chat ohne Hook-Fehler?
 - Ist `connector` unter `/mcp` verbunden, und kommt eine echte Antwort?

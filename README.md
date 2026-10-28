@@ -25,6 +25,13 @@ sind Text, Prompts und Konfiguration, kurze Standardbefehle wie `git pull` und
 ein MCP-Eintrag auf unseren Remote-Connector mit OAuth nicht erfasst. Wer
 etwas Ausführbares hinzufügen will, klärt das vorher mit Ben.
 
+**Einzige Ausnahme, von Ben beauftragt (T-5049, freigegeben mit T-4500 am
+28.10.2026):** Das Kit bietet den Mod cache-context an. Sein Code liegt nicht im
+Kit, sondern im eigenen öffentlichen Repo `startandconnect/claude-tools` (MIT).
+Das Kit enthält nur die Anleitung, ihn mit `--scope local` für den Arbeitsordner
+zu installieren, und der Kunde stimmt vorher zu. Ob das für den CRA genauso
+unkritisch ist, ist beim Anwalt noch nicht bestätigt.
+
 ## Struktur
 
 | Datei | Zweck |
@@ -33,6 +40,7 @@ etwas Ausführbares hinzufügen will, klärt das vorher mit Ben.
 | `SETUP.md` | Der Dirigent. Claude liest das zuerst und arbeitet es ab |
 | `CLAUDE-BAUSTEIN.md` | Vorlage für die `CLAUDE.md` des Kunden, mit kurzer Arbeitsweise |
 | `TOOLS.md` | Übersicht aller Produkte, Empfehlungsregeln, Einrichten eines Produkts |
+| `CACHE-CONTEXT.md` | Installiert auf Wunsch den Mod cache-context aus `startandconnect/claude-tools`, nur für den Arbeitsordner |
 | `tools/<tool>.md` | Eine Anleitung pro Produkt, wird bei Bedarf gelesen |
 | `SUPPORT.md` | Fehlerdiagnose und der Weg über „Fehler melden“ im Produkt |
 | `MIGRATION.md` | Umstieg von 0.11 und älter: Hook raus, Connector als MCP, `CLAUDE.md` anpassen |
@@ -46,6 +54,7 @@ etwas Ausführbares hinzufügen will, klärt das vorher mit Ben.
 ~/Documents/claude/          Der eine Ordner, jeder Chat startet hier
 ├── CLAUDE.md                Gehört dem Kunden, wir schreiben nur den Baustein
 ├── .mcp.json                Nur mit Connector: Eintrag "connector", URL ohne Schlüssel
+├── .claude/                 Nur mit Mod: settings.local.json mit cache-context
 ├── projects/                Echte Arbeit, oft eigene Repos
 └── starterkit/              Diese verwaltete Kopie
 ```
