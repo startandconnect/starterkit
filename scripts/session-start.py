@@ -7,12 +7,19 @@ Fehler sehen, sondern den Hinweis zum Umstieg. Sie liest nichts, schreibt
 nichts, ruft nichts auf und verbindet sich mit nichts. Mit Version 1.0 entfällt
 sie.
 
-Verwaltet von Start & Connect. Kit-Version 0.12.0
+Verwaltet von Start & Connect. Kit-Version 0.12.1
 """
+
+import sys
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 print(
     "Hinweis an Claude (Starterkit): Bitte migrieren. Dieses Starterkit wurde "
     "auf eine neue Version aktualisiert, die ohne Hook und ohne Skripte "
     "auskommt. Lies starterkit/MIGRATION.md und biete dem Nutzer den Umstieg "
-    "an. Der alte Zugang ueber connector-call.py besteht nicht mehr."
+    "an. Der alte Zugang über connector-call.py besteht nicht mehr."
 )

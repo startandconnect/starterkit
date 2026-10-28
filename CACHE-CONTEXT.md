@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.12.0 | Stand 2026-10-28
+     Kit-Version 0.12.1 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Mod cache-context
@@ -32,7 +32,7 @@ im Ordner `cache-context`, Lizenz MIT.
 > verbraucht hast. Lässt du einen Chat eine Stunde liegen, fasst sie ihn vorher
 > kurz zusammen, damit das Weitermachen dich nicht unnötig viel kostet.
 
-Der Mod ist ein Zusatzprogramm, das in Claude Code mitläuft. **Frag deshalb
+Der Mod ist eine Erweiterung, die in Claude Code mitläuft. **Frag deshalb
 einmal, ob er ihn haben will**, und installiere ihn nur bei einem Ja. Will er
 ihn nicht, ist das in Ordnung. Sag es kurz und mach mit Schritt 7 weiter.
 
