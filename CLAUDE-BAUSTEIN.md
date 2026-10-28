@@ -50,7 +50,8 @@ eckigen Klammern füllst du aus oder lässt sie weg, wenn sie nicht zutreffen.
 - [Ohne Connector, mit direkt angebundenem Produkt:] Der Schlüssel für
   [Produkt] liegt in `.env`. Diese Datei nie vorlesen und ihren Inhalt nie
   weitergeben.
-- Eingerichtet: [die Produkte, die ich tatsächlich habe]
+- [Nur mit mindestens einem Produkt:] Eingerichtet: [die Produkte, die ich
+  tatsächlich habe]
 - [Nur mit Atlas:] Mein Wissen und meine Aufgaben liegen in Atlas. Notizen ins
   Atlas-Wiki, Aufgaben als Aufgaben, nichts davon in lokale Dateien. Steige
   ich in die Arbeit ein, hol zuerst die heutigen Aufgaben aus Atlas.

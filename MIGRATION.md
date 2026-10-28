@@ -11,7 +11,6 @@ Anleitung an dich, Claude, für Nutzer, die das Starterkit in einer Version
 bis 0.11 eingerichtet haben. Du erkennst das an einem dieser Zeichen:
 
 - Beim Start erscheint der Hinweis „Bitte migrieren“ aus dem alten Hook.
-
 - In `.claude/settings.local.json` steht ein Hook, der auf
   `starterkit/scripts/session-start.py` zeigt, oder beim Start erscheint ein
   Hook-Fehler, weil diese Datei fehlt.
@@ -23,7 +22,7 @@ Trifft nichts davon zu, ist nichts zu tun.
 
 ## Was sich geändert hat
 
-Ab Version 0.12 besteht das Starterkit nur noch aus Text. Es gibt keinen Hook
+Ab Version 1.0 besteht das Starterkit nur noch aus Text. Es gibt keinen Hook
 und keine Skripte mehr. Den Connector erreichst du jetzt direkt als
 MCP-Verbindung, ohne Schlüssel in einer Datei auf dem Rechner.
 

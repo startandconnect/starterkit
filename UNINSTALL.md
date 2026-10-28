@@ -22,8 +22,10 @@ aufräumen können, ohne überredet zu werden.
 - **`secondbrain/`** mit allen Notizen, falls er es aus einer älteren Version hat
 - **`CLAUDE.md`**, sie gehört ihm
 
-Diese fasst du unter keinen Umständen an. Sag ihm das gleich zu Beginn,
-das ist die Sorge, die er in dem Moment hat.
+Diese löschst du unter keinen Umständen. In der `CLAUDE.md` entfernst du nur
+unsere eigenen Verweise (Abschnitt 4), alles andere darin bleibt Wort für Wort
+stehen. Sag ihm das gleich zu Beginn, das ist die Sorge, die er in dem Moment
+hat.
 
 ## Was entfernt wird
 

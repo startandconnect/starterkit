@@ -29,8 +29,10 @@ etwas Ausführbares hinzufügen will, klärt das vorher mit Ben.
 28.10.2026):** Das Kit bietet den Mod cache-context an. Sein Code liegt nicht im
 Kit, sondern im eigenen öffentlichen Repo `startandconnect/claude-tools` (MIT).
 Das Kit enthält nur die Anleitung, ihn mit `--scope local` für den Arbeitsordner
-zu installieren, und der Kunde stimmt vorher zu. Ob das für den CRA genauso
-unkritisch ist, ist beim Anwalt noch nicht bestätigt.
+zu installieren, und der Kunde stimmt vorher zu. Für den CRA ist das nach Bens
+Entscheidung unkritisch: „Wir stellen nur einen Mod zur Verfügung. Das ist
+total in Ordnung. Das ist kein CRA-relevant. Das ist meine Entscheidung.“
+(Ben, 28.10.2026)
 
 ## Struktur
 
