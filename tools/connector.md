@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 1.0.0 | Stand 2026-10-28
+     Kit-Version 1.0.1 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Connector

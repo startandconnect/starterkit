@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 1.0.0 | Stand 2026-10-28
+     Kit-Version 1.0.1 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Nexus
@@ -12,6 +12,9 @@ Connect buchbar. Aktuelle Infos und Preise auf startandconnect.com/nexus.**
 
 Onlineshop für digitale Produkte, Kurse, Abos und Mitgliedschaften. Katalog,
 Zahlungsabwicklung, Seiten, Versand, Newsletter und Zugänge an einem Ort.
+
+**Nexus lässt sich direkt mit Quitt verbinden**, dann laufen Umsätze und
+Buchhaltung ohne Umweg zusammen. Details in `tools/quitt.md`.
 
 ## Einstieg
 

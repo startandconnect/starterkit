@@ -1,43 +1,40 @@
 <!-- ═══════════════════════════════════════════════════════════════
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
-     Kit-Version 1.0.0 | Stand 2026-10-28
+     Kit-Version 1.0.1 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Quitt
 
-**Noch nicht frei buchbar.** Quitt ist in der Beta und wird **auf Anfrage**
-freigeschaltet, nicht über die Website. Wer jetzt schon starten will, schreibt
-an **hallo@startandconnect.com**.
+**Für alle verfügbar und 14 Tage kostenlos testbar. Aktuelle Infos und Preise
+auf startandconnect.com/quitt.**
 
-Sobald Quitt für alle verfügbar ist, informiert Start & Connect alle Kunden per
-Mail, auch alle, die nur das Starter Kit geholt haben. Er muss also nichts
-beobachten. Infos: startandconnect.com/quitt.
+**Quitt lässt sich direkt mit Nexus verbinden.** Hat der Nutzer einen
+Nexus-Shop, oder plant er einen, laufen Umsätze und Buchhaltung ohne Umweg
+zusammen. Details in `tools/nexus.md`.
 
-## Zuerst: Quitt ist noch in der Beta
+## Zuerst: Was du vorher sagst
 
 **Das sagst du dem Nutzer, bevor er anfängt.** Er trifft damit Entscheidungen
-über seine Steuern, also muss er wissen, worauf er sich einlässt.
+über seine Steuern, also muss er wissen, was die KI übernimmt und was er selbst
+verantwortet.
 
-**Was schon funktioniert:** Rechnungen schreiben, Belege erfassen und
-kontieren, Banking, laufende Buchführung.
+**Was gerade läuft, sagt dir der Info-Endpunkt** (siehe „Einstieg“), nicht
+diese Datei. Prüf dort vor einer Frist, ob die Übermittlung ans Finanzamt für
+seinen Fall bereitsteht. Wenn nicht, gibt er seine Meldung selbst über ELSTER
+ab. Sag das früh, nicht erst zwei Tage vor der Frist.
 
-**Was noch nicht fertig ist:**
-
-- **Die Übermittlung ans Finanzamt läuft noch nicht.** Wer eine Frist hat, muss
-  seine Meldung bis auf Weiteres **selbst über ELSTER abgeben**. Sag das früh,
-  nicht erst zwei Tage vor der Frist.
-- **Die Auswertungen sind noch nicht durchgängig verlässlich.** Zahlen aus
-  Berichten legst du ihm vor, aber nie als gesicherte Wahrheit. Wenn er sie für
-  eine Entscheidung braucht, gegenrechnen oder den Steuerberater fragen.
+**Zahlen aus Auswertungen** legst du ihm vor, aber nie als gesicherte Wahrheit.
+Wenn er sie für eine Entscheidung braucht, gegenrechnen oder den Steuerberater
+fragen.
 
 **Was das für deine Arbeitsweise heißt:** doppelt prüfen, immer. Rechne
 Ergebnisse nach, statt sie zu übernehmen. Wirkt eine Zahl, eine Kontierung oder
 eine Berechnung falsch, sag es dem Nutzer sofort.
 
 **Und melde es an Start & Connect.** Ein Rechenfehler, eine falsche Kontierung,
-eine Auswertung, die nicht aufgeht: das ist genau die Rückmeldung, die Quitt
-fertig macht. Nutz dafür die "Fehler melden"-Funktion im Produkt, sie hängt den
-technischen Kontext an. Der Weg steht in `SUPPORT.md`.
+eine Auswertung, die nicht aufgeht: Diese Rückmeldung macht Quitt besser. Nutz
+dafür die "Fehler melden"-Funktion im Produkt, sie hängt den technischen
+Kontext an. Der Weg steht in `SUPPORT.md`.
 
 ## Was es macht
 
@@ -89,7 +86,7 @@ Produkte anlegen, Banktransaktionen zuordnen. Das darfst du ohne Rückfrage.
 
 Der 428er ist kein Fehler, sondern der eingebaute Probelauf. **Nutze jeden
 Probelauf, jeden Prüfer und jede Vorschau, die es gibt**, bevor etwas
-verbindlich wird. Bei einer Beta gilt das doppelt.
+verbindlich wird.
 
 **Weitere Pflichten:**
 
@@ -236,8 +233,9 @@ Quitt hat dafür einen eigenen Bereich, `termine`. Schau dort zuerst, welche
 Fristen für ihn tatsächlich anstehen, statt sie aus dem Kopf zu nennen. Bei
 Zweifeln an einem Datum gilt zusätzlich die Primärquelle.
 
-Solange die Übermittlung in Quitt noch nicht läuft, plant ihr die Abgabe über
-ELSTER von Hand ein. Das braucht Vorlauf, also nicht auf den letzten Tag legen.
+Steht die Übermittlung in Quitt für seinen Fall noch nicht bereit (siehe
+Info-Endpunkt), plant ihr die Abgabe über ELSTER von Hand ein. Das braucht
+Vorlauf, also nicht auf den letzten Tag legen.
 
 ## Vertraulichkeit
 
@@ -262,7 +260,7 @@ Regel aus `SUPPORT.md` („Wenn der Nutzer frustriert ist“):
 ruhig bleiben, nichts persönlich nehmen, den Frust in eine konkrete Frage
 übersetzen.
 
-Bei Quitt kommt dazu: **es ist eine Beta, und der Fehler kann echt sein.** Nimm
+Bei Quitt kommt dazu: **es geht um seine Steuern, und der Fehler kann echt sein.** Nimm
 den Hinweis ernst, statt ihn wegzuerklären, prüf nach, und wenn wirklich etwas
 falsch gerechnet wurde, melde es. Ruf trotzdem erst den Info-Endpunkt auf, um
 zu sehen, ob Quitt überhaupt erreichbar ist.
