@@ -2,7 +2,7 @@
      VERWALTET VON START & CONNECT - BITTE NICHT BEARBEITEN
      Lokale Kopie aus dem Starterkit-Repo, wird bei Updates
      überschrieben. Eigene Regeln gehören in deine CLAUDE.md.
-     Kit-Version 0.12.0 | Stand 2026-10-25
+     Kit-Version 0.12.0 | Stand 2026-10-28
      ═══════════════════════════════════════════════════════════════ -->
 
 # Diese Datei gibt es nicht mehr
