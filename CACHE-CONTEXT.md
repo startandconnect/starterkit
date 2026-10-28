@@ -57,7 +57,7 @@ Antwortet keins von beiden mit einer Versionsnummer, geh zu Abschnitt 3.
 ### 2. Installieren
 
 Existiert `<arbeitsordner>/.claude/settings.local.json` schon, leg vorher eine
-Sicherungskopie als `settings.local.json.bak-<datum>` an. Dort können
+Sicherungskopie als `settings.local.json.bak-<datum>-mod` an. Dort können
 Einstellungen des Nutzers liegen, etwa Berechtigungen.
 Dann mit dem Befehl aus Abschnitt 1, im Arbeitsordner:
 

@@ -57,7 +57,10 @@ Schlüssel kannst du entfernen.
 
 Den Marktplatz nicht mit `plugin marketplace remove` löschen, das würde ihn
 auch in anderen Ordnern entfernen. Dass `claude-tools` danach noch in
-`plugin marketplace list` steht, ist gewollt und harmlos. Läuft kein Befehl
+`plugin marketplace list` steht, ist gewollt und harmlos. Ist der Mod noch in
+einem anderen Ordner installiert, zeigt `plugin list` ihn hier als `disabled`,
+auch das ist richtig. Bleibt `settings.local.json` danach als `{}` zurück,
+darf die Datei weg. Läuft kein Befehl
 `claude`, entfernt er den Mod in Claude Desktop über das **+** neben dem
 Eingabefeld, dann **Plugins**.
 
